@@ -1,0 +1,75 @@
+import ChooseBox from "../../widgets/ChooseBox/ChooseBox"
+import ExpTut from '../../../assets/images/Icons/teacher.png'
+import FlexLearn from '../../../assets/images/Icons/clock.png'
+import GreatValue from '../../../assets/images/Icons/badge.png'
+import OneOnOne from '../../../assets/images/Icons/oneonone.png'
+import chooseBg from '../../../assets/images/tltBg.jpg'
+import { motion } from 'framer-motion';
+
+const WhyChooseUs = () => {
+
+    const chooseData = [
+        {title:'Experienced Tutors', text:`Our team consists of highly qualified tutors with years of experience in helping students succeed academically.`, icon: ExpTut},
+        {title:'One-on-One Classes', text:`We offer personalized, one-on-one tutoring sessions that cater to your child's unique learning needs.`, icon: OneOnOne},
+        {title:'Flexible Learning', text:`Our schedules are designed to fit into your busy life, allowing your child to learn at their own pace.`, icon: FlexLearn},
+        {title:'Great Value', text:`We deliver exceptional tutoring services at a price that reflects the quality and care your child deserves.`, icon: GreatValue},
+    ]
+
+    const containerVariants = {
+        hidden: {
+          opacity: 0,
+        },
+        show: {
+          opacity: 1,
+          transition: {
+            staggerChildren: 0.5,  // Delay between the appearance of each child (course card)
+          },
+        },
+      };
+      
+      const cardVariants = {
+        hidden: {
+          opacity: 0,
+        //   y: 50,  // Starts slightly off-screen (below)
+        },
+        show: {
+          opacity: 1,
+        //   y: 0,   // Moves to its final position
+          transition: {
+            duration: 3,  // You can tweak the timing her
+            delay: 0.5,
+          },
+        },
+      };
+
+  return (
+    <div className=" flex justify-between items-center px-20 my-20">
+
+        <div className="w-2/5 flex flex-col gap-6">
+        <h1 className="capitalize text-3xl font-bold">This is why we are <span className="text-tltorange">best</span> from others</h1>
+        <p className="text-gray-400 text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis fuga sed accusamus atque non eveniet alias minus tempore blanditiis sint.</p>
+        <img src={ chooseBg} alt=""  className="rounded-lg w-4/5"/>
+        </div>
+        <motion.div 
+        className="grid grid-cols-1 md:grid-cols-2 gap-6 w-1/2"
+        variants={containerVariants}
+        initial="hidden"
+        animate="show"> {/* Adjust styling as needed */}
+            {chooseData.map((item, index) => (
+                <motion.div
+                key={index}
+                variants={cardVariants}>
+                    <ChooseBox
+                    key={index}
+                    title={item.title}
+                    text={item.text}
+                    icon={item.icon}
+                />
+                </motion.div>
+            ))}
+        </motion.div>
+    </div>
+  )
+}
+
+export default WhyChooseUs

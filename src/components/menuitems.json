@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Home",
+        "path": "/",
+        "cName": "nav-links"
+    },
+    {
+        "title": "About",
+        "path": "/about",
+        "cName": "nav-links"
+    }, 
+    {
+        "title": "Meet Our Team",
+        "path": "/meet-our-team",
+        "cName": "nav-links"
+    },
+    {
+        "title": "How We Operate",
+        "path": "/contact",
+        "cName": "nav-links"
+    },
+    {
+        "title": "Become a Tutor",
+        "path": "/signup",
+        "cName": "nav-links"
+    },
+    {
+        "title": "Blog",
+        "path": "/signup",
+        "cName": "nav-links"
+    }
+    ]
