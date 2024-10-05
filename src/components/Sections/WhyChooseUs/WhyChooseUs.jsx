@@ -43,15 +43,16 @@ const WhyChooseUs = () => {
       };
 
   return (
-    <div className=" flex justify-between items-center px-20 my-20">
+    <div className=" flex flex-col lg:flex-row justify-between items-center px-4 lg:px-20 my-20 ">
 
-        <div className="w-2/5 flex flex-col gap-6">
+        <div className=" w-full mb-10 md:mb-0 lg:w-2/5 flex flex-col gap-6">
         <h1 className="capitalize text-3xl font-bold">This is why we are <span className="text-tltorange">best</span> from others</h1>
         <p className="text-gray-400 text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis fuga sed accusamus atque non eveniet alias minus tempore blanditiis sint.</p>
-        <img src={ chooseBg} alt=""  className="rounded-lg w-4/5"/>
+        <img src={ chooseBg} alt=""  className="hidden lg:block rounded-lg w-4/5"/>
         </div>
+
         <motion.div 
-        className="grid grid-cols-1 md:grid-cols-2 gap-6 w-1/2"
+        className="  grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-6 w-full px-0 md:px-0 lg:w-1/2 place-items-center"
         variants={containerVariants}
         initial="hidden"
         animate="show"> {/* Adjust styling as needed */}

@@ -15,13 +15,8 @@
         "cName": "nav-links"
     },
     {
-        "title": "How We Operate",
-        "path": "/contact",
-        "cName": "nav-links"
-    },
-    {
         "title": "Become a Tutor",
-        "path": "/signup",
+        "path": "/become-a-tutor",
         "cName": "nav-links"
     },
     {
