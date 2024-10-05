@@ -1,4 +1,4 @@
-import teamImg from '../../../assets/images/teamimg.jpg'
+// import teamImg from '../../../assets/images/teamimg.jpg'
 import CountUp from 'react-countup';
 import Navbar from "../../Sections/NavBar/Navbar"
 import Vbox from '../../widgets/Vision Box/Vbox';
@@ -26,7 +26,7 @@ const AboutPage = () => {
           <div className=" h-full w-full md:w-1/2 flex flex-col justify-center items-center gap-1">
             {/* right upper section */}
             <div className="w-full md:w-9/12">
-              <img src={teamImg} alt="" className='rounded-xl' />
+              {/* <img src={teamImg} alt="" className='rounded-xl' /> */}
             </div>
 
             {/* right lower section */}
