@@ -4,7 +4,6 @@ import { createRoot } from 'react-dom/client'
 import Home from './components/pages/HomePage/Home.jsx'
 import AboutPage from './components/pages/AboutPage/AboutPage.jsx'
 import MeetTheTeam from './components/pages/MeetTheTeam/MeetTheTeam.jsx'
-import BecomeATutor from './components/pages/Become A Tutor/BecomeATutor.jsx'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import './index.css'
 
@@ -23,14 +22,14 @@ const router = createBrowserRouter([
     path: '/meet-our-team',
     element: <MeetTheTeam />,
   },
-  {
-    path: '/become-a-tutor',
-    element: <BecomeATutor />,
-  },
-  {
-    path: '/signup',
-    // element: <h1>Sign Up</h1>,
-  },
+  // {
+  //   path: '/become-a-tutor',
+  //   element: <BecomeATutor />,
+  // },
+  // {
+  //   path: '/signup',
+  //   element: <h1>Sign Up</h1>,
+  // },
 ])
 createRoot(document.getElementById('root')).render(
   <StrictMode>
