@@ -2,7 +2,7 @@ import Navbar from "../../Sections/NavBar/Navbar"
 import EmployeeOfTheMonth from '../../../assets/images/August.png'
 import TeamBox from "../../widgets/TeamBox/TeamBox"
 import Footer from "../../Sections/Footer/Footer"
-// import teamImg from '../../../assets/images/teamimg.jpg'
+import teamImg from '../../../assets/images/teamimg.jpg'
 
 
 // TutorImgs
@@ -70,7 +70,13 @@ const MeetTheTeam = () => {
         <div className="meet_the_team_cont h-screen ">
 
             {/* Meet The Team Header */}
-            <div className="meet_team_header pt-56 py-20 flex flex-col justify-center items-center mb-16">
+            <div className="meet_team_header pt-56 py-20 flex flex-col justify-center items-center mb-16"
+            style={{ 
+             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(${teamImg})`,  // Use the imported image here
+             backgroundSize: 'cover',  // Ensures the image covers the entire div
+             backgroundPosition: 'center',  // Centers the image
+             backgroundRepeat: 'no-repeat'  // Ensures the image doesn’t repeat
+            }}>
             <h1 className="text-4xl px-4 md:px-0 w-full md:w-1/2 text-tltwhite text-center font-bold ">We bring a <span className="text-tltorange">wealth</span> of experience from a wide range <span className="text-tltorange">background</span>.</h1>
             <p className="text-center w-full px-4 text-sm md:text-base md:w-2/5 text-tltwhite">
             We are a group of passionate individuals working together to achieve a common goal. Get to know the faces behind out success.
