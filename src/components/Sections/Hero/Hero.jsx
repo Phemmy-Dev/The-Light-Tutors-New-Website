@@ -12,7 +12,12 @@ const Hero = (props) => {
         <div className={props.sectionCname}>
             <h1>{props.title}</h1>
             <p>{props.text}</p>
-            <Link to="/services" className={`${props.heroBtnStyle} hover:bg-transparent border-2 border-tltorange transition ease-in-out duration-300`}>{props.herobtn}</Link>
+            <a href="http://wa.link/x1ej0c" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={`${props.heroBtnStyle} hover:bg-transparent border-2 border-tltorange transition ease-in-out duration-300`}
+            > {props.herobtn}
+            </a>
         </div>
       </div>
     </>

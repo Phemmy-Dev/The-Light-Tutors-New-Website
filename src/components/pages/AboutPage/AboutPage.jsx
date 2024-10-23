@@ -16,14 +16,15 @@ const AboutPage = () => {
           <div className=" flex items-center justify-center h-full w-full md:w-1/2">
             <div className="flex flex-col gap-10 px-5 py-10 w-full md:w-9/12 bg-tltwhite shadow-2xl rounded-3xl">
               <p className="text-tltorange font-medium">How It Started</p>
-              <h2 className="text-4xl font-bold">Our Dream is to teach children to be <span className="text-tltorange">creative</span></h2>
-              <p className="text-xs">The Light Tutors is a tutoring academy founded during the pandemic in a bid to make education accessible despite the challenges of social distancing and timing. We work towards bridging the gap in education, and are constantly looking for ways to make learning as easy and seamless as possible. TLT offers personalised tutoring sessions in Mathematics, English, and Sciences to Students in KS2 up to GCSE level, elementary (Grades K–5), middle (Grades 6–8) and high (Grades 9–12). We also offer bespoke content for languages such as Yoruba and French for beginners and intermediate Students.
+              <h2 className="text-4xl font-bold">Our dream is to teach children to be <span className="text-tltorange">creative</span></h2>
+              <p className="text-xs text-justify">The Light Tutors (TLT) was founded in response to the challenges brought about by the pandemic. With social distancing making traditional education difficult, we saw an opportunity to bridge the education gap and ensure that learning continued, no matter the circumstances. Our mission from the start has been to make education accessible to students everywhere, despite time zones, restrictions, or challenges. <br /> <br />We offer personalized tutoring sessions in Mathematics, English, and Sciences to students from KS2 up to GCSE level, as well as those in elementary (Grades K–5), middle (Grades 6–8), and high school (Grades 9–12). In addition, we provide bespoke language learning for beginners and intermediate learners in Yoruba and French. <br /><br />
+              <span className='font-semibold'>Our goal is simple: to make learning as easy and seamless as possible, offering support tailored to each student’s unique needs.</span>
               </p>
             </div>
           </div>
 
           {/* Right section */}
-          <div className=" h-full w-full md:w-1/2 flex flex-col justify-center items-center gap-1">
+          <div className="h-full w-full md:w-1/2 flex flex-col justify-center items-center gap-1">
             {/* right upper section */}
             <div className="w-full md:w-9/12">
               <img src={teamImg} alt="" className='rounded-xl' />
@@ -37,7 +38,7 @@ const AboutPage = () => {
 
               <div className="box1 bg-slate-100  rounded-lg px-3 py-3 flex flex-col justify-center ">
               <CountUp start={0} end={45} duration={5} suffix="+" className='text-2xl font-semibold'/>
-              <p>Students</p>
+              <p className='text-xs'>Students</p>
               </div>
 
               <div className="box2 bg-slate-100 rounded-lg px-3 py-3 flex flex-col justify-center ">

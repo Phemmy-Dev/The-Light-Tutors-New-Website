@@ -46,8 +46,8 @@ const WhyChooseUs = () => {
     <div className=" flex flex-col lg:flex-row justify-between items-center px-4 lg:px-20 my-20 ">
 
         <div className=" w-full mb-10 md:mb-0 lg:w-2/5 flex flex-col gap-6">
-        <h1 className="capitalize text-3xl font-bold">This is why we are <span className="text-tltorange">best</span> from others</h1>
-        <p className="text-gray-400 text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis fuga sed accusamus atque non eveniet alias minus tempore blanditiis sint.</p>
+        <h1 className="capitalize text-3xl font-bold">This is why we are <span className="text-tltorange">different</span> from others</h1>
+        <p className="text-gray-400 text-sm">At The Light Tutors, we stand out because of our commitment to quality, personalized learning, and results-driven education. Our team of experienced tutors is dedicated to helping your child succeed through flexible, one-on-one classes designed around their unique needs. Whether you’re seeking a tutor for primary school or advanced subjects, we ensure that every student receives top-tier instruction with excellent value for your investment.</p>
         <img src={ chooseBg} alt=""  className="hidden lg:block rounded-lg w-4/5"/>
         </div>
 

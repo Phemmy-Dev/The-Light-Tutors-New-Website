@@ -15,22 +15,22 @@ const Footer = () => {
                 <div className="logo">
                     <img src={Logo} alt="The Light Tutors Logo" className='w-24 rounded-lg text-center' />
                 </div>
-                <div className="text text-gray-400 w-5/6">
-                    <p>The Light Tutors is a tutoring company formed in 2020 with a vision of giving Students good academic foundations to build on and to help bridge gaps in education.</p>
+                <div className="text text-gray-400 w-5/6 text-sm">
+                    
                 </div>
                 <div className="social_links flex gap-3 ">
-                <FaXTwitter className='bg-tltorange px-2 rounded-full text-white font-semibold hover:bg-tltorange hover:text-white transition ease-in duration-300 w-8 h-8 cursor-pointer'/>
-                <FaLinkedinIn className='bg-tltorange px-2 rounded-full  font-semibold hover:bg-tltorange hover:text-white transition ease-in duration-300 text-white w-8 h-8 cursor-pointer'/>
-                <FaInstagram className='bg-tltorange px-2 rounded-full text-white font-semibold  transition ease-in duration-300  w-8 h-8 cursor-pointer'/>
+                <a href="https://x.com/thelightutors"><FaXTwitter className='bg-tltorange px-2 rounded-full text-white font-semibold hover:bg-tltorange hover:text-white transition ease-in duration-300 w-8 h-8 cursor-pointer'/></a>
+                <a href="https://www.linkedin.com/company/the-light-tutors/posts/?feedView=all"><FaLinkedinIn className='bg-tltorange px-2 rounded-full  font-semibold hover:bg-tltorange hover:text-white transition ease-in duration-300 text-white w-8 h-8 cursor-pointer'/></a>
+                <a href="https://www.instagram.com/thelightutors/"><FaInstagram className='bg-tltorange px-2 rounded-full text-white font-semibold  transition ease-in duration-300  w-8 h-8 cursor-pointer'/></a>
 
                 </div>
             </div>
             {/* Footer Links */}
-            <div className="footer_links w-full md:w-1/3 flex flex-col justify-center">
+            <div className="footer_links w-full md:w-1/3 flex flex-col justify-center text-sm">
                 <h4 className="text-white font-bold mb-3 text-xl">Quick Links</h4>
                 <ul className='text-white flex flex-col gap-1'>
                 {data.map((item, index) => (
-                            <li key={index} className='font-normal text-base w-36 text-gray-400 hover:translate-x-3 transition-transform duration-300'>
+                            <li key={index} className='font-normal text-sm w-36 pl-2 text-gray-400 hover:translate-x-3 transition-transform duration-300'>
                                 <Link to={item.path} className={` ${item.cName} `}>
                                 {item.title}</Link>
                             </li>
@@ -48,7 +48,7 @@ const Footer = () => {
                 </div>
                 <div className="mail_link flex items-center gap-3">
                 <MdOutlineMail className='text-tltorange w-6 h-6'/>
-                <p className='text-white font-bold'>thelightutorsltd@gmail.com</p>
+                <p className='text-white font- text-sm'>thelightutorsltd@gmail.com</p>
                 </div>
             </div>
             </div>

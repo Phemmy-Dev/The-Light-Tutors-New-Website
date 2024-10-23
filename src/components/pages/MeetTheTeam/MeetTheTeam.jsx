@@ -1,5 +1,5 @@
 import Navbar from "../../Sections/NavBar/Navbar"
-import EmployeeOfTheMonth from '../../../assets/images/August.png'
+import EmployeeOfTheMonth from '../../../assets/images/employeeM.png'
 import TeamBox from "../../widgets/TeamBox/TeamBox"
 import Footer from "../../Sections/Footer/Footer"
 import teamImg from '../../../assets/images/teamimg.jpg'
@@ -77,9 +77,9 @@ const MeetTheTeam = () => {
              backgroundPosition: 'center',  // Centers the image
              backgroundRepeat: 'no-repeat'  // Ensures the image doesn’t repeat
             }}>
-            <h1 className="text-4xl px-4 md:px-0 w-full md:w-1/2 text-tltwhite text-center font-bold ">We bring a <span className="text-tltorange">wealth</span> of experience from a wide range <span className="text-tltorange">background</span>.</h1>
+            <h1 className="text-4xl mb-4 px-4 md:px-0 w-full md:w-1/2 text-tltwhite text-center font-bold ">We bring a <span className="text-tltorange">wealth</span> of experience from a wide range <span className="text-tltorange">background</span>.</h1>
             <p className="text-center w-full px-4 text-sm md:text-base md:w-2/5 text-tltwhite">
-            We are a group of passionate individuals working together to achieve a common goal. Get to know the faces behind out success.
+            We are a group of passionate individuals working together to achieve a common goal. Get to know the faces behind ourfoot success.
             </p>
             </div>
 

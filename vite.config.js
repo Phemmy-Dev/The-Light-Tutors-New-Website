@@ -5,5 +5,4 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   assetsInclude: ['**/*.JPG', '**/*.jpg'],
   plugins: [react()],
-  base: '/The-Light-Tutors-New-Website/',
 })

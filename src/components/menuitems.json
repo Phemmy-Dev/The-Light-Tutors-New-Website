@@ -18,10 +18,5 @@
         "title": "Become a Tutor",
         "path": "/become-a-tutor",
         "cName": "nav-links"
-    },
-    {
-        "title": "Blog",
-        "path": "/signup",
-        "cName": "nav-links"
     }
     ]
