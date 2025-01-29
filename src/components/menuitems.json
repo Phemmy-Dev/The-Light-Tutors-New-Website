@@ -18,5 +18,10 @@
         "title": "Become a Tutor",
         "path": "/become-a-tutor",
         "cName": "nav-links"
+    },
+    {
+        "title": "FAQ ",
+        "path": "/frequently-asked-questions",
+        "cName": "nav-links"
     }
     ]

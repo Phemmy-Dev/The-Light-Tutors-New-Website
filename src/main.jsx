@@ -5,6 +5,7 @@ import Home from './components/pages/HomePage/Home.jsx'
 import AboutPage from './components/pages/AboutPage/AboutPage.jsx'
 import MeetTheTeam from './components/pages/MeetTheTeam/MeetTheTeam.jsx'
 import Becomeatutor from './components/pages/BecomeATutor/Becomeatutor.jsx'
+import Faq from './components/pages/Faq/faq.jsx'
 import PageNotFound from './components/pages/errorPage/PageNotFound.jsx'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import './index.css'
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: '/become-a-tutor',
     element: <Becomeatutor />,
+  },
+  {
+    path: '/frequently-asked-questions',
+    element: <Faq/>,
   },
   {
     path: '*',

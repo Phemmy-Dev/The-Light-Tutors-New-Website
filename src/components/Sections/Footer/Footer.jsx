@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <div className="mt-20 bg-tltgreen py-10 px-8">
-        <div className="footer_upper flex flex-col md:flex-row justify-between  gap-10 items-center ">
+    <div className="mt-20 bg-tltgreen py-10 px-8 ">
+        <div className="footer_upper flex flex-col flex-wrap md:flex-nowrap md:flex-row justify-between gap-10 items-center md:mx-12 ">
             {/* Footer Logo */}
             <div className="footer_logo_and_text flex flex-col md:justify-center w-full md:w-1/3 gap-3 ">
                 <div className="logo">
@@ -26,11 +26,11 @@ const Footer = () => {
                 </div>
             </div>
             {/* Footer Links */}
-            <div className="footer_links w-full md:w-1/3 flex flex-col justify-center text-sm">
+            <div className="footer_links w-full md:w-1/3 flex flex-col justify-center text-sm md:items-center ">
                 <h4 className="text-white font-bold mb-3 text-xl">Quick Links</h4>
                 <ul className='text-white flex flex-col gap-1'>
                 {data.map((item, index) => (
-                            <li key={index} className='font-normal text-sm w-36 pl-2 text-gray-400 hover:translate-x-3 transition-transform duration-300'>
+                            <li key={index} className='font-normal text-sm w-36 md:pl-6 text-gray-400 hover:translate-x-3 transition-transform duration-300'>
                                 <Link to={item.path} className={` ${item.cName} `}>
                                 {item.title}</Link>
                             </li>
@@ -38,7 +38,7 @@ const Footer = () => {
                 </ul>
             </div>
             {/* Contact Info */}
-            <div className="contact_info w-full md:w-1/3 justify-center">
+            <div className="contact_info w-full md:w-1/3 justify-center md:ml-16">
             <h4 className='text-white font-bold mb-3 text-xl'>Contact Info</h4>
             {/* Contact Links */}
             <div className='my-4 flex flex-col gap-3'>

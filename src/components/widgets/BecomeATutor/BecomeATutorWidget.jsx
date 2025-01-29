@@ -13,8 +13,9 @@ const BecomeATutorWidget = (props) => {
                 }}>
         <div className="batcontent flex flex-col justify-center items-center gap-3">
             <h1 className='text-3xl font-semibold text-tltwhite text-center'>{props.title}</h1>
-                <p className='text-xs text-tltwhite w-1/2 text-center'>{props.subtext}</p>
-                <p className='w-1/2 text-xs text-center text-tltwhite'>{props.subsubtext}</p>
+                <p className='text-xs text-tltwhite w-2/3 md:w-1/2 text-justify'>{props.subtext}</p>
+                <p className='w-2/3 md:w-1/2 text-xs text-justify text-tltwhite'>{props.subsubtext}</p>
+                <p className='w-2/3 md:w-1/2 text-xs text-justify text-tltwhite'>{props.subsubsubtext}</p>
         </div>
         </div>
 
@@ -29,6 +30,7 @@ BecomeATutorWidget.propTypes = {
     title: PropTypes.string.isRequired, 
     subtext: PropTypes.string.isRequired, 
     subsubtext: PropTypes.string.isRequired, 
+    subsubsubtext: PropTypes.string.isRequired, 
     herobtn: PropTypes.string.isRequired, 
     contCname: PropTypes.string.isRequired, 
     sectionCname: PropTypes.string.isRequired, 

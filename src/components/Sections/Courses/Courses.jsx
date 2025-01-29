@@ -8,9 +8,7 @@ import Coding from '../../../assets/images/Icons/coding.png'
 import Music from '../../../assets/images/Icons/music.png'
 import Languages from '../../../assets/images/Icons/planet-earth.png'
 import Nvr from '../../../assets/images/Icons/puzzle.png'
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react'
-
+import { motion } from 'framer-motion'
 
 const Courses = () => {
 
@@ -20,7 +18,7 @@ const Courses = () => {
     { name: 'Physics', imageSrc: Physics },
     { name: 'Chemistry', imageSrc: Chemistry },
     { name: 'Biology', imageSrc: Biology },
-    { name: 'Programming', imageSrc: Coding },
+    { name: 'Coding', imageSrc: Coding },
     { name: 'Music', imageSrc: Music },
     { name: 'Languages', imageSrc: Languages },
     { name: '11+ NVR/VR', imageSrc: Nvr },
@@ -33,7 +31,8 @@ const Courses = () => {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.5,  // Delay between the appearance of each child (course card)
+        staggerChildren: 0.7,  // Delay between the appearance of each child (course card)
+        // ease: easeOut,          // Animation effect
       },
     },
   };
@@ -46,17 +45,11 @@ const Courses = () => {
     show: {
       opacity: 1,
       y: 0,   // Moves to its final position
-      transition: {
-        duration: 0.5,  // You can tweak the timing here
-      },
     },
   };
 
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true }) // Animation will trigger once when in view
-
   return (
-    <section ref={ref} className='course_cont bg-tltgreen py-10'>
+    <section className='course_cont bg-tltgreen py-10'>
       {/* Heading */}
       <div className="text-center mb-8">
         <h2 className="text-tltorange text-center font-semibold text-xl">Our Courses</h2>
@@ -65,21 +58,21 @@ const Courses = () => {
       
       {/* Courses Grid */}
       <motion.div 
-      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-20"
-      variants={containerVariants}
-      initial="hidden"
-      animate="show">
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-20"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }} // Ensures the animation only triggers once
+      >
         {courses.map((course, index) => (
           <motion.div
-          key={index} 
-          variants={cardVariants}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: index * 0.4, duration: 0.5 }}>
+            key={index} 
+            variants={cardVariants}
+          >
             <CourseCard 
-            key={index}
-            imageSrc={course.imageSrc}
-            courseName={course.name}
-          />
+              imageSrc={course.imageSrc}
+              courseName={course.name}
+            />
           </motion.div>
         ))}
       </motion.div>

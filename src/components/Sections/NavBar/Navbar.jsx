@@ -3,7 +3,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import data from '../../menuitems.json'
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
-import Logo from '../../../assets/images/logo-wbg.jpg'
+import Logo from '../../../assets/images/Logo.png'
 const Navbar = () => {  
     const [isOpen, setIsOpen] = useState(false)
 
@@ -19,7 +19,7 @@ const Navbar = () => {
                     <img 
                     src={Logo} 
                     alt="The Light Tutors Logo" 
-                    className='w-24' /></Link>
+                    className='w-24 flex' /></Link>
                     
                 </div>
 
