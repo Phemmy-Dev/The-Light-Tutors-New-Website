@@ -61,10 +61,10 @@ const Testimonial = () => {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
             >
               <p className='text-gray-400 w-full text-left text-xs'>
-                I got feedback from Paul`s Science teacher. He got a reward as well. Thanks once again for the support and tuition that has helped Paul ease into Secondary School academics. He is doing remarkably well and sends his greetings.
+                Thank you so much. Teacher Daniel has been of immense support to Femi's preparations for GSCE and we would love to keep him for Femi's Alevels, as well as for our second son.
               </p>
               <div className="title text-left mt-2 text-sm">
-                <h4 className='font-semibold text-tltorange'>Mrs Soares</h4>
+                <h4 className='font-semibold text-tltorange'>Mrs Soyoye</h4>
                 <p className='text-gray-400'>Parent</p>
               </div>
             </motion.div>
