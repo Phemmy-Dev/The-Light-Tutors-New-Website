@@ -92,5 +92,42 @@
         padding: 10px 90px !important;
         border-radius: 8px;
     }
+
+    /* Mobile styles for hiring button */
+    .hiring-btn {
+        animation: glowOrange 2s ease-in-out infinite;
+        border-radius: 50px !important;
+        background-color: #fc8402 !important;
+        color: white !important;
+        font-weight: 700 !important;
+        padding: 15px 30px !important;
+    }
   }
-  
+
+/* Glowing orange animation for the hiring button */
+@keyframes glowOrange {
+    0%, 100% {
+        box-shadow: 0 0 5px #fc8402, 0 0 10px #fc8402, 0 0 15px #fc8402;
+        background-color: #fc8402;
+        color: white;
+    }
+    50% {
+        box-shadow: 0 0 20px #fc8402, 0 0 30px #fc8402, 0 0 40px #fc8402;
+        background-color: #ff9533;
+        color: white;
+    }
+}
+
+.hiring-btn {
+    animation: glowOrange 2s ease-in-out infinite;
+    border-radius: 50px !important;
+    background-color: #fc8402 !important;
+    color: white !important;
+    font-weight: 700 !important;
+}
+
+.hiring-btn:hover {
+    animation-play-state: paused;
+    background-color: #e6750a !important;
+    transform: scale(1.05);
+}

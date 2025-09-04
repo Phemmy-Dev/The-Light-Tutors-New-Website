@@ -30,53 +30,48 @@ import Tutorpic27 from '../../../assets/images/tutors/27.jpg'
 import Tutorpic28 from '../../../assets/images/tutors/28.jpg'
 import Tutorpic30 from '../../../assets/images/tutors/30.jpg'
 import Tutorpic31 from '../../../assets/images/tutors/31.jpg'
-import Tutorpic32 from '../../../assets/images/tutors/32.jpg'
 import Tutorpic33 from '../../../assets/images/tutors/33.jpg'
 import Tutorpic34 from '../../../assets/images/tutors/34.jpg'
 import Tutorpic35 from '../../../assets/images/tutors/35.jpg'
 import Tutorpic36 from '../../../assets/images/tutors/36.jpg'
 import Tutorpic37 from '../../../assets/images/tutors/37.jpg'
 import Tutorpic38 from '../../../assets/images/tutors/38.jpg'
-import Tutorpic39 from '../../../assets/images/tutors/39.jpg'
 import Tutorpic3 from '../../../assets/images/tutors/3.jpg'
 
 const MeetTheTeam = () => {
 
 
     const teamMembers = [
-        { name: "Joshua Oroge", title: "CEO/Founder", img: Tutorpic36 },
-        { name: "Rose Oroge", title: "Chief Operating Officer", img: Tutorpic5 },
-        { name: "Aaliyah Zemaiye", title: "Chief Operating Officer", img: Tutorpic17 },
-        { name: "Olamiji Onanuga", title: "HR & Admin Assistant", img: Tutorpic28 },
-        { name: "Erioluwa Oladeji", title: "HR Manager", img: Tutorpic7 },
-        { name: "Busayo Amadi", title: "Supervisor", img: Tutorpic6 },
-        { name: "Gideon Akintade", title: "Supervisor", img: Tutorpic23 },
-        { name: "Ese Emielu", title: "Social Media Admin", img: Tutorpic30 },
-        { name: "Oluwafemi Akinruntan", title: "Tutor & Technical Manager", img: Tutorpic26 },
-        {name: "Rasheed Adeoti", title: "Tutor & Graphics Designer", img: Tutorpic3 },
-        {name: "Dolapo Obasa", title: "Tutor", img: Tutorpic2 },
-        {name: "Emmanuel Oziegbe", title: "Tutor", img: Tutorpic4 },
-        {name: "Priscilla Lasisi", title: "English Tutor", img: Tutorpic27 },
-        {name: "Mercy Adams", title: "Tutor", img: Tutorpic15 },
-        {name: "James Opara", title: "Tutor", img: Tutorpic25},
-        {name: "Toyin Salami", title: "Coding Tutor", img: Tutorpic19 },
-        {name: "Abisola Adefila", title: "Science Tutor", img: Tutorpic16 },
-        {name: "Ayodeji Akinsanya", title: "Tutor", img: Tutorpic11 },
-        {name: "Blossom Adeyemi", title: "Tutor", img: Tutorpic1 },
-        {name: "Opemipo Ojeleye", title: "Tutor", img: Tutorpic39 },
-        {name: "Praise Aderinola", title: "Tutor", img: Tutorpic34 },
-        {name: "Kemisola David", title: "Tutor", img: Tutorpic37 },
-        {name: "Olumide Adisa", title: "Tutor", img: Tutorpic38 },
-        {name: "Iseoluwa Akinduko", title: "Tutor", img: Tutorpic35 },
-        {name: "Seyi Afolayan", title: "Tutor", img: Tutorpic32 },
-        {name: "Faith Jimoh", title: "Tutor", img: Tutorpic33 },
-        {name: "Adeleke Abidemi", title: "Yoruba Tutor", img: Tutorpic9 },
-        {name: "Dongmo Bilson", title: "French Tutor", img: Tutorpic8 },
-        {name: "Afolayan Opeyemi", title: "Tutor", img: Tutorpic18 },
-        {name: "Daniel Babalola", title: "Tutor", img: Tutorpic21 },
-        {name: "Jason Owa", title: "Tutor", img: Tutorpic22 },
-        {name: "Noah Ige", title: "Tutor", img: Tutorpic31 },
-        ];
+        { id: 1, name: "Joshua Oroge", title: "CEO/Founder", img: Tutorpic36 },
+        { id: 2, name: "Rose Oroge", title: "Chief Operating Officer", img: Tutorpic5 },
+        { id: 3, name: "Aaliyah Zemaiye", title: "Chief Marketing Officer", img: Tutorpic17 },
+        { id: 4, name: "Erioluwa Oladeji", title: "HR Manager", img: Tutorpic7 },
+        { id: 14, name: "Priscilla Lasisi", title: "HR/Tutor", img: Tutorpic27 },
+        { id: 5, name: "Olamiji Onanuga", title: "HR & Admin Assistant", img: Tutorpic28 },
+        { id: 6, name: "Busayo Amadi", title: "Supervisor", img: Tutorpic6 },
+        { id: 7, name: "Gideon Akintade", title: "Supervisor", img: Tutorpic23 },
+        { id: 20, name: "Blossom Adeyemi", title: "Supervisor", img: Tutorpic1 },
+        // { id: 8, name: "Ese Emielu", title: "Social Media Admin", img: Tutorpic30 },
+        { id: 9, name: "Oluwafemi Akinruntan", title: "Tutor & Technical Manager", img: Tutorpic26 },
+        { id: 10, name: "Iseoluwa Akinduko", title: "Counselor", img: Tutorpic35 },
+        // { id: 11, name: "Rasheed Adeoti", title: "Tutor", img: Tutorpic3 },
+        // { id: 12, name: "Dolapo Obasa", title: "Tutor", img: Tutorpic2 },
+        { id: 13, name: "Emmanuel Oziegbe", title: "Tutor", img: Tutorpic4 },
+        { id: 15, name: "Mercy Adams", title: "Tutor", img: Tutorpic15 },
+        { id: 16, name: "James Opara", title: "Tutor", img: Tutorpic25 },
+        { id: 17, name: "Toyin Salami", title: "Coding Tutor", img: Tutorpic19 },
+        { id: 18, name: "Abisola Adefila", title: "Science Tutor", img: Tutorpic16 },
+        // { id: 19, name: "Ayodeji Akinsanya", title: "Tutor", img: Tutorpic11 },
+        { id: 22, name: "Praise Aderinola", title: "Tutor", img: Tutorpic34 },
+        { id: 23, name: "Kemisola David", title: "Tutor", img: Tutorpic37 },
+        { id: 24, name: "Olumide Adisa", title: "Tutor", img: Tutorpic38 },
+        { id: 26, name: "Faith Jimoh", title: "Tutor", img: Tutorpic33 },
+        { id: 27, name: "Adeleke Abidemi", title: "Yoruba Tutor", img: Tutorpic9 },
+        { id: 28, name: "Dongmo Bilson", title: "French Tutor", img: Tutorpic8 },
+        { id: 29, name: "Afolayan Opeyemi", title: "Tutor", img: Tutorpic18 },
+        { id: 30, name: "Daniel Babalola", title: "Tutor", img: Tutorpic21 },
+        { id: 32, name: "Noah Ige", title: "Tutor", img: Tutorpic31 },
+    ];
 
   return (
     <div>
@@ -110,7 +105,7 @@ const MeetTheTeam = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
                 >
-                We are a group of passionate individuals working together to achieve a common goal. Get to know the faces behind our success.
+                We are a group of young passionate individuals working together to achieve a common goal. Get to know the faces behind our success.
                 </motion.p>
         </motion.div>
 
@@ -133,16 +128,14 @@ const MeetTheTeam = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             >
             Our Team
-            </motion.h2>      
-                {/* <p className="w-full text-center md:text-left md:w-2/5 text-gray-400 mb-10">
-                    We are a group of passionate individuals working together to achieve a common goal. Get to know the faces behind out success.
-                </p> */}
+            </motion.h2>  
 
                 {/* Meet the team Boxes */}
-                <div className="box_cont flex gap-5 flex-wrap justify-center items-center">
-                {teamMembers.map((member, index) => (
+                <div className="box_cont flex gap-5 flex-wrap justify-around items-center">
+                {teamMembers.map((member) => (
                     <TeamBox
-                        key={index}
+                        key={member.id}
+                        id={member.id}         // Unique ID for each team member
                         img={member.img}       // Image for each team member
                         name={member.name}     // Name of the team member
                         title={member.title}   // Title/Role of the team member

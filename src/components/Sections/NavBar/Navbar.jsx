@@ -13,13 +13,13 @@ const Navbar = () => {
     }
     return (
     <>
-     <nav className='nav_bar flex justify-between items-center py-1 px-5 rounded-xl w-11/12 fixed top-5 left-1/2 transform -translate-x-1/2 z-50 bg-tltwhite'>
+     <nav className='nav_bar flex justify-between items-center py-4 px-5 rounded-xl w-11/12 fixed top-5 left-1/2 transform -translate-x-1/2 z-50 bg-tltwhite'>
                 <div className="logo">
                     <Link to={'/'} className='decoration-none'>
                     <img 
                     src={Logo} 
                     alt="The Light Tutors Logo" 
-                    className='w-24 flex' /></Link>
+                    className='w-44 flex' /></Link>
                     
                 </div>
 

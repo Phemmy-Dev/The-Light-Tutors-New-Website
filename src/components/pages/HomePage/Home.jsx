@@ -1,5 +1,5 @@
 import './Home.css'
-import bgImg2 from '../../../assets/images/heroBg2.jpg'
+import bgImg3 from '../../../assets/images/heroBg3.jpg'
 import Navbar from '../../Sections/NavBar/Navbar'
 import Hero from '../../Sections/Hero/Hero'
 import Counter from '../../widgets/Counter/Counter'
@@ -14,7 +14,7 @@ const Home = () => {
     <div>
       <Navbar />
 
-      <Hero title='Quality tutoring through 1-on-1 Online Classes' text='Get one of our skilled and highly qualified tutors.' herobtn='Sign Up' contCname='hero_cont' sectionCname='hero_text' heroImg={bgImg2} />
+      <Hero title='Quality tutoring through 1-on-1 Online Classes' text='Get one of our skilled and highly qualified tutors.' herobtn='Sign Up' contCname='hero_cont' sectionCname='hero_text' heroImg={bgImg3} />
       <Counter/>
       {/* <div className=" py-10 px-6 sm:px-12 lg:px-24">
       <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">

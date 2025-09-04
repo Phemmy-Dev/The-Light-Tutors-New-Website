@@ -10,7 +10,7 @@ const Counter = () => {
         <div className="students_count border-r-2 gap-4 border-gray-400 w-1/3  flex h-20 items-center justify-center font-semibold">
         <FaUsers className='w-16 h-16 bg-slate-50 px-2 text-tltorange rounded-lg shadow-inner hidden lg:block'/>
         <div>
-        <CountUp start={0} end={55} duration={5} delay={3} suffix="+"/>
+        <CountUp start={0} end={100} duration={5} delay={3} suffix="+"/>
         <p className='text-sm text-tltorange'>Students</p>
         </div>
         </div>
@@ -18,7 +18,7 @@ const Counter = () => {
         <div className="tutors_count border-r-2 border-gray-400 w-1/3 flex gap-4 h-20 items-center justify-center font-semibold">
         <GiTeacher className='w-16 h-16 bg-slate-50 px-2 text-tltorange rounded-lg shadow-inner hidden lg:block'/>
         <div>
-        <CountUp start={0} end={20} duration={5} delay={3} suffix="+"/>
+        <CountUp start={0} end={30} duration={5} delay={3} suffix="+"/>
         <p className='text-sm text-tltorange'>Tutors</p>
         </div>
         </div>

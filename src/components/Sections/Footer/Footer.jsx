@@ -1,4 +1,4 @@
-import Logo from '../../../assets/images/logo-wbg.jpg'
+import Logo from '../../../assets/images/Logo.png'
 import { FaWhatsapp } from "react-icons/fa";
 import { FaLinkedinIn, FaInstagram , FaXTwitter  } from "react-icons/fa6";
 import { MdOutlineMail } from "react-icons/md";
@@ -9,7 +9,7 @@ import { motion } from 'framer-motion'
 
 const Footer = () => {
   return (
-    <div className="mt-20 bg-tltgreen py-10 px-8 ">
+    <div className="mt-20 mb-0  w-full bottom-0 bg-tltgreen py-10 px-8 ">
         <div className="footer_upper flex flex-col flex-wrap md:flex-nowrap md:flex-row justify-between gap-10 items-center md:mx-12">
         {/* Footer Logo and Social Links */}
         <motion.div
@@ -19,7 +19,7 @@ const Footer = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <div className="logo">
-            <img src={Logo} alt="The Light Tutors Logo" className="w-24 rounded-lg text-center" />
+            <img src={Logo} alt="The Light Tutors Logo" className="w-44 rounded-lg text-center" />
           </div>
           <div className="text text-gray-400 w-5/6 text-sm"></div>
           <div className="social_links flex gap-3">
@@ -67,7 +67,7 @@ const Footer = () => {
                   visible: { opacity: 1, y: 0 },
                 }}
               >
-                <Link to={item.path} className={item.cName}>
+                <Link to={item.path} className={item.cName.replace('hiring-btn', 'nav-links').trim()}>
                   {item.title}
                 </Link>
               </motion.li>

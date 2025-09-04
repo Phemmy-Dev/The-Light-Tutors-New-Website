@@ -15,12 +15,12 @@
         "cName": "nav-links"
     },
     {
-        "title": "Become a Tutor",
+        "title": "We're Hiring",
         "path": "/become-a-tutor",
-        "cName": "nav-links"
+        "cName": "nav-links hiring-btn"
     },
     {
-        "title": "FAQ ",
+        "title": "FAQ",
         "path": "/frequently-asked-questions",
         "cName": "nav-links"
     }

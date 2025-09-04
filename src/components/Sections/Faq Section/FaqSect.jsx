@@ -6,7 +6,7 @@ const FaqSect = () => {
   const faqItems = [
     {
       title: "What subjects and grade levels do you offer tutoring for?",
-      answer: "We offer tuition in Mathematics, Further Mathematics, English Language, English Literature, Sciences, Biology, Chemistry, Physics, Geography, Computer Science, Programming Languages (HTML, CSS, Java, C+, C#, Scratch, etc), language courses (French and Yoruba), to mainly primary and secondary school students.",
+      answer: "We offer tuition in Mathematics, Further Mathematics, English Language, English Literature, Sciences, Biology, Chemistry, Physics, Geography, Computer Science, Coding (HTML, CSS, Java, C+, C#, Python, Scratch, etc), language courses (French and Yoruba), to mainly primary and secondary school students.",
     },
     {
       title: "What technology platform and tools do you use to teach?",
@@ -32,10 +32,10 @@ const FaqSect = () => {
       title: "What materials/curriculum are used to teach?",
       answer: "Parents are advised to send their children’s school curriculum before lessons begin. However, in the event parents are unable to provide that, tutors generally use the open-access government education curriculum, e.g. Gov.UK National Curriculum.",
     },
-    {
-      title: "Do you teach extracurricular subjects?",
-      answer: "Currently, we do not teach extracurricular activities. However, we hold extracurricular virtual events for our students, named camps. We usually have these events quarterly in a year. Each camp comprises fun-filled educational activities for our students. We also teach some language and programming subjects.",
-    },
+    // {
+    //   title: "Do you teach extracurricular subjects?",
+    //   answer: "Currently, we do not teach extracurricular activities. However, we hold extracurricular virtual events for our students, named camps. We usually have these events quarterly in a year. Each camp comprises fun-filled educational activities for our students. We also teach some language and programming subjects.",
+    // },
   ];
 
   return (

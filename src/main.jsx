@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 // import App from './App.jsx'
 import Home from './components/pages/HomePage/Home.jsx'
 import AboutPage from './components/pages/AboutPage/AboutPage.jsx'
@@ -7,7 +8,7 @@ import MeetTheTeam from './components/pages/MeetTheTeam/MeetTheTeam.jsx'
 import Becomeatutor from './components/pages/BecomeATutor/Becomeatutor.jsx'
 import Faq from './components/pages/Faq/faq.jsx'
 import PageNotFound from './components/pages/errorPage/PageNotFound.jsx'
-import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import TutorProfile from './components/pages/TutorProfile/TutorProfile.jsx'
 import './index.css'
 
 
@@ -15,7 +16,6 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Home />,
-      errorElement: <h1>404 Page Not Found</h1>,
   },
   {
     path: '/about',
@@ -34,6 +34,10 @@ const router = createBrowserRouter([
     element: <Faq/>,
   },
   {
+    path: '/meet-our-team/:id', // Dynamic route for tutor profiles
+    element: <TutorProfile />,
+  },
+  {
     path: '*',
     element: <PageNotFound />,
   },
@@ -42,4 +46,4 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
   </StrictMode>,
-)
+) 
