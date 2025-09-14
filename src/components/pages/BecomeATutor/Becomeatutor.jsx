@@ -215,8 +215,7 @@ const Becomeatutor = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
           >
-            We are looking for skilled and passionate language (Spanish) tutors to join our team, conducting live online tutoring sessions for students in the UK Years 3 to 11 and A’levels.
-
+            We are looking for skilled and passionate tutors to join our team, conducting live online tutoring sessions for students in the UK Years 3 to 11 and A’levels.
           </motion.p>
 
           <motion.h2
@@ -263,6 +262,53 @@ const Becomeatutor = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 1.0 }}
+          >
+            Subjects
+          </motion.h2>
+          <motion.div
+            className="mb-6 flex flex-wrap gap-2 justify-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: { staggerChildren: 0.1, delayChildren: 1.0 },
+              },
+            }}
+          >
+            {[
+              "English", "Mathematics", "Physics", "Verbal & Non-verbal Reasoning",
+              "Chemistry", "Biology", "Basic Science", "Spanish", "Coding"
+            ].map((subject, index) => (
+              <motion.span
+                key={index}
+                className="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-shadow duration-200"
+                variants={{
+                  hidden: { opacity: 0, scale: 0.8 },
+                  visible: { opacity: 1, scale: 1 },
+                }}
+                whileHover={{ scale: 1.05 }}
+              >
+                {subject}
+              </motion.span>
+            ))}
+          </motion.div>
+          <motion.p
+            className="text-center mb-6 text-sm italic opacity-90"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 1.2 }}
+          >
+            (Computer Studies & Geography are a plus)
+          </motion.p>
+
+          <motion.h2
+            className="text-2xl font-bold mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 1.4 }}
           >
             Requirements
           </motion.h2>
@@ -350,7 +396,7 @@ const Becomeatutor = () => {
             // transition={{ duration: 0.8, ease: "easeOut", delay: 1.8 }}
           >
             <a
-              href="https://forms.gle/mAYpUmGC81Mt3maL9"
+              href="https://www.careers-page.com/thelightutors"
               target="_blank"
               className="px-6 py-3 bg-white text-black font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition duration-200"
             >
