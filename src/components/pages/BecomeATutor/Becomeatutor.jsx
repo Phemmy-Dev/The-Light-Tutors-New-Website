@@ -326,8 +326,8 @@ const Becomeatutor = () => {
             }}
           >
             {[
-              "Educational Background: WASSCE and/or B.Sc. in Education or relevantLanguage or equivalent qualification.",
-              "Experience: Prior experience in teaching Language subjects, preferably online.",
+              "Educational Background: Possesses WASSCE and/or a Bachelor’s Degree in Education or its equivalent.",
+              "Experience: Prior experience in teaching stated subjects, preferably online.",
               "Technical Skills: Proficiency in using virtual tools and platforms.",
               "Soft Skills: Excellent communication, adaptability, patience, and empathy.",
               "Fluent in English.",
