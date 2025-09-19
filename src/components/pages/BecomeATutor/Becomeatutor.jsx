@@ -30,7 +30,7 @@ const Becomeatutor = () => {
     <div>
       <Navbar />
       <BecomeATutorWidget  title='Join The Light Tutors Team' 
-      subtext='Thank you for your interest in joining us. We`re currently not hiring but you can feel free to check back from time to time for future opportunities.'
+      subtext='Thank you for your interest in joining us. We are currently not hiring, but please check back from time to time for future opportunities.'
       subsubtext="" 
       batImg={teamImg2} />
 
@@ -195,7 +195,7 @@ const Becomeatutor = () => {
         </motion.div> 
 
         {/*  Tutor Position Details */}
-          <motion.div
+          {/* <motion.div
           className="bg-gradient-to-r from-tltgreen to-teal-600 text-white p-8 rounded-lg shadow-lg mx-10 mt-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -396,14 +396,14 @@ const Becomeatutor = () => {
             // transition={{ duration: 0.8, ease: "easeOut", delay: 1.8 }}
           >
             <a
-              href="https://www.careers-page.com/thelightutors"
+              href="https://forms.gle/zeyCGZzTsxK5RwebA"
               target="_blank"
               className="px-6 py-3 bg-white text-black font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition duration-200"
             >
               Apply Now
             </a>
           </div>
-        </motion.div> 
+        </motion.div>  */}
       </div>
 
       <Footer />
