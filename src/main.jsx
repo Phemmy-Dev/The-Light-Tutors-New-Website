@@ -7,6 +7,7 @@ import AboutPage from './components/pages/AboutPage/AboutPage.jsx'
 import MeetTheTeam from './components/pages/MeetTheTeam/MeetTheTeam.jsx'
 import Becomeatutor from './components/pages/BecomeATutor/Becomeatutor.jsx'
 import Faq from './components/pages/Faq/faq.jsx'
+import CsrPage from './components/pages/CSR/CsrPage.jsx'
 import PageNotFound from './components/pages/errorPage/PageNotFound.jsx'
 import TutorProfile from './components/pages/TutorProfile/TutorProfile.jsx'
 import './index.css'
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: '/frequently-asked-questions',
     element: <Faq/>,
+  },
+  {
+    path: '/csr',
+    element: <CsrPage />,
   },
   {
     path: '/meet-our-team/:id', // Dynamic route for tutor profiles

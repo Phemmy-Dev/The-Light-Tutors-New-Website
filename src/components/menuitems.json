@@ -23,5 +23,10 @@
         "title": "FAQ",
         "path": "/frequently-asked-questions",
         "cName": "nav-links"
+    },
+    {
+        "title": "TLT CSR",
+        "path": "/csr",
+        "cName": "nav-links"
     }
     ]
