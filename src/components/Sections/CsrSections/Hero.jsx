@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import defaultHeroImg from '../../../assets/images/csrhero.jpg'
 import { motion } from 'framer-motion'
 
 const Hero = ({ heroImg }) => {
@@ -33,7 +34,7 @@ const Hero = ({ heroImg }) => {
     <div className="hero_cont relative">
       {/* Background Image */}
       <div className="bg_img">
-        {heroImg && <img src={heroImg} alt="CSR Hero Background" />}
+        <img src={heroImg || defaultHeroImg} alt="CSR Hero Background" />
       </div>
 
       {/* Main Hero Content */}
@@ -47,7 +48,7 @@ const Hero = ({ heroImg }) => {
           Impacting Education, Empowering Communities
         </h1>
         <p>
-          Since inception, The Light Tutors has supported learners through 
+          The Light Tutors has supported learners through 
           exam sponsorships, outreach programs, mentorship initiatives, 
           and skill-based training.
         </p>

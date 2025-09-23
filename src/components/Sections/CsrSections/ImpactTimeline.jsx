@@ -51,6 +51,15 @@ const ImpactTimeline = () => {
         summary: "Comprehensive project combining school infrastructure improvements with sustainable feeding programs.",
         impactHighlights: "Target: 200+ students | 3 schools",
         status: "upcoming"
+      },
+      {
+        title: "HireGround",
+        date: "December 2025",
+        category: "Career & Skills Development",
+        pillarIcon: <FaBriefcase className="text-tltorange" />,
+        summary: "A career transformation event, designed to bridge the gap between talent and opportunity. Born from the vision of creating a platform where career dreams become reality, we bring together industry leaders, job seekers, career changers, and entrepreneurs under one roof.",
+        impactHighlights: "Target: 1000+ people",
+        status: "upcoming"
       }
     ],
     2024: [
@@ -207,10 +216,10 @@ const ImpactTimeline = () => {
               </div>
 
               {/* CTA Button */}
-              <button className="w-full bg-tltorange text-white py-2 px-4 rounded-lg font-semibold hover:bg-tltorange/90 transition-colors duration-300 flex items-center justify-center gap-2">
+              {/* <button className="w-full bg-tltorange text-white py-2 px-4 rounded-lg font-semibold hover:bg-tltorange/90 transition-colors duration-300 flex items-center justify-center gap-2">
                 <FaEye className="text-sm" />
                 Read More
-              </button>
+              </button> */}
             </div>
           </motion.div>
         ))}
