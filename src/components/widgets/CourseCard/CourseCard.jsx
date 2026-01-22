@@ -1,25 +1,30 @@
 import { motion } from 'framer-motion';
 import proptypes from 'prop-types';
 
-const CourseCard = ({ imageSrc, courseName }) => {
+const CourseCard = ({ imageSrc, courseName, description }) => {
   return (
-    <div>
+    <div className="h-full">
         <motion.div
-        className="flex flex-row items-center justify-center bg-white shadow-lg  py-2 rounded-lg gap-2 md:gap-10 "
-        whileHover={{ scale: 1.05 }}
-        transition={{ duration: 0.3 }}
+        className="flex flex-col items-center justify-center bg-white shadow-lg hover:shadow-2xl p-3 sm:p-4 rounded-xl gap-2 sm:gap-3 h-full min-h-[120px] sm:min-h-[140px] transition-all duration-300"
+        whileHover={{ scale: 1.03, y: -5 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
         >
             {/* Course Icon Image */}
-           <div className=' w-1/5 md:w-4/12 flex items-center  justify-center'>
+           <div className='flex items-center justify-center bg-tltorange/5 p-2 sm:p-3 rounded-full'>
            <img 
                 src={imageSrc} 
                 alt={courseName} 
-                className="w-6 h-6 md:w-10 md:h-10 object-contain "  
+                className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain"  
             />
            </div>
-           <div className='w-1/2'>
+           
+           <div className='text-center flex-1 flex flex-col justify-center'>
             {/* Course Name */}
-            <h3 className=" text-xs md:text-xl font-bold ">{courseName}</h3>
+            <h3 className="text-sm sm:text-base md:text-lg font-bold text-tltgreen">{courseName}</h3>
+            {/* Description */}
+            {description && (
+              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mt-1">{description}</p>
+            )}
            </div>
            
         </motion.div>
@@ -29,7 +34,8 @@ const CourseCard = ({ imageSrc, courseName }) => {
 
 CourseCard.propTypes = {
     imageSrc: proptypes.node,
-    courseName: proptypes.string
+    courseName: proptypes.string,
+    description: proptypes.string
 }
 
 export default CourseCard

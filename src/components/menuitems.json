@@ -15,8 +15,18 @@
         "cName": "nav-links"
     },
     {
-        "title": "Become a Tutor",
-        "path": "/become-a-tutor",
+        "title": "Subjects",
+        "path": "/#subjects",
+        "cName": "nav-links"
+    },
+    {
+        "title": "Testimonials",
+        "path": "/#testimonials",
+        "cName": "nav-links"
+    },
+    {
+        "title": "CSR",
+        "path": "/csr",
         "cName": "nav-links"
     },
     {
@@ -25,8 +35,8 @@
         "cName": "nav-links"
     },
     {
-        "title": "TLT CSR",
-        "path": "/csr",
+        "title": "Become a Tutor",
+        "path": "/become-a-tutor",
         "cName": "nav-links"
     }
-    ]
+]

@@ -56,15 +56,16 @@ const WhyChooseUs = () => {
     };
 
     return (
-        <div className="flex flex-col lg:flex-row justify-between items-center px-6 lg:px-20 my-20">
+        <div className="flex flex-col lg:flex-row justify-between items-center px-4 sm:px-6 md:px-10 lg:px-20 py-12 md:py-16 lg:py-20 gap-8 lg:gap-12">
 
             {/* Left Section */}
-            <div className="w-full mb-10 md:mb-0 lg:w-2/5 flex flex-col gap-6">
+            <div className="w-full lg:w-2/5 flex flex-col gap-4 md:gap-6">
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="text-3xl font-bold"
+                    viewport={{ once: true }}
+                    className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight"
                 >
                     This is Why We are <span className="text-tltorange">different</span> from Others
                 </motion.h1>
@@ -72,27 +73,29 @@ const WhyChooseUs = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-                    className="text-gray-400 text-sm"
+                    viewport={{ once: true }}
+                    className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed"
                 >
                     At The Light Tutors, we stand out because of our commitment to quality, personalized learning, and results-driven education. Our team of experienced tutors is dedicated to helping your child succeed through flexible, one-on-one classes designed around their unique needs. <br /><br />Whether you’re seeking a tutor for primary school or advanced subjects, we ensure that every student receives top-tier instruction with excellent value for your investment.
                 </motion.p>
                 <motion.img
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.7, ease: "easeOut", delay: 0.7 }}
+                    transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
+                    viewport={{ once: true }}
                     src={whychooseusbg}
-                    alt=""
-                    className="hidden lg:block rounded-lg w-4/5"
+                    alt="Why Choose Us"
+                    className="hidden lg:block rounded-xl w-full max-w-md shadow-xl"
                 />
             </div>
 
             {/* Right Section - Grid of ChooseBoxes */}
             <motion.div
-                className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-6 w-full px-0 md:px-0 lg:w-1/2 place-items-center"
+                className="grid grid-cols-2 sm:grid-cols-2 gap-4 md:gap-6 w-full lg:w-1/2"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true }} // Ensures animation only triggers once
+                viewport={{ once: true }}
             >
                 {chooseData.map((item, index) => (
                     <motion.div

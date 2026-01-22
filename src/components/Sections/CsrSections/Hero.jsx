@@ -68,3 +68,5 @@ const Hero = ({ heroImg }) => {
 }
 
 export default Hero
+
+

@@ -4,39 +4,42 @@ import { motion } from 'framer-motion';
 const Cta = () => {
   return (
     <div>
-      <div className="cta_cont bg-tltgreen py-10">
-        <div className="cta_content flex items-center justify-around gap-0 md:px-28">
+      <div className="cta_cont bg-tltgreen py-12 md:py-16 lg:py-20">
+        <div className="cta_content flex flex-col md:flex-row items-center justify-center md:justify-around gap-8 md:gap-6 px-4 sm:px-6 md:px-10 lg:px-20 max-w-7xl mx-auto">
 
           {/* Cta Image */}
           <motion.div
-            className="cta-img w-2/5 hidden md:block"
-            initial={{ opacity: 0, x: -50 }} // Start off-screen to the left
-            whileInView={{ opacity: 1, x: 0 }} // Slide in to the final position
+            className="cta-img w-full md:w-2/5 lg:w-1/2"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
           >
-            <img src={CtaImg} alt="" className='h-1/3 w-3/4 rounded-2xl' />
+            <img src={CtaImg} alt="Student Learning" className='w-full h-auto rounded-2xl shadow-2xl object-cover max-w-md md:max-w-none mx-auto' />
           </motion.div>
 
           {/* Cta Text */}
           <motion.div
-            className="cta-text px-5 md:px-0 w-full md:w-2/5 flex flex-col gap-7"
-            initial={{ opacity: 0, y: 50 }} // Start off-screen below
-            whileInView={{ opacity: 1, y: 0 }} // Slide up to the final position
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }} // Slight delay for staggered effect
+            className="cta-text w-full md:w-3/5 lg:w-1/2 flex flex-col gap-4 md:gap-6 text-center md:text-left"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
           >
-            <h2 className='text-3xl capitalize font-bold text-white'>
-              Every child deserves the opportunity to learn.
+            <h2 className='text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight'>
+              We Believe in Your Child's Potential. Let's Unlock It Together.
             </h2>
-            <p className='text-tltwhite'>
-              We understand your needs, your experience with us is customized to better help us work with you towards achieving your personal goals.
+            <p className='text-sm sm:text-base md:text-lg text-tltwhite leading-relaxed'>
+              Take the first step without any risk. See for yourself how our personalized approach can transform your child's learning experience, absolutely free.
             </p>
             <motion.a
               href="https://api.whatsapp.com/send?phone=2348153418503"
-              whileHover={{ scale: 1.05 }} // Slight scale-up on hover
-              whileTap={{ scale: 0.95 }} // Slight scale-down on click
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block"
             >
-              <button className='bg-tltorange text-tltwhite hover:bg-transparent font-bold border-2 border-tltorange transition ease-in-out duration-300 w-48 px-5 py-3 rounded-full'>
-                Get started
+              <button className='bg-tltorange text-white hover:bg-white hover:text-tltgreen font-bold border-2 border-tltorange transition ease-in-out duration-300 w-full md:w-auto px-6 sm:px-8 py-3 md:py-4 rounded-full text-sm sm:text-base md:text-lg shadow-lg hover:shadow-xl'>
+                Find My Child's Tutor
               </button>
             </motion.a>
           </motion.div>

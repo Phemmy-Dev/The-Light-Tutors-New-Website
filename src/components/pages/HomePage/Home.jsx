@@ -14,7 +14,7 @@ const Home = () => {
     <div>
       <Navbar />
 
-      <Hero title='Quality tutoring through 1-on-1 Online Classes' text='Get one of our skilled and highly qualified tutors.' herobtn='Sign Up' contCname='hero_cont' sectionCname='hero_text' heroImg={bgImg3} />
+      <Hero title='Tired of Watching Your Child Struggle Alone?' text="We provide expert 1-on-1 tutoring that transforms frustration into confidence and confusion into aha moments guaranteed." herobtn="Find Your Child's Tutor" contCname='hero_cont' sectionCname='hero_text' heroImg={bgImg3} />
       <Counter/>
       {/* <div className=" py-10 px-6 sm:px-12 lg:px-24">
       <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">

@@ -258,7 +258,7 @@ const AboutPage = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
-          Our trained tutors are based in Africa and our Students are based in different countries, hence our services are provided remotely.
+          At The Light Tutors, our highly trained tutors are based in Africa, while our students span across multiple countries — a truly global connection powered by technology. All our lessons are delivered remotely, making world-class education accessible from the comfort of your home.
         </motion.p>
         <motion.p
           className="text-xs md:text-sm mb-4 text-justify"
@@ -266,7 +266,7 @@ const AboutPage = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
         >
-          We use online teaching and learning. The minimum requirements for students to be admitted is to have access to a computer, webcam, good internet, and the desire to achieve in a non-traditional classroom. Learners say that the online environment makes it easier to incorporate education into their hectic schedules.
+          To get started, all a student needs is a computer, a webcam, a reliable internet connection, and the determination to succeed beyond the limits of a traditional classroom. Parents and learners alike tell us how our flexible online environment allows them to fit quality education seamlessly into their busy lives.
         </motion.p>
         <motion.p
           className="text-xs md:text-sm text-justify"
@@ -274,7 +274,7 @@ const AboutPage = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
         >
-          For many of today's students, the opportunity to access a course from any computer with internet connectivity, 24 hours a day, seven days a week, is a huge plus.
+          With 24/7 access from any computer with internet connectivity, learning no longer has to compete with schedules — it becomes part of everyday life. For today’s students, that flexibility isn’t just a convenience; it’s a game-changer.
         </motion.p>
       </motion.div>
 

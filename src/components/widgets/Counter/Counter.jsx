@@ -1,35 +1,55 @@
 import CountUp from 'react-countup';
-import { FaUsers } from "react-icons/fa6";
+import { FaUsers, FaStar } from "react-icons/fa6";
 import { GiTeacher } from "react-icons/gi";
 import { GiWorld } from "react-icons/gi";
+import { BsGraphUpArrow } from "react-icons/bs";
 
 
 const Counter = () => {
   return (
-    <div className='flex gap-1 items-center justify-around text-black mx-3 text-xs md:text-2xl bg-tltwhite shadow-2xl h-28 mt-5 md:mt-10 md:mx-10 rounded-full '>
-        <div className="students_count border-r-2 gap-4 border-gray-400 w-1/3  flex h-20 items-center justify-center font-semibold">
-        <FaUsers className='w-16 h-16 bg-slate-50 px-2 text-tltorange rounded-lg shadow-inner hidden lg:block'/>
-        <div>
-        <CountUp start={0} end={100} duration={5} delay={3} suffix="+"/>
-        <p className='text-sm text-tltorange'>Students</p>
-        </div>
+    <div className="py-12 md:py-16 bg-white">
+      {/* Headline */}
+      <h2 className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-tltgreen mb-8 md:mb-12 px-4">
+        Join Thousands of Parents Who've Found Their Solution
+      </h2>
+      
+      {/* Stats Container - Mobile: Stack vertically, Tablet+: Horizontal */}
+      <div className='flex flex-col md:flex-row gap-6 md:gap-1 items-center justify-center md:justify-around text-black mx-4 max-w-6xl lg:mx-auto'>
+        
+        {/* Stat 1 */}
+        <div className="students_count w-full md:w-1/3 md:border-r-2 md:border-gray-400 flex flex-col md:flex-row gap-3 md:gap-4 items-center justify-center p-6 md:p-4 bg-white md:bg-transparent rounded-2xl md:rounded-none shadow-lg md:shadow-none">
+          <FaUsers className='w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-tltorange/10 p-3 text-tltorange rounded-xl'/>
+          <div className='text-center md:text-left'>
+            <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-tltgreen">
+              <CountUp start={0} end={300} duration={3} delay={0.5} suffix="+"/>
+            </div>
+            <p className='text-xs sm:text-sm md:text-base text-gray-600 mt-1 max-w-[200px]'>Students who've boosted their confidence</p>
+          </div>
         </div>
 
-        <div className="tutors_count border-r-2 border-gray-400 w-1/3 flex gap-4 h-20 items-center justify-center font-semibold">
-        <GiTeacher className='w-16 h-16 bg-slate-50 px-2 text-tltorange rounded-lg shadow-inner hidden lg:block'/>
-        <div>
-        <CountUp start={0} end={30} duration={5} delay={3} suffix="+"/>
-        <p className='text-sm text-tltorange'>Tutors</p>
-        </div>
+        {/* Stat 2 */}
+        <div className="tutors_count w-full md:w-1/3 md:border-r-2 md:border-gray-400 flex flex-col md:flex-row gap-3 md:gap-4 items-center justify-center p-6 md:p-4 bg-white md:bg-transparent rounded-2xl md:rounded-none shadow-lg md:shadow-none">
+          <FaStar className='w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-tltorange/10 p-3 text-tltorange rounded-xl'/>
+          <div className='text-center md:text-left'>
+            <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-tltgreen flex items-center justify-center md:justify-start gap-1">
+              <CountUp start={0} end={4.9} duration={3} delay={0.5} decimals={1}/>
+              <span className="text-2xl md:text-3xl">/5</span>
+            </div>
+            <p className='text-xs sm:text-sm md:text-base text-gray-600 mt-1 max-w-[200px]'>Rated by parents for patience & expertise</p>
+          </div>
         </div>
 
-        <div className="countries_count w-1/3  flex gap-4 h-20 items-center justify-center font-semibold">
-        <GiWorld className='w-16 h-16 bg-slate-50 px-2 text-tltorange rounded-lg shadow-inner hidden lg:block'/>
-        <div>
-        <CountUp start={0} end={5} duration={5} delay={3} suffix="+"/>
-        <p className='text-sm text-tltorange'>Countries</p>
+        {/* Stat 3 */}
+        <div className="countries_count w-full md:w-1/3 flex flex-col md:flex-row gap-3 md:gap-4 items-center justify-center p-6 md:p-4 bg-white md:bg-transparent rounded-2xl md:rounded-none shadow-lg md:shadow-none">
+          <BsGraphUpArrow className='w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-tltorange/10 p-3 text-tltorange rounded-xl'/>
+          <div className='text-center md:text-left'>
+            <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-tltgreen">
+              <CountUp start={0} end={96} duration={3} delay={0.5} suffix="%"/>
+            </div>
+            <p className='text-xs sm:text-sm md:text-base text-gray-600 mt-1 max-w-[200px]'>Of parents see progress in their first month</p>
+          </div>
         </div>
-        </div>
+      </div>
     </div>
   )
 }

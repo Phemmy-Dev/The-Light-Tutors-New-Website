@@ -29,7 +29,7 @@ const Navbar = () => {
                 </div>
 
                 <div className={`nav-items  ${isOpen ? 'active' : ''}`}>
-                    <ul className='flex list-none gap-2 justify-between items-center'>
+                    <ul className='flex list-none gap-1 justify-between items-center'>
                         {data.map((item, index) => (
                             <li key={index}>
                                 <Link to={item.path} className={item.cName}>
