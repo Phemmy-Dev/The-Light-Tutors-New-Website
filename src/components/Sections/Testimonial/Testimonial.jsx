@@ -140,7 +140,7 @@ const Testimonial = () => {
         </motion.div>
 
         <h2 className="text-3xl md:text-5xl lg:text-6xl text-tltwhite font-bold text-center leading-tight max-w-4xl">
-          Trusted by Parents Across the <span className="text-tltorange">UK</span>
+          Trusted by Parents Across <span className="text-tltorange">Europe</span>
         </h2>
         <p className="text-sm md:text-lg lg:text-xl text-tltwhite/90 max-w-3xl text-center leading-relaxed">
           Real success stories from <span className='text-tltorange font-semibold'>The Light Guardians</span> — families who've seen their children thrive with our expert tutors
