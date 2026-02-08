@@ -1,7 +1,7 @@
 import Navbar from "../../Sections/NavBar/Navbar";
 import Footer from "../../Sections/Footer/Footer";
 import BecomeATutorWidget from "../../widgets/BecomeATutor/BecomeATutorWidget";
-import teamImg2 from '../../../assets/images/teamimg.jpg';
+import teamImg2 from '../../../assets/images/teamimg.JPG';
 import { FaWallet, FaCalendarAlt } from "react-icons/fa";
 import { IoIosHome } from "react-icons/io";
 import { motion } from "framer-motion";
