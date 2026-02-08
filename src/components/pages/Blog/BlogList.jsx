@@ -137,19 +137,74 @@ const BlogList = () => {
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-12 md:py-16">
         {loading ? (
-          <div className="flex justify-center items-center min-h-[500px]">
-            <div className="flex flex-col items-center gap-6">
-              <div className="relative">
-                <div className="w-16 h-16 border-4 border-tltorange/20 rounded-full"></div>
-                <div className="w-16 h-16 border-4 border-tltorange border-t-transparent rounded-full animate-spin absolute inset-0"></div>
+          /* Skeleton Loading UI */
+          <div className="animate-pulse">
+            {/* Featured Post Skeleton */}
+            <div className="mb-16">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-1 h-6 bg-gray-200 rounded-full"></div>
+                <div className="h-6 w-32 bg-gray-200 rounded-lg"></div>
               </div>
-              <div className="text-center">
-                <p className="text-tltgreen font-semibold text-lg">Loading Articles</p>
-                <p className="text-gray-500 text-sm">Preparing something great for you...</p>
+              <div className="bg-white rounded-3xl shadow-lg overflow-hidden">
+                <div className="grid md:grid-cols-2 gap-0">
+                  <div className="aspect-[4/3] md:aspect-auto bg-gray-200"></div>
+                  <div className="p-8 md:p-10 flex flex-col justify-center">
+                    <div className="flex gap-2 mb-4">
+                      <div className="h-6 w-20 bg-gray-200 rounded-full"></div>
+                      <div className="h-6 w-24 bg-gray-200 rounded-full"></div>
+                    </div>
+                    <div className="h-8 w-full bg-gray-200 rounded-lg mb-3"></div>
+                    <div className="h-8 w-3/4 bg-gray-200 rounded-lg mb-4"></div>
+                    <div className="space-y-2 mb-6">
+                      <div className="h-4 w-full bg-gray-200 rounded"></div>
+                      <div className="h-4 w-full bg-gray-200 rounded"></div>
+                      <div className="h-4 w-2/3 bg-gray-200 rounded"></div>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-gray-200 rounded-full"></div>
+                      <div>
+                        <div className="h-4 w-24 bg-gray-200 rounded mb-2"></div>
+                        <div className="h-3 w-32 bg-gray-200 rounded"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Latest Articles Skeleton */}
+            <div>
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-1 h-6 bg-gray-200 rounded-full"></div>
+                <div className="h-6 w-36 bg-gray-200 rounded-lg"></div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {[1, 2, 3].map((i) => (
+                  <div key={i} className="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div className="aspect-[16/10] bg-gray-200"></div>
+                    <div className="p-6">
+                      <div className="flex gap-2 mb-3">
+                        <div className="h-5 w-16 bg-gray-200 rounded-full"></div>
+                        <div className="h-5 w-20 bg-gray-200 rounded-full"></div>
+                      </div>
+                      <div className="h-6 w-full bg-gray-200 rounded mb-2"></div>
+                      <div className="h-6 w-2/3 bg-gray-200 rounded mb-4"></div>
+                      <div className="space-y-2 mb-4">
+                        <div className="h-3 w-full bg-gray-200 rounded"></div>
+                        <div className="h-3 w-full bg-gray-200 rounded"></div>
+                      </div>
+                      <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
+                        <div className="w-8 h-8 bg-gray-200 rounded-full"></div>
+                        <div className="h-3 w-20 bg-gray-200 rounded"></div>
+                        <div className="ml-auto h-3 w-16 bg-gray-200 rounded"></div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
-        ) : posts.length === 0 ? (
+        ) : posts.length === 0 && !featuredPost ? (
           <motion.div
             className="flex flex-col items-center justify-center min-h-[500px] text-center"
             initial={{ opacity: 0, y: 20 }}
@@ -175,7 +230,7 @@ const BlogList = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <a
-                  href="https://wa.me/2348143749900"
+                  href="https://wa.me/2348185179500"
                   className="bg-tltorange text-white font-bold px-6 py-3 rounded-full hover:bg-orange-500 transition-colors"
                 >
                   Get Notified
@@ -190,15 +245,18 @@ const BlogList = () => {
             </div>
           </motion.div>
         ) : (
-          <>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4 }}
+          >
             {/* Featured Post */}
             {displayFeaturedPost && (
               <motion.section
                 className="mb-16"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
               >
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-1 h-6 bg-tltorange rounded-full"></div>
@@ -211,10 +269,9 @@ const BlogList = () => {
             {/* Latest Articles Grid */}
             {remainingPosts.length > 0 && (
               <motion.section
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
                   <div className="flex items-center gap-3">
@@ -233,10 +290,9 @@ const BlogList = () => {
                   {remainingPosts.map((post, index) => (
                     <motion.div
                       key={post._id}
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                     >
                       <BlogCard post={post} />
                     </motion.div>
@@ -244,7 +300,7 @@ const BlogList = () => {
                 </div>
               </motion.section>
             )}
-          </>
+          </motion.div>
         )}
       </div>
 
