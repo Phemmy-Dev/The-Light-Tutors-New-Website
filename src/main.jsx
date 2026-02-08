@@ -10,6 +10,8 @@ import Faq from './components/pages/Faq/faq.jsx'
 import CsrPage from './components/pages/CSR/CsrPage.jsx'
 import PageNotFound from './components/pages/errorPage/PageNotFound.jsx'
 import TutorProfile from './components/pages/TutorProfile/TutorProfile.jsx'
+import BlogList from './components/pages/Blog/BlogList.jsx'
+import BlogPost from './components/pages/Blog/BlogPost.jsx'
 import './index.css'
 
 
@@ -37,6 +39,14 @@ const router = createBrowserRouter([
   {
     path: '/csr',
     element: <CsrPage />,
+  },
+  {
+    path: '/blog',
+    element: <BlogList />,
+  },
+  {
+    path: '/blog/:slug',
+    element: <BlogPost />,
   },
   {
     path: '/meet-our-team/:id', // Dynamic route for tutor profiles

@@ -30,6 +30,11 @@
         "cName": "nav-links"
     },
     {
+        "title": "Blog",
+        "path": "/blog",
+        "cName": "nav-links"
+    },
+    {
         "title": "FAQ",
         "path": "/frequently-asked-questions",
         "cName": "nav-links"
