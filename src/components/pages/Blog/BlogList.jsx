@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import Navbar from '../../Sections/NavBar/Navbar'
 import Footer from '../../Sections/Footer/Footer'
 import BlogCard from '../../widgets/BlogCard/BlogCard'
-import { client, queries } from '../../../lib/sanity'
+import { client, queries, urlFor } from '../../../lib/sanity'
 
 const BlogList = () => {
   const [posts, setPosts] = useState([])
@@ -31,174 +32,259 @@ const BlogList = () => {
     setEmail('')
   }
 
+  // Separate featured post from rest
+  const featuredPost = posts[0]
+  const remainingPosts = posts.slice(1)
+
   return (
     <div className="bg-gray-50 min-h-screen">
       <Navbar />
 
       {/* Hero Section */}
       <motion.div
-        className="pt-28 md:pt-36 pb-16 bg-gradient-to-br from-tltgreen via-tltgreen/95 to-tltgreen/90 relative overflow-hidden"
+        className="pt-28 md:pt-36 pb-12 md:pb-16 bg-white relative overflow-hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        {/* Background decorations */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-tltorange/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
-        <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-tltorange/5 rounded-full"></div>
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230a3d48' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}></div>
         
-        <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="inline-block bg-tltorange/20 text-tltorange text-sm font-bold px-4 py-2 rounded-full mb-6"
-          >
-            📚 Our Blog
-          </motion.div>
-          
-          <motion.h1
-            className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-          >
-            Educational Insights &{' '}
-            <span className="text-tltorange">Success Stories</span>
-          </motion.h1>
-          
-          <motion.p
-            className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-          >
-            Expert tips, parenting advice, and proven strategies to help your child excel academically and build confidence.
-          </motion.p>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
+          <div className="text-center max-w-3xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-tltorange/10 to-orange-100 text-tltorange text-sm font-bold px-5 py-2.5 rounded-full mb-6"
+            >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
+              The Light Tutors Blog
+            </motion.div>
+            
+            <motion.h1
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-tltgreen mb-6 leading-tight"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+            >
+              Insights for{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-tltorange to-orange-500">
+                Academic Excellence
+              </span>
+            </motion.h1>
+            
+            <motion.p
+              className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+            >
+              Expert advice, proven strategies, and inspiring stories to help your child thrive academically and build lasting confidence.
+            </motion.p>
+          </div>
         </div>
       </motion.div>
 
-      {/* Blog Posts Section */}
-      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-16 md:py-20">
-        {/* Section Header */}
-        <motion.div
-          className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-tltgreen">
-              Latest Articles
-            </h2>
-            <p className="text-gray-600 mt-2">
-              Discover our latest posts on education, parenting, and student success
-            </p>
-          </div>
-          <div className="flex items-center gap-2 text-sm text-gray-500">
-            <span className="w-2 h-2 bg-tltorange rounded-full"></span>
-            <span>{posts.length} {posts.length === 1 ? 'Article' : 'Articles'}</span>
-          </div>
-        </motion.div>
-
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-12 md:py-16">
         {loading ? (
-          <div className="flex justify-center items-center min-h-[400px]">
-            <div className="flex flex-col items-center gap-4">
-              <div className="w-14 h-14 border-4 border-tltorange border-t-transparent rounded-full animate-spin"></div>
-              <p className="text-gray-600 font-medium">Loading amazing content...</p>
+          <div className="flex justify-center items-center min-h-[500px]">
+            <div className="flex flex-col items-center gap-6">
+              <div className="relative">
+                <div className="w-16 h-16 border-4 border-tltorange/20 rounded-full"></div>
+                <div className="w-16 h-16 border-4 border-tltorange border-t-transparent rounded-full animate-spin absolute inset-0"></div>
+              </div>
+              <div className="text-center">
+                <p className="text-tltgreen font-semibold text-lg">Loading Articles</p>
+                <p className="text-gray-500 text-sm">Preparing something great for you...</p>
+              </div>
             </div>
           </div>
         ) : posts.length === 0 ? (
           <motion.div
-            className="flex flex-col items-center justify-center min-h-[400px] text-center bg-white rounded-2xl shadow-sm p-12"
+            className="flex flex-col items-center justify-center min-h-[500px] text-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="w-24 h-24 bg-gradient-to-br from-tltorange/20 to-tltorange/10 rounded-full flex items-center justify-center mb-6">
-              <svg
-                className="w-12 h-12 text-tltorange"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
-                />
-              </svg>
+            <div className="bg-white rounded-3xl shadow-xl p-12 max-w-lg">
+              <div className="w-24 h-24 bg-gradient-to-br from-tltorange/20 to-orange-100 rounded-2xl flex items-center justify-center mb-8 mx-auto rotate-3">
+                <svg
+                  className="w-12 h-12 text-tltorange -rotate-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-tltgreen mb-4">
+                Coming Soon!
+              </h3>
+              <p className="text-gray-600 mb-8">
+                We're crafting amazing content to help your child succeed. Be the first to know when we publish!
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <a
+                  href="https://wa.me/2348143749900"
+                  className="bg-tltorange text-white font-bold px-6 py-3 rounded-full hover:bg-orange-500 transition-colors"
+                >
+                  Get Notified
+                </a>
+                <Link
+                  to="/"
+                  className="border-2 border-tltgreen text-tltgreen font-bold px-6 py-3 rounded-full hover:bg-tltgreen hover:text-white transition-colors"
+                >
+                  Back Home
+                </Link>
+              </div>
             </div>
-            <h3 className="text-2xl font-bold text-tltgreen mb-3">
-              Coming Soon!
-            </h3>
-            <p className="text-gray-600 max-w-md">
-              We're working on creating amazing content for you. Subscribe below to be notified when we publish our first article!
-            </p>
           </motion.div>
         ) : (
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-          >
-            {posts.map((post, index) => (
-              <motion.div
-                key={post._id}
+          <>
+            {/* Featured Post */}
+            {featuredPost && (
+              <motion.section
+                className="mb-16"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <BlogCard post={post} />
-              </motion.div>
-            ))}
-          </motion.div>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-1 h-6 bg-tltorange rounded-full"></div>
+                  <h2 className="text-xl font-bold text-tltgreen">Featured Story</h2>
+                </div>
+                <BlogCard post={featuredPost} variant="featured" />
+              </motion.section>
+            )}
+
+            {/* Latest Articles Grid */}
+            {remainingPosts.length > 0 && (
+              <motion.section
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+                  <div className="flex items-center gap-3">
+                    <div className="w-1 h-6 bg-tltgreen rounded-full"></div>
+                    <h2 className="text-xl font-bold text-tltgreen">Latest Articles</h2>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-gray-500">
+                    <span className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-tltorange rounded-full animate-pulse"></span>
+                      {posts.length} {posts.length === 1 ? 'Article' : 'Articles'} Published
+                    </span>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {remainingPosts.map((post, index) => (
+                    <motion.div
+                      key={post._id}
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      <BlogCard post={post} />
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.section>
+            )}
+          </>
         )}
       </div>
 
       {/* Newsletter Section */}
       <motion.section
-        className="max-w-4xl mx-auto px-4 md:px-8 pb-20"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        className="py-16 md:py-20"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <div className="bg-gradient-to-r from-tltgreen to-tltgreen/90 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden">
-          {/* Background decoration */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-tltorange/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
-          
-          <div className="relative z-10 text-center">
-            <div className="inline-block bg-white/10 text-white text-sm font-bold px-4 py-2 rounded-full mb-6">
-              ✉️ Newsletter
-            </div>
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Stay Updated with Our Latest Insights
-            </h3>
-            <p className="text-white/80 mb-8 max-w-xl mx-auto">
-              Join thousands of parents receiving our weekly tips on helping their children succeed academically.
-            </p>
-            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email address..."
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="flex-1 px-6 py-4 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-tltorange shadow-lg"
-              />
-              <button
-                type="submit"
-                className="bg-tltorange hover:bg-orange-500 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap"
+        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
+          <div className="bg-gradient-to-br from-tltgreen via-tltgreen to-tltgreen/90 rounded-[2rem] p-8 md:p-16 relative overflow-hidden">
+            {/* Decorative elements */}
+            <div className="absolute top-0 right-0 w-80 h-80 bg-tltorange/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2"></div>
+            <div className="absolute top-1/2 right-1/4 w-20 h-20 bg-tltorange/30 rounded-full blur-xl"></div>
+            
+            <div className="relative z-10 max-w-3xl mx-auto text-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                viewport={{ once: true }}
+                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white text-sm font-bold px-5 py-2.5 rounded-full mb-6"
               >
-                Subscribe
-              </button>
-            </form>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                Join Our Newsletter
+              </motion.div>
+              
+              <motion.h3
+                className="text-3xl md:text-4xl font-bold text-white mb-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                Get Weekly Insights Delivered
+              </motion.h3>
+              
+              <motion.p
+                className="text-white/80 text-lg mb-10 max-w-xl mx-auto"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                Receive our best tips on education, parenting, and helping children achieve academic excellence.
+              </motion.p>
+              
+              <motion.form
+                onSubmit={handleSubscribe}
+                className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <div className="flex-1 relative">
+                  <input
+                    type="email"
+                    placeholder="Enter your email address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    className="w-full px-6 py-4 pr-12 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-tltorange/30 shadow-xl text-base"
+                  />
+                  <svg className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"/>
+                  </svg>
+                </div>
+                <button
+                  type="submit"
+                  className="bg-tltorange hover:bg-orange-500 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 whitespace-nowrap flex items-center justify-center gap-2"
+                >
+                  Subscribe
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                  </svg>
+                </button>
+              </motion.form>
+            </div>
           </div>
         </div>
       </motion.section>
