@@ -1,4 +1,4 @@
-import teamImg from '../../../assets/images/teamimg.jpg'
+import teamImg from '../../../assets/images/teamimg.JPG'
 import CountUp from 'react-countup';
 import Navbar from "../../Sections/NavBar/Navbar"
 import Vbox from '../../widgets/Vision Box/Vbox';

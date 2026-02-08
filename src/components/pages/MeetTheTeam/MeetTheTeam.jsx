@@ -2,7 +2,7 @@ import Navbar from "../../Sections/NavBar/Navbar"
 import EmployeeOfTheMonth from '../../../assets/images/employeeM.png'
 import TeamBox from "../../widgets/TeamBox/TeamBox"
 import Footer from "../../Sections/Footer/Footer"
-import teamImg from '../../../assets/images/teamimg.jpg'
+import teamImg from '../../../assets/images/teamimg.JPG'
 import {motion} from 'framer-motion'
 
 
