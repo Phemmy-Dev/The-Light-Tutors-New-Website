@@ -15,16 +15,6 @@
         "cName": "nav-links"
     },
     {
-        "title": "Subjects",
-        "path": "/#subjects",
-        "cName": "nav-links"
-    },
-    {
-        "title": "Testimonials",
-        "path": "/#testimonials",
-        "cName": "nav-links"
-    },
-    {
         "title": "CSR",
         "path": "/csr",
         "cName": "nav-links"
