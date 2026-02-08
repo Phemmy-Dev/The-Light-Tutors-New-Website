@@ -19,7 +19,9 @@ export default {
         'tltorange': '#fc8402',
         'tltgreen': '#0a3d48',
         'tltwhite': '#ffffff',
-
+      },
+      fontFamily: {
+        'sans': ['Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'],
       }
     },
   },
