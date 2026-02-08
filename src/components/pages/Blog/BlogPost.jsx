@@ -7,6 +7,8 @@ import Footer from '../../Sections/Footer/Footer'
 import BlogCard from '../../widgets/BlogCard/BlogCard'
 import { client, queries, urlFor } from '../../../lib/sanity'
 
+const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyVJaJAeRlKMkLVBvTDDjCnL6POBQBAklJrI2gilR24V7xYU-6bMWIDuvpqbwZuZsfL/exec'
+
 // Custom components for Portable Text rendering
 const portableTextComponents = {
   types: {
@@ -124,6 +126,8 @@ const BlogPost = () => {
   const [relatedPosts, setRelatedPosts] = useState([])
   const [loading, setLoading] = useState(true)
   const [email, setEmail] = useState('')
+  const [subscribing, setSubscribing] = useState(false)
+  const [subscribeStatus, setSubscribeStatus] = useState(null)
   const articleRef = useRef(null)
 
   // Reading progress bar
@@ -174,11 +178,34 @@ const BlogPost = () => {
       })
     : ''
 
-  const handleSubscribe = (e) => {
+  const handleSubscribe = async (e) => {
     e.preventDefault()
-    // Handle newsletter subscription
-    alert(`Thank you for subscribing with ${email}!`)
-    setEmail('')
+    setSubscribing(true)
+    setSubscribeStatus(null)
+    
+    try {
+      await fetch(GOOGLE_SHEET_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email,
+          source: 'Blog Post: ' + (post?.title || 'Unknown')
+        }),
+      })
+      
+      setSubscribeStatus('success')
+      setEmail('')
+      setTimeout(() => setSubscribeStatus(null), 5000)
+    } catch (error) {
+      console.error('Subscription error:', error)
+      setSubscribeStatus('error')
+      setTimeout(() => setSubscribeStatus(null), 5000)
+    } finally {
+      setSubscribing(false)
+    }
   }
 
   // Calculate reading time based on body content
@@ -389,25 +416,32 @@ const BlogPost = () => {
       {/* Featured Image */}
       {post.mainImage && (
         <motion.div
-          className="max-w-5xl mx-auto px-4 md:px-8 -mt-4 mb-10"
+          className="max-w-6xl mx-auto px-4 md:px-8 -mt-4 mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
         >
-          <div className="relative rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
+          <div className="relative rounded-2xl md:rounded-[2rem] overflow-hidden shadow-2xl group">
+            {/* Main Image */}
             <img
               src={urlFor(post.mainImage).width(1400).url()}
               alt={post.title}
-              className="w-full"
+              className="w-full aspect-[16/9] md:aspect-[21/9] object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            
+            {/* Subtle overlay for depth */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/10"></div>
+            
+            {/* Decorative corner accents */}
+            <div className="absolute top-4 left-4 w-16 h-16 border-l-4 border-t-4 border-white/30 rounded-tl-xl"></div>
+            <div className="absolute bottom-4 right-4 w-16 h-16 border-r-4 border-b-4 border-white/30 rounded-br-xl"></div>
           </div>
         </motion.div>
       )}
 
       {/* Blog Content */}
       <motion.article
-        className="max-w-4xl mx-auto px-4 md:px-8 py-8 md:py-12"
+        className="max-w-6xl mx-auto px-4 md:px-8 py-8 md:py-12"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.5 }}
@@ -542,7 +576,8 @@ const BlogPost = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="w-full px-6 py-4 pr-12 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-tltorange/30 shadow-xl"
+                  disabled={subscribing}
+                  className="w-full px-6 py-4 pr-12 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-tltorange/30 shadow-xl disabled:opacity-50"
                 />
                 <svg className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"/>
@@ -550,14 +585,58 @@ const BlogPost = () => {
               </div>
               <button
                 type="submit"
-                className="bg-tltorange hover:bg-orange-500 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 whitespace-nowrap flex items-center justify-center gap-2"
+                disabled={subscribing}
+                className="bg-tltorange hover:bg-orange-500 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 whitespace-nowrap flex items-center justify-center gap-2 disabled:opacity-50 disabled:hover:scale-100"
               >
-                Subscribe
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                </svg>
+                {subscribing ? (
+                  <>
+                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    Subscribing...
+                  </>
+                ) : (
+                  <>
+                    Subscribe
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                  </>
+                )}
               </button>
             </form>
+            
+            {/* Status Messages */}
+            {subscribeStatus === 'success' && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mt-6"
+              >
+                <div className="bg-white rounded-full px-6 py-3 inline-flex items-center gap-3 shadow-lg">
+                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span className="text-tltgreen font-semibold">Thank you! Check your inbox soon.</span>
+                </div>
+              </motion.div>
+            )}
+            {subscribeStatus === 'error' && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mt-6"
+              >
+                <div className="bg-white rounded-full px-6 py-3 inline-flex items-center gap-3 shadow-lg">
+                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                  </div>
+                  <span className="text-gray-700 font-semibold">Something went wrong. Please try again.</span>
+                </div>
+              </motion.div>
+            )}
           </div>
         </div>
       </motion.section>

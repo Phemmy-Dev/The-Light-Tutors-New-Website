@@ -78,4 +78,40 @@ export const queries = {
       title
     }
   }`,
+
+  // Get featured post (post with "Featured" category)
+  featuredPost: `*[_type == "post" && defined(publishedAt) && "Featured" in categories[]->title] | order(publishedAt desc)[0] {
+    _id,
+    title,
+    slug,
+    "excerpt": pt::text(body[0..2]),
+    mainImage,
+    publishedAt,
+    author->{
+      name,
+      image
+    },
+    categories[]->{
+      _id,
+      title
+    }
+  }`,
+
+  // Get all posts except featured
+  nonFeaturedPosts: `*[_type == "post" && defined(publishedAt) && !("Featured" in categories[]->title)] | order(publishedAt desc) {
+    _id,
+    title,
+    slug,
+    "excerpt": pt::text(body[0..2]),
+    mainImage,
+    publishedAt,
+    author->{
+      name,
+      image
+    },
+    categories[]->{
+      _id,
+      title
+    }
+  }`,
 }
