@@ -260,7 +260,7 @@ const BlogList = () => {
               >
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-1 h-6 bg-tltorange rounded-full"></div>
-                  <h2 className="text-xl font-bold text-tltgreen">Featured Story</h2>
+                  <h2 className="text-xl font-bold text-tltgreen">Featured Article</h2>
                 </div>
                 <BlogCard post={displayFeaturedPost} variant="featured" />
               </motion.section>
