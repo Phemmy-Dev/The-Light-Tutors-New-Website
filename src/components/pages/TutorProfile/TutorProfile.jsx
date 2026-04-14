@@ -26,7 +26,7 @@ import Tutorpic21 from '../../../assets/images/tutors/21.jpg'
 import Tutorpic22 from '../../../assets/images/tutors/22.jpg'
 import Tutorpic23 from '../../../assets/images/tutors/23.jpg'
 import Tutorpic25 from '../../../assets/images/tutors/25.jpg'
-import Tutorpic26 from '../../../assets/images/tutors/26.jpg'
+import Tutorpic26 from '../../../assets/images/tutors/26.jpeg'
 import Tutorpic27 from '../../../assets/images/tutors/27.jpg'
 import Tutorpic28 from '../../../assets/images/tutors/28.jpg'
 import Tutorpic30 from '../../../assets/images/tutors/30.jpg'
@@ -203,7 +203,7 @@ const teamData = [
     {
         id: 9,
         name: "Oluwafemi Akinruntan",
-        title: "Tutor & Technical Manager",
+        title: "Technical Manager & Supervisor",
         img: Tutorpic26,
         isTutor: true,
         nationality: "Nigerian",

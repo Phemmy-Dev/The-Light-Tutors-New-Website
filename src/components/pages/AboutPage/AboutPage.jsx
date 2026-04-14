@@ -132,7 +132,7 @@ const AboutPage = () => {
                 variants={boxVariants}
                 whileHover="hover"
               >
-                <CountUp start={0} end={45} duration={5} suffix="+" className="text-2xl font-semibold" />
+                <CountUp start={0} end={97} duration={5} suffix="+" className="text-2xl font-semibold" />
                 <p className="text-xs">Students</p>
               </motion.div>
 
@@ -142,7 +142,7 @@ const AboutPage = () => {
                 variants={boxVariants}
                 whileHover="hover"
               >
-                <CountUp start={0} end={30} duration={5} suffix="+" className="text-2xl font-semibold" />
+                <CountUp start={0} end={52} duration={5} suffix="+" className="text-2xl font-semibold" />
                 <p className="text-xs">Tutors</p>
               </motion.div>
 
@@ -152,7 +152,9 @@ const AboutPage = () => {
                 variants={boxVariants}
                 whileHover="hover"
               >
-                <CountUp start={0} end={5} duration={5} suffix="+" className="text-2xl font-semibold" />
+                <CountUp start={0} end={6
+                  
+                } duration={5} suffix="+" className="text-2xl font-semibold" />
                 <p className="text-xs">Countries</p>
               </motion.div>
             </div>
@@ -228,7 +230,7 @@ const AboutPage = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}>
-          <Vbox title={"Our Vision"} text={"Our vision is to be the leading online tutoring company, renowned for our commitment to staff growth and welfare, personalized education, and student success across global communities."} /> 
+          <Vbox title={"Our Vision"} text={"Our vision is to build a delightful learning ecosystem that uplifts everyone who comes in contact with us, as we become the premier online tutoring company."} /> 
 
           <Vbox title={"Our Mission"} text={"Our mission is to provide students with a strong foundation and the tools to enjoy learning, to lead impactful programs that foster both academic success and character development, and to embrace individualized learning approaches that enhance efficiency."} />
         </motion.div>

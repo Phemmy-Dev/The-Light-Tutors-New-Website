@@ -30,7 +30,7 @@ const Becomeatutor = () => {
     <div>
       <Navbar />
       <BecomeATutorWidget  title='Join The Light Tutors Team' 
-      subtext='Thank you for your interest in joining us. We are currently not hiring, but please check back from time to time for future opportunities.'
+      subtext='We are excited to welcome passionate and dedicated tutors to our growing team. Explore the details below and apply today!'
       subsubtext="" 
       batImg={teamImg2} />
 
@@ -193,6 +193,28 @@ const Becomeatutor = () => {
             ))}
           </motion.div>
         </motion.div> 
+
+        {/* Apply Now CTA */}
+        <motion.div
+          className="text-center py-16 px-6 mx-10 mt-10 bg-tltorange/5 rounded-2xl border border-tltorange/20"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Ready to Join Us?</h2>
+          <p className="text-gray-600 mb-8 max-w-lg mx-auto">
+            If you meet the requirements and are passionate about teaching, we'd love to hear from you. Click below to fill out the application form.
+          </p>
+          <a
+            href="https://forms.gle/3bzxXxwatTGGiHiH6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-8 py-3.5 bg-tltorange text-white font-semibold rounded-full shadow-md hover:bg-orange-600 transition-colors duration-200 text-lg"
+          >
+            Apply Now
+          </a>
+        </motion.div>
 
         {/*  Tutor Position Details */}
           {/* <motion.div

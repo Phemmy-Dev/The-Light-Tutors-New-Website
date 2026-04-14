@@ -3,9 +3,20 @@ import { motion } from 'framer-motion'
 import { FaGraduationCap, FaUtensils, FaBriefcase, FaUsers, FaCalendarAlt, FaEye } from 'react-icons/fa'
 
 const ImpactTimeline = () => {
-  const [selectedYear, setSelectedYear] = useState('2025');
+  const [selectedYear, setSelectedYear] = useState('2026');
 
   const csrActivities = {
+    2026: [
+      {
+        title: "HireGround Academy",
+        date: "2026",
+        category: "Career & Skills Development",
+        pillarIcon: <FaBriefcase className="text-tltorange" />,
+        summary: "A follow-up to the HireGround Career Fair — a 6-week employability and skills development program designed to prepare early-career professionals and graduates for the job market.",
+        impactHighlights: "20 students impacted",
+        status: "completed"
+      }
+    ],
     2025: [
       {
         title: "GCSE Boot Camp",

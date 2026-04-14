@@ -41,12 +41,12 @@ const Counter = () => {
 
         {/* Stat 3 */}
         <div className="countries_count w-full md:w-1/3 flex flex-col md:flex-row gap-3 md:gap-4 items-center justify-center p-6 md:p-4 bg-white md:bg-transparent rounded-2xl md:rounded-none shadow-lg md:shadow-none">
-          <BsGraphUpArrow className='w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-tltorange/10 p-3 text-tltorange rounded-xl'/>
+          <GiTeacher className='w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-tltorange/10 p-3 text-tltorange rounded-xl'/>
           <div className='text-center md:text-left'>
             <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-tltgreen">
-              <CountUp start={0} end={96} duration={3} delay={0.5} suffix="%"/>
+              <CountUp start={0} end={18000} duration={3} delay={0.5} suffix="+" separator=","/>
             </div>
-            <p className='text-xs sm:text-sm md:text-base text-gray-600 mt-1 max-w-[200px]'>Of parents see progress in their first month</p>
+            <p className='text-xs sm:text-sm md:text-base text-gray-600 mt-1 max-w-[200px]'>Hours of teaching delivered</p>
           </div>
         </div>
       </div>
