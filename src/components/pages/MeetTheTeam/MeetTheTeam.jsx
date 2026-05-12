@@ -50,6 +50,7 @@ import TobaPic from '../../../assets/images/tutors/tovas-toba.jpg'
 import SharonDavidPic from '../../../assets/images/tutors/sharon-david.jpg'
 import BukunmiOlaopaPic from '../../../assets/images/tutors/oluwbukunmi-olaopa.jpeg'
 import MaryAdenijiPic from '../../../assets/images/tutors/mary-adeniji.jpeg'
+import OlamideChristianPic from '../../../assets/images/tutors/olamide-christian.jpeg'
 
 const MeetTheTeam = () => {
 
@@ -97,6 +98,7 @@ const MeetTheTeam = () => {
         { id: 43, name: "David Sharon", title: "Tutor", img: SharonDavidPic },
 
         { id: 45, name: "Mary Adeniji", title: "Tutor", img: MaryAdenijiPic },
+        { id: 46, name: "Olamide Christian", title: "Tutor", img: OlamideChristianPic },
     ];
 
     return (
