@@ -28,7 +28,7 @@ import Tutorpic23 from '../../../assets/images/tutors/23.jpg'
 import Tutorpic25 from '../../../assets/images/tutors/25.jpg'
 import Tutorpic26 from '../../../assets/images/tutors/26.jpeg'
 import Tutorpic27 from '../../../assets/images/tutors/27.jpg'
-import Tutorpic28 from '../../../assets/images/tutors/28.jpg'
+import Tutorpic28 from '../../../assets/images/tutors/olamiji.jpeg'
 import Tutorpic30 from '../../../assets/images/tutors/30.jpg'
 import Tutorpic31 from '../../../assets/images/tutors/31.jpg'
 import Tutorpic33 from '../../../assets/images/tutors/33.jpg'
@@ -133,7 +133,7 @@ const teamData = [
     {
         id: 5,
         name: "Olamiji Onanuga",
-        title: "HR & Admin Assistant",
+        title: "HR Officer",
         img: Tutorpic28,
         nationality: "Nigerian",
         gender: "Male",
@@ -167,7 +167,7 @@ const teamData = [
     {
         id: 7,
         name: "Gideon Akintade",
-        title: "Tutor Supervisor",
+        title: "CSR Team Lead",
         img: Tutorpic23,
         nationality: "Nigerian",
         gender: "Male",
@@ -181,6 +181,24 @@ const teamData = [
             "Dancing",
             "Singing",
             "Listening to good stuff",
+        ]
+    },
+    {
+        id: 46,
+        name: "Olamide Christian",
+        title: "CSR Deputy Lead",
+        isTutor: true,
+        img: OlamideChristianPic,
+        nationality: "Nigerian",
+        gender: "Female",
+        subject: "Mathematics, English Language and Non-Verbal Reasoning",
+        course: "Food Science and Technology",
+        yearsattlt: "Less than a year",
+        level: "B.Sc Food Science and Technology",
+        passionate: "Helping students unlock their potential and making complex topics easy to understand.",
+        interest: [
+            "Reading",
+            "Teaching",
         ]
     },
     {
@@ -204,7 +222,7 @@ const teamData = [
     {
         id: 9,
         name: "Oluwafemi Akinruntan",
-        title: "Technical Manager & Supervisor",
+        title: "Chief Technical Officer",
         img: Tutorpic26,
         isTutor: true,
         nationality: "Nigerian",
@@ -224,7 +242,7 @@ const teamData = [
     {
         id: 10,
         name: "Iseoluwa Akinduko",
-        title: "Counselor",
+        title: "Counsellor",
         isTutor: true,
         img: Tutorpic35,
         nationality: "Nigerian",
@@ -847,25 +865,7 @@ const teamData = [
             "Tennis",
             "Cooking",
         ]
-    },
-    {
-        id: 46,
-        name: "Olamide Christian",
-        title: "Tutor",
-        isTutor: true,
-        img: OlamideChristianPic,
-        nationality: "Nigerian",
-        gender: "Female",
-        subject: "Mathematics, English Language and Non-Verbal Reasoning",
-        course: "Food Science and Technology",
-        yearsattlt: "Less than a year",
-        level: "B.Sc Food Science and Technology",
-        passionate: "Helping students unlock their potential and making complex topics easy to understand.",
-        interest: [
-            "Reading",
-            "Teaching",
-        ]
-    },
+    }
 ];
 
 const TeamProfile = () => {

@@ -30,7 +30,7 @@ const Cta = () => {
               We Believe in Your Child's Potential. Let's Unlock It Together.
             </h2>
             <p className='text-sm sm:text-base md:text-lg text-tltwhite leading-relaxed'>
-              Take the first step without any risk. See for yourself how our personalized approach can transform your child's learning experience, absolutely free.
+              Take the first step without any risk. See for yourself how our personalised approach can transform your child's learning experience, absolutely free.
             </p>
             <motion.a
               href="https://api.whatsapp.com/send?phone=2348153418503"

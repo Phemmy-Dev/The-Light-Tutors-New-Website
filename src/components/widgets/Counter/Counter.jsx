@@ -10,7 +10,7 @@ const Counter = () => {
     <div className="py-12 md:py-16 bg-white">
       {/* Headline */}
       <h2 className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-tltgreen mb-8 md:mb-12 px-4">
-        Join Thousands of Parents Who've Found Their Solution
+        Join Hundreds of Parents Who've Found Their Solution
       </h2>
       
       {/* Stats Container - Mobile: Stack vertically, Tablet+: Horizontal */}

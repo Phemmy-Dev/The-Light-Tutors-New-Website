@@ -80,13 +80,13 @@ const Courses = () => {
 
       {/* CTA Button */}
       <div className="text-center mt-8 md:mt-12 px-4">
-        <a 
+        <a
           href="https://api.whatsapp.com/send?phone=2348153418503"
           target="_blank"
           rel="noopener noreferrer"
         >
           <button className="bg-tltorange text-white px-6 sm:px-8 md:px-10 py-3 md:py-4 rounded-full font-bold text-sm sm:text-base md:text-lg hover:bg-white hover:text-tltgreen transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
-            Get a Personalized Learning Plan
+            Get a Personalised Learning Plan
           </button>
         </a>
       </div>

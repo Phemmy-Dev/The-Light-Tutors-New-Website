@@ -72,7 +72,7 @@ const Becomeatutor = () => {
               {
                 icon: <FaCalendarAlt />,
                 title: "Convenient Schedule",
-                description: "Your own personalized work calendar that can be easily customized and planned around your day.",
+                description: "Your own personalised work calendar that can be easily customised and planned around your day.",
               },
               {
                 icon: <IoIosHome />,

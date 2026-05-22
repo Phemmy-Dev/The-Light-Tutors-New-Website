@@ -87,7 +87,7 @@ const AboutPage = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               The Light Tutors (TLT) was founded in response to the challenges brought about by the pandemic. With social distancing making traditional education difficult, we saw an opportunity to bridge the education gap and ensure that learning continued, no matter the circumstances. Our mission from the start has been to make education accessible to students everywhere, despite time zones, restrictions, or challenges. <br /> <br />
-              We offer personalized tutoring sessions in Mathematics, English, and Sciences to students from KS2 up to GCSE level, as well as those in elementary (Grades K–5), middle (Grades 6–8), and high school (Grades 9–12). In addition, we provide bespoke language learning for beginners and intermediate learners in Yoruba and French. <br /><br />
+              We offer personalised tutoring sessions in Mathematics, English, and Sciences to students from KS2 up to GCSE level, as well as those in elementary (Grades K–5), middle (Grades 6–8), and high school (Grades 9–12). In addition, we provide bespoke language learning for beginners and intermediate learners in Yoruba and French. <br /><br />
               <span className="font-semibold">Our goal is simple: to make learning as easy and seamless as possible, offering support tailored to each student’s unique needs.</span>
             </motion.p>
           </div>
@@ -132,7 +132,7 @@ const AboutPage = () => {
                 variants={boxVariants}
                 whileHover="hover"
               >
-                <CountUp start={0} end={97} duration={5} suffix="+" className="text-2xl font-semibold" />
+                <CountUp start={0} end={100} duration={5} suffix="+" className="text-2xl font-semibold" />
                 <p className="text-xs">Students</p>
               </motion.div>
 
@@ -142,7 +142,7 @@ const AboutPage = () => {
                 variants={boxVariants}
                 whileHover="hover"
               >
-                <CountUp start={0} end={52} duration={5} suffix="+" className="text-2xl font-semibold" />
+                <CountUp start={0} end={49} duration={5} suffix="+" className="text-2xl font-semibold" />
                 <p className="text-xs">Tutors</p>
               </motion.div>
 
@@ -152,10 +152,18 @@ const AboutPage = () => {
                 variants={boxVariants}
                 whileHover="hover"
               >
-                <CountUp start={0} end={6
-                  
-                } duration={5} suffix="+" className="text-2xl font-semibold" />
+                <CountUp start={0} end={4} duration={5} className="text-2xl font-semibold" />
                 <p className="text-xs">Countries</p>
+              </motion.div>
+
+              {/* Box 4 */}
+              <motion.div
+                className="box4 bg-slate-100 rounded-lg px-3 py-3 flex flex-col justify-center"
+                variants={boxVariants}
+                whileHover="hover"
+              >
+                <CountUp start={0} end={65} duration={5} suffix="+" className="text-2xl font-semibold" />
+                <p className="text-xs">Staff</p>
               </motion.div>
             </div>
           </motion.div>
@@ -232,7 +240,7 @@ const AboutPage = () => {
         viewport={{ once: true, amount: 0.5 }}>
           <Vbox title={"Our Vision"} text={"Our vision is to build a delightful learning ecosystem that uplifts everyone who comes in contact with us, as we become the premier online tutoring company."} /> 
 
-          <Vbox title={"Our Mission"} text={"Our mission is to provide students with a strong foundation and the tools to enjoy learning, to lead impactful programs that foster both academic success and character development, and to embrace individualized learning approaches that enhance efficiency."} />
+          <Vbox title={"Our Mission"} text={"Our mission is to provide students with a strong foundation and the tools to enjoy learning, to lead impactful programmes that foster both academic success and character development, and to embrace individualised learning approaches that enhance efficiency."} />
         </motion.div>
       </section>
 

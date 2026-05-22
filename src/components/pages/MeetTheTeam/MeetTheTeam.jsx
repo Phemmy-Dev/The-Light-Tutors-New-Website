@@ -26,7 +26,7 @@ import Tutorpic23 from '../../../assets/images/tutors/23.jpg'
 import Tutorpic25 from '../../../assets/images/tutors/25.jpg'
 import Tutorpic26 from '../../../assets/images/tutors/26.jpeg'
 import Tutorpic27 from '../../../assets/images/tutors/27.jpg'
-import Tutorpic28 from '../../../assets/images/tutors/28.jpg'
+import Tutorpic28 from '../../../assets/images/tutors/olamiji.jpeg'
 import Tutorpic30 from '../../../assets/images/tutors/30.jpg'
 import Tutorpic31 from '../../../assets/images/tutors/31.jpg'
 import Tutorpic33 from '../../../assets/images/tutors/33.jpg'
@@ -61,11 +61,12 @@ const MeetTheTeam = () => {
         { id: 39, name: "Oyeniran Tofunmi Elizabeth", title: "Customer Care Lead", img: TofunmiOyeniranPic },
         { id: 3, name: "Aaliyah Zemaiye", title: "Chief Marketing Officer", img: Tutorpic17 },
         { id: 14, name: "Priscilla Lasisi", title: "HR Assistant & Tutor", img: Tutorpic27 },
-        { id: 5, name: "Olamiji Onanuga", title: "HR & Admin Assistant", img: Tutorpic28 },
+        { id: 5, name: "Olamiji Onanuga", title: "HR Officer", img: Tutorpic28 },
         { id: 6, name: "Busayo Amadi", title: "Supervisor Lead", img: Tutorpic6 },
-        { id: 7, name: "Gideon Akintade", title: "Supervisor", img: Tutorpic23 },
+        { id: 7, name: "Gideon Akintade", title: "CSR Team Lead", img: Tutorpic23 },
+        { id: 46, name: "Olamide Christian", title: "CSR Deputy Lead", img: OlamideChristianPic },
         { id: 20, name: "Blossom Adeyemi", title: "Supervisor", img: Tutorpic1 },
-        { id: 9, name: "Oluwafemi Akinruntan", title: "Technical Manager & Supervisor", img: Tutorpic26 },
+        { id: 9, name: "Oluwafemi Akinruntan", title: "Chief Technical Officer", img: Tutorpic26 },
         { id: 29, name: "Afolayan Opeyemi", title: "Supervisor", img: Tutorpic18 },
         { id: 18, name: "Abisola Adefila", title: "Supervisor", img: Tutorpic16 },
         { id: 10, name: "Iseoluwa Akinduko", title: "Counselor", img: Tutorpic35 },
@@ -98,7 +99,6 @@ const MeetTheTeam = () => {
         { id: 43, name: "David Sharon", title: "Tutor", img: SharonDavidPic },
 
         { id: 45, name: "Mary Adeniji", title: "Tutor", img: MaryAdenijiPic },
-        { id: 46, name: "Olamide Christian", title: "Tutor", img: OlamideChristianPic },
     ];
 
     return (

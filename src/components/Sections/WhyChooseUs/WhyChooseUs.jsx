@@ -10,7 +10,7 @@ const WhyChooseUs = () => {
 
     const chooseData = [
         { title: 'Experienced Tutors', text: `Our team consists of highly qualified tutors with years of experience in helping students succeed academically.`, icon: ExpTut },
-        { title: 'One-on-One Classes', text: `We offer personalized, one-on-one tutoring sessions that cater to your child's unique learning needs.`, icon: OneOnOne },
+        { title: 'One-on-One Classes', text: `We offer personalised, one-on-one tutoring sessions that cater to your child's unique learning needs.`, icon: OneOnOne },
         { title: 'Flexible Learning', text: `Our schedules are designed to fit into your busy life, allowing your child to learn at their own pace.`, icon: FlexLearn },
         { title: 'Great Value', text: `We deliver exceptional tutoring services at a price that reflects the quality and care your child deserves.`, icon: GreatValue },
     ]

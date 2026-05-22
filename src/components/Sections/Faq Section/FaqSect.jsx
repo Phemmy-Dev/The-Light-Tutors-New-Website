@@ -6,19 +6,19 @@ const FaqSect = () => {
   const faqItems = [
     {
       title: "What subjects and grade levels do you offer tutoring for?",
-      answer: "We offer tuition in Mathematics, Further Mathematics, English Language, English Literature, Sciences, Biology, Chemistry, Physics, Geography, Computer Science, Coding (HTML, CSS, Java, C+, C#, Python, Scratch, etc), language courses (French and Yoruba), to mainly primary and secondary school students.",
+      answer: "We offer tuition in Mathematics, Further Mathematics, English Language, English Literature, Sciences, Biology, Chemistry, Physics, Geography, Computer Science, Coding (HTML, CSS, Java, C+, C#, Python, Scratch, etc), language courses (French and Yoruba), to primary and secondary school students.",
     },
     {
       title: "What technology platform and tools do you use to teach?",
-      answer: "Online platforms such as Zoom and Google Classroom are the major tools for class tutorials, assignments, and quizzes. We also make use of other learning materials such as audio-visuals from YouTube; slides, infographics, and course lessons from trusted websites for learning. Parents are also advised to provide their wards’ school curriculum for better teaching guidance.",
+      answer: "Online platforms such as Zoom and our student portal are the major tools for class tutorials, assignments, and quizzes. We also make use of other learning materials such as audio-visuals from YouTube; slides, infographics, and course lessons from trusted websites for learning. Parents are also advised to provide their wards’ school curriculum for better teaching guidance.",
     },
     {
       title: "What is the duration and frequency of tutoring sessions?",
-      answer: "The standard duration is 1 hour per session per subject per week. But this is subject to change from the tutor's advice and parents’ desire.",
+      answer: "The standard duration is 1 hour per session per subject. But this is subject to change from the tutor's advice and parents’ desire.",
     },
     {
       title: "How do I monitor my child’s progress?",
-      answer: "Class reports are sent to a WhatsApp group after each class. This class report contains very detailed information about how each class went and also the child’s behaviour in classes. Using Google Classrooms as well, scores of assignments and tests are accessible to the parents. Progress reports are also sent if requested by parents. This is sent monthly but can be reviewed as desired by parents.",
+      answer: "Class reports are sent to the student's portal after each class. This class report contains very detailed information about how each class went and also the child’s behaviour in classes. Using the student portal as well, scores of assignments and tests are accessible to the parents. Progress reports are also sent if requested by parents. This is sent monthly but can be reviewed as desired by parents.",
     },
     {
       title: "What should I expect from a session?",
@@ -26,7 +26,7 @@ const FaqSect = () => {
     },
     {
       title: "How many students are in a class?",
-      answer: "Usually, tutoring is on a one-on-one basis. Hence, there is only one tutor to one student at a time. However, if parents want and agree to have their wards learn with other students, arrangements can be made for that.",
+      answer: "Tutoring is on a one-on-one basis. Hence, there is only one tutor to one student at a time. However, if parents want and agree to have their wards learn with other students, arrangements can be made for that.",
     },
     {
       title: "What materials/curriculum are used to teach?",
