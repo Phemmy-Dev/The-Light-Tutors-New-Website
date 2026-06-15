@@ -65,9 +65,9 @@ const teamData = [
         nationality: "Nigerian",
         gender: "Male",
         subject: "Nil",
-        course: "First Class",
+        course: "Mathematics",
         yearsattlt: "4 years and 9 months",
-        level: "Mathematics",
+        level: "B.Sc Mathematics",
         passionate: "To see people grow and develop in all areas of life.",
         interest: [
             "Reading",
@@ -78,7 +78,7 @@ const teamData = [
     {
         id: 2,
         name: "Rose Oroge",
-        title: "Chief Operating Officer",
+        title: "Director",
         img: Tutorpic5,
         nationality: "Nigerian",
         gender: "Female",
@@ -90,6 +90,43 @@ const teamData = [
         interest: [
             "Travelling",
             "Reading",
+        ]
+    },
+    {
+        id: 14,
+        name: "Priscilla Lasisi",
+        title: "HR Manager",
+        isTutor: true,
+        img: Tutorpic27,
+        nationality: "Nigerian",
+        gender: "Female",
+        subject: "English, VR",
+        course: "English and Literary Studies",
+        yearsattlt: "15 months",
+        level: "400 Level",
+        passionate: "I would say seeing my students grow, not just in their studies but in who they are. I’ve had students who barely spoke up in class become more confident, and others who struggled with basics like spelling make real progress. Watching that growth happen, seeing them realize what they’re capable of, that’s what makes this so fulfilling for me.",
+        interest: [
+            "Voice acting",
+            "Script writing",
+        ]
+    },
+    {
+        id: 20,
+        name: "Blossom Adeyemi",
+        title: "Customer Care Lead",
+        isTutor: true,
+        img: Tutorpic1,
+        nationality: "Nigerian",
+        gender: "Female",
+        subject: "Mathematics, English, Science, Verbal Reasoning ",
+        course: "Nursing Science",
+        yearsattlt: "2 years",
+        level: "B.Sc Nursing (RN)",
+        passionate: "I am passionate about providing students with the knowledge, skills and encouragement needed for then to learn, grow and achieve their goals. It is immensely rewarding to see a student finally grasp a concept that they were previously struggling with.",
+        interest: [
+            "Public health",
+            "Film",
+            "Fashion",
         ]
     },
     {
@@ -110,24 +147,23 @@ const teamData = [
         ]
     },
     {
-        id: 4,
-        name: "Erioluwa Oladeji",
-        title: "HR Manager",
-        img: Tutorpic7,
+        id: 9,
+        name: "Oluwafemi Akinruntan",
+        title: "Chief Technical Officer",
+        img: Tutorpic26,
+        isTutor: true,
         nationality: "Nigerian",
-        gender: "Female",
-        subject: "Nil",
-        course: "Public Health",
-        yearsattlt: "4+ years",
-        level: "B.Sc Honours",
+        gender: "Male",
+        subject: "Mathematics, Coding, NVR & VR",
+        course: "Mathematics",
+        yearsattlt: "2+ year",
+        level: "B.Sc Mathematics",
         passionate: "Nil",
         interest: [
-            "Design",
-            "Creativity",
-            "Art",
-            "Teaching",
-            "Fashion",
-            "Public health",
+            "Technology",
+            "Football",
+            "Artificial Intelligence",
+            "Learning new things",
         ]
     },
     {
@@ -149,19 +185,37 @@ const teamData = [
     {
         id: 6,
         name: "Busayo Amadi",
-        title: "Tutor Supervisor",
+        title: "Supervisor Lead",
         img: Tutorpic6,
         nationality: "Nigerian",
         gender: "Female",
         subject: "Nil",
         course: "Nursing",
         yearsattlt: "3 years and 7 months",
-        level: "500 Level",
+        level: "B.Sc Nursing (RN)",
         passionate: "Nil",
         interest: [
             "Music",
             "Movies",
             "Trying new restaurants",
+        ]
+    },
+
+    {
+        id: 44,
+        name: "Oluwabukunmi Olaopa",
+        title: "Programs and Partnerships Lead",
+        isTutor: false,
+        img: BukunmiOlaopaPic,
+        nationality: "Nigerian",
+        gender: "Female",
+        subject: "Nil",
+        course: "Health Promotion",
+        yearsattlt: "",
+        level: "B.Sc Health Promotion",
+        passionate: "",
+        interest: [
+            "",
         ]
     },
     {
@@ -201,48 +255,11 @@ const teamData = [
             "Teaching",
         ]
     },
-    {
-        id: 8,
-        name: "Ese Emielu",
-        title: "Social Media Admin",
-        img: Tutorpic30,
-        nationality: "Nigerian",
-        gender: "Male",
-        subject: "Nil",
-        course: "Economics",
-        yearsattlt: "1 year 9 months",
-        level: "Bs.c Economics",
-        passionate: "Nil",
-        interest: [
-            "Well crafted stories",
-            "Physical Sports",
-            "Watching movies",
-        ]
-    },
-    {
-        id: 9,
-        name: "Oluwafemi Akinruntan",
-        title: "Chief Technical Officer",
-        img: Tutorpic26,
-        isTutor: true,
-        nationality: "Nigerian",
-        gender: "Male",
-        subject: "Mathematics, Coding, NVR & VR",
-        course: "Mathematics",
-        yearsattlt: "2+ year",
-        level: "B.Sc Mathematics",
-        passionate: "Nil",
-        interest: [
-            "Technology",
-            "Football",
-            "Artificial Intelligence",
-            "Learning new things",
-        ]
-    },
+
     {
         id: 10,
         name: "Iseoluwa Akinduko",
-        title: "Counsellor",
+        title: "Counselor",
         isTutor: true,
         img: Tutorpic35,
         nationality: "Nigerian",
@@ -259,99 +276,7 @@ const teamData = [
             "Community Development",
         ]
     },
-    {
-        id: 11,
-        name: "Rasheed Adeoti",
-        title: "Tutor",
-        isTutor: true,
-        img: Tutorpic3,
-        nationality: "Nigerian",
-        gender: "Male",
-        subject: "Mathematics",
-        course: "Mathematics",
-        yearsattlt: "2 years",
-        level: "First Class",
-        passionate: "Impacting Knowledge to younger generations ",
-        interest: [
-            "Researching",
-            "Reading",
-        ]
-    },
-    {
-        id: 12,
-        name: "Dolapo Obasa",
-        title: "Tutor",
-        isTutor: true,
-        img: Tutorpic2,
-        nationality: "Nigerian",
-        gender: "Female",
-        subject: "Mathematics, Biology, Chemistry and Physics",
-        course: "Medicine and Surgery",
-        yearsattlt: "3 years",
-        level: "400 Level",
-        passionate: "My students are the most important part of this job to me, I take imparting knowledge very seriously.",
-        interest: [
-            "Reading",
-            "Watching Anime",
-            "Writing",
-        ]
-    },
-    {
-        id: 13,
-        name: "Emmanuel Oziegbe",
-        title: "Tutor",
-        isTutor: true,
-        img: Tutorpic4,
-        nationality: "Nigerian",
-        gender: "Male",
-        subject: "Mathematics, Science",
-        course: "Agricultre",
-        yearsattlt: "3 years",
-        level: "Bs.c Agriculture",
-        passionate: "I am passionate about tutoring because I love helping students overcome challenges, build confidence, and achieve their academic goals. Seeing their growth and success inspires me to keep making a difference.",
-        interest: [
-            "Playing the piano",
-            "Coding",
-            "Meeting new people",
-        ]
-    },
-    {
-        id: 14,
-        name: "Priscilla Lasisi",
-        title: "English Tutor",
-        isTutor: true,
-        img: Tutorpic27,
-        nationality: "Nigerian",
-        gender: "Female",
-        subject: "English, VR",
-        course: "English and Literary Studies",
-        yearsattlt: "15 months",
-        level: "400 Level",
-        passionate: "I would say seeing my students grow, not just in their studies but in who they are. I’ve had students who barely spoke up in class become more confident, and others who struggled with basics like spelling make real progress. Watching that growth happen, seeing them realize what they’re capable of, that’s what makes this so fulfilling for me.",
-        interest: [
-            "Voice acting",
-            "Script writing",
-        ]
-    },
-    {
-        id: 15,
-        name: "Mercy Adams",
-        title: "Tutor",
-        isTutor: true,
-        img: Tutorpic15,
-        nationality: "Nigerian",
-        gender: "Female",
-        subject: "English language, Biology and Mathematics     ",
-        course: "Biology education ",
-        yearsattlt: "2+ Years",
-        level: "B.Sc Biology Education",
-        passionate: "Seeing my students finally understand and grasp a difficult concept, and witnessing their confidence and excitement grow as a result!",
-        interest: [
-            "Reading",
-            "Drawing",
-            "Impacting knowledge",
-        ]
-    },
+
     {
         id: 16,
         name: "James Opara",
@@ -393,7 +318,7 @@ const teamData = [
     {
         id: 18,
         name: "Abisola Adefila",
-        title: "Science Tutor",
+        title: "Supervisor",
         isTutor: true,
         img: Tutorpic16,
         nationality: "Nigerian",
@@ -409,43 +334,43 @@ const teamData = [
             "Music",
         ]
     },
+
     {
-        id: 19,
-        name: "Ayodeji Akinsanya",
-        title: "Tutor",
+        id: 15,
+        name: "Mercy Adams",
+        title: "Supervisor",
         isTutor: true,
-        img: Tutorpic11,
+        img: Tutorpic15,
         nationality: "Nigerian",
-        gender: "Male",
-        subject: "Mathematics, NVR, Physics, Science and Coding",
-        course: "Mathematics",
-        yearsattlt: "2 years",
-        level: "B.Sc Mathematics",
-        passionate: "My passion as a tutor comes from seeing my students grow in confidence and excel academically. I find great fulfillment in helping them overcome challenges and achieve their goals.",
+        gender: "Female",
+        subject: "English language, Biology and Mathematics     ",
+        course: "Biology education ",
+        yearsattlt: "2+ Years",
+        level: "B.Sc Biology Education",
+        passionate: "Seeing my students finally understand and grasp a difficult concept, and witnessing their confidence and excitement grow as a result!",
         interest: [
-            "Teaching",
             "Reading",
-            "Gaming",
-            "Solving puzzles",
+            "Drawing",
+            "Impacting knowledge",
         ]
     },
     {
-        id: 20,
-        name: "Blossom Adeyemi",
+        id: 13,
+        name: "Emmanuel Oziegbe",
         title: "Supervisor",
         isTutor: true,
-        img: Tutorpic1,
+        img: Tutorpic4,
         nationality: "Nigerian",
-        gender: "Female",
-        subject: "Mathematics, English, Science, Verbal Reasoning ",
-        course: "Nursing Science",
-        yearsattlt: "2 years",
-        level: "500 Level",
-        passionate: "I am passionate about providing students with the knowledge, skills and encouragement needed for then to learn, grow and achieve their goals. It is immensely rewarding to see a student finally grasp a concept that they were previously struggling with.",
+        gender: "Male",
+        subject: "Mathematics, Science",
+        course: "Agriculture",
+        yearsattlt: "3 years",
+        level: "Bs.c Agriculture",
+        passionate: "I am passionate about tutoring because I love helping students overcome challenges, build confidence, and achieve their academic goals. Seeing their growth and success inspires me to keep making a difference.",
         interest: [
-            "Public health",
-            "Film",
-            "Fashion",
+            "Playing the piano",
+            "Coding",
+            "Meeting new people",
         ]
     },
     {
@@ -459,7 +384,7 @@ const teamData = [
         subject: "Mathematics, Science, NVR",
         course: "Pharmacy",
         yearsattlt: "2 years",
-        level: "500 Level",
+        level: "600 Level",
         passionate: "I love breaking down concepts and It's so rewarding watching my student understand a that topic they've been struggling with, seeing them gain confidence in their abilities to solve so- called difficult questions makes tutoring incredibly fulfilling.",
         interest: [
             " Drug discovery",
@@ -479,7 +404,7 @@ const teamData = [
         subject: "Maths, English, Science",
         course: "Medicine and Surgery",
         yearsattlt: "1 year",
-        level: "B.Sc Mathematics",
+        level: "600 Level",
         passionate: "My passion as a tutor comes from wanting to continue a beautiful cycle – as someone who has benefitted greatly from learning from some of the best teachers in the world, I'm happy to be able to be pass on knowledge in its simplest form to as many other people as I can. ",
         interest: [
             "Binge watching TV series",
@@ -497,7 +422,7 @@ const teamData = [
         subject: "Mathematics, English,Physics,Biology, Chemistry ",
         course: "Medicine and Surgery",
         yearsattlt: "1 year",
-        level: "400 Level",
+        level: "600 Level",
         passionate: "As a tutor, I'm passionate about helping students achieve their goals and reach their full potential. I'm passionate about helping students build their confidence and Self-Esteem. I also love making learning fun for students",
         interest: [
             "Medicine",
@@ -517,7 +442,7 @@ const teamData = [
         subject: "Science",
         course: "Veterinary Medicine",
         yearsattlt: "2 years",
-        level: "400 Level",
+        level: "600 Level",
         passionate: "The opportunity to make a positive impact on student's life.",
         interest: [
             "Helping students oversome challenges",
@@ -565,7 +490,7 @@ const teamData = [
     {
         id: 29,
         name: "Afolayan Opeyemi",
-        title: "Tutor",
+        title: "Supervisor",
         isTutor: true,
         img: Tutorpic18,
         nationality: "Nigerian",
@@ -590,8 +515,8 @@ const teamData = [
         nationality: "Nigerian",
         gender: "Male",
         subject: "Mathematics, Further Mathematics, English, Economics & Physics",
-        course: "8 Months",
-        yearsattlt: "Less than a Year",
+        course: "Civil Engineering",
+        yearsattlt: "8 Months",
         level: "B.Eng Civil Engineering",
         passionate: "I'm passionate about teaching because it's a privilege to witness the 'lightbulb' moments, to guide students towards their potential, and to know I'm contributing to their growth and future success.",
         interest: [
@@ -686,9 +611,9 @@ const teamData = [
         nationality: "Nigerian",
         gender: "Female",
         subject: "English Language, English Literature",
-        course: "B.Ed & B.A in English Education",
+        course: "English Education",
         yearsattlt: "3 months",
-        level: "Bachelor's Degree",
+        level: "B.Ed & B.A in English Education",
         passionate: "I use the playway approach and also unlearn, learn, and relearn with my students. Therefore, learning again and again makes me more passionate.",
         interest: [
             "Dancing",
@@ -738,7 +663,7 @@ const teamData = [
     {
         id: 39,
         name: "Oyeniran Tofunmi Elizabeth",
-        title: "Customer Care Lead",
+        title: "Chief Financial Officer",
         isTutor: false,
         img: TofunmiOyeniranPic,
         nationality: "Nigerian",
@@ -746,7 +671,7 @@ const teamData = [
         subject: "Nil",
         course: "Statistics",
         yearsattlt: "9 months",
-        level: "Second Class Upper",
+        level: "B.Sc Statistics",
         passionate: "What makes me passionate as a Customer Care Rep is making a difference in the customer experience. I see my role as the bridge between the company and the customer. Every interaction I have can improve loyalty and trust, which is motivating.",
         interest: [
             "Sewing",
@@ -830,23 +755,7 @@ const teamData = [
             "Going on adventures",
         ]
     },
-    {
-        id: 44,
-        name: "Oluwabukunmi Olaopa",
-        title: "Programs and Partnerships Lead",
-        isTutor: false,
-        img: BukunmiOlaopaPic,
-        nationality: "Nigerian",
-        gender: "Female",
-        subject: "Nil",
-        course: "Health Promotion / University of Ilorin",
-        yearsattlt: "",
-        level: "BSc Graduate",
-        passionate: "",
-        interest: [
-            "",
-        ]
-    },
+
     {
         id: 45,
         name: "Mary Adeniji",
@@ -946,7 +855,7 @@ const TeamProfile = () => {
                                 <p className="text-gray-800">{selectedTutor.course}</p>
                             </div>
                             <div>
-                                <p className="text-xs text-gray-400 mb-0.5">Qualification</p>
+                                <p className="text-xs text-gray-400 mb-0.5">Qualification/Level</p>
                                 <p className="text-gray-800">{selectedTutor.level}</p>
                             </div>
                         </div>
