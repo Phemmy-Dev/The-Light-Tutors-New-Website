@@ -12,6 +12,9 @@ import PageNotFound from './components/pages/errorPage/PageNotFound.jsx'
 import TutorProfile from './components/pages/TutorProfile/TutorProfile.jsx'
 import BlogList from './components/pages/Blog/BlogList.jsx'
 import BlogPost from './components/pages/Blog/BlogPost.jsx'
+import Terms from './components/pages/Terms/Terms.jsx'
+import Privacy from './components/pages/Privacy/Privacy.jsx'
+import Refund from './components/pages/Refund/Refund.jsx'
 import './index.css'
 
 
@@ -51,6 +54,18 @@ const router = createBrowserRouter([
   {
     path: '/meet-our-team/:id', // Dynamic route for tutor profiles
     element: <TutorProfile />,
+  },
+  {
+    path: '/terms',
+    element: <Terms />,
+  },
+  {
+    path: '/privacy',
+    element: <Privacy />,
+  },
+  {
+    path: '/refund',
+    element: <Refund />,
   },
   {
     path: '*',

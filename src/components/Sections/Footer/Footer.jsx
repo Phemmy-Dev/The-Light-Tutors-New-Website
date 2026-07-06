@@ -10,10 +10,10 @@ import { motion } from 'framer-motion'
 const Footer = () => {
   return (
     <div className="mt-20 mb-0  w-full bottom-0 bg-tltgreen py-10 px-8 ">
-        <div className="footer_upper flex flex-col flex-wrap md:flex-nowrap md:flex-row justify-between gap-10 items-center md:mx-12">
+        <div className="footer_upper flex flex-col flex-wrap md:flex-nowrap md:flex-row justify-between gap-10 items-start md:mx-12">
         {/* Footer Logo and Social Links */}
         <motion.div
-          className="footer_logo_and_text flex flex-col md:justify-center w-full md:w-1/3 gap-3"
+          className="footer_logo_and_text flex flex-col md:justify-center w-full md:w-1/4 gap-3"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -37,7 +37,7 @@ const Footer = () => {
 
         {/* Footer Links */}
         <motion.div
-          className="footer_links w-full md:w-1/3 flex flex-col justify-center text-sm md:items-center"
+          className="footer_links w-full md:w-1/4 flex flex-col justify-center text-sm md:items-center"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -75,9 +75,62 @@ const Footer = () => {
           </ul>
         </motion.div>
 
+        {/* Legal Links */}
+        <motion.div
+          className="footer_legal w-full md:w-1/4 flex flex-col justify-center text-sm md:items-start"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.2, delayChildren: 0.3 },
+            },
+          }}
+        >
+          <motion.h4
+            className="text-white font-bold mb-3 text-xl"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            Legal
+          </motion.h4>
+          <ul className="text-white flex flex-col gap-1">
+            <motion.li
+              className="font-normal text-sm w-44 text-gray-400 hover:translate-x-3 transition-transform duration-300"
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
+              <Link to="/terms" className="nav-links hover:text-white transition-colors duration-300">Terms & Conditions</Link>
+            </motion.li>
+            <motion.li
+              className="font-normal text-sm w-44 text-gray-400 hover:translate-x-3 transition-transform duration-300"
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
+              <Link to="/privacy" className="nav-links hover:text-white transition-colors duration-300">Privacy Policy</Link>
+            </motion.li>
+            <motion.li
+              className="font-normal text-sm w-44 text-gray-400 hover:translate-x-3 transition-transform duration-300"
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
+              <Link to="/refund" className="nav-links hover:text-white transition-colors duration-300">Refund Policy</Link>
+            </motion.li>
+          </ul>
+        </motion.div>
+
         {/* Contact Info */}
         <motion.div
-          className="contact_info w-full md:w-1/3 justify-center md:ml-16"
+          className="contact_info w-full md:w-1/4 justify-center md:ml-16"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
