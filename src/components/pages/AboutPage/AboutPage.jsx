@@ -195,7 +195,7 @@ const AboutPage = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
-          Guided by our core values, we strive to build a nurturing and impactful educational experience. Our commitment to respect, communication, and growth shapes everything we do.
+          Guided by our core values, we strive to build a nurturing and impactful educational experience. Our commitment to excellence, growth, and impact shapes everything we do.
         </motion.p>
         <motion.div
           className="values_list flex flex-row flex-wrap gap-2"
@@ -212,13 +212,10 @@ const AboutPage = () => {
         >
           {[
             "Servant Leadership",
-            "Communication",
+            "Excellence",
+            "Growth & Development",
+            "Impact",
             "Celebration",
-            "Welfare and Support",
-            "Respect",
-            "Relationship",
-            "Integrity",
-            "Growth and Development",
           ].map((value, index) => (
             <motion.div
               key={index}

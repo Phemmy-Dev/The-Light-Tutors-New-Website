@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-const TeamBox = ({ id, img, name, title, index = 0 }) => {
+const TeamBox = ({ id, img, name, title, index = 0, clickable = true }) => {
 
   const navigate = useNavigate();
 
@@ -12,13 +12,13 @@ const TeamBox = ({ id, img, name, title, index = 0 }) => {
 
   return (
     <motion.div
-      className="group relative w-full rounded-2xl overflow-hidden cursor-pointer bg-white"
-      onClick={handleClick}
+      className={`group relative w-full rounded-2xl overflow-hidden bg-white ${clickable ? 'cursor-pointer' : ''}`}
+      onClick={clickable ? handleClick : undefined}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, ease: "easeOut", delay: (index % 4) * 0.1 }}
-      whileHover={{ y: -6 }}
+      whileHover={clickable ? { y: -6 } : undefined}
       style={{
         boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
       }}
@@ -60,6 +60,7 @@ TeamBox.propTypes = {
   name: PropTypes.string,
   title: PropTypes.string,
   index: PropTypes.number,
+  clickable: PropTypes.bool,
 };
 
 export default TeamBox;

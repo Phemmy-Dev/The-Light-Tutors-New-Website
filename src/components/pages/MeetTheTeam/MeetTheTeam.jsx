@@ -5,101 +5,10 @@ import Footer from "../../Sections/Footer/Footer"
 import teamImg from '../../../assets/images/teamimg.JPG'
 import { motion } from 'framer-motion'
 
-
-// TutorImgs
-import Tutorpic1 from '../../../assets/images/tutors/1.jpg'
-import Tutorpic2 from '../../../assets/images/tutors/2.jpg'
-import Tutorpic4 from '../../../assets/images/tutors/4.jpg'
-import Tutorpic5 from '../../../assets/images/tutors/5.jpg'
-import Tutorpic6 from '../../../assets/images/tutors/6.jpg'
-import Tutorpic8 from '../../../assets/images/tutors/8.jpg'
-import Tutorpic9 from '../../../assets/images/tutors/9.jpeg'
-import Tutorpic11 from '../../../assets/images/tutors/11.png'
-import Tutorpic15 from '../../../assets/images/tutors/15.jpg'
-import Tutorpic16 from '../../../assets/images/tutors/16.jpg'
-import Tutorpic17 from '../../../assets/images/tutors/17.jpg'
-import Tutorpic18 from '../../../assets/images/tutors/18.jpg'
-import Tutorpic19 from '../../../assets/images/tutors/19.jpg'
-import Tutorpic21 from '../../../assets/images/tutors/21.jpg'
-import Tutorpic22 from '../../../assets/images/tutors/22.jpg'
-import Tutorpic23 from '../../../assets/images/tutors/23.jpg'
-import Tutorpic25 from '../../../assets/images/tutors/25.jpg'
-import Tutorpic26 from '../../../assets/images/tutors/26.jpeg'
-import Tutorpic27 from '../../../assets/images/tutors/27.jpg'
-import Tutorpic28 from '../../../assets/images/tutors/olamiji.jpeg'
-import Tutorpic30 from '../../../assets/images/tutors/30.jpg'
-import Tutorpic31 from '../../../assets/images/tutors/31.jpg'
-import Tutorpic33 from '../../../assets/images/tutors/33.jpg'
-import Tutorpic34 from '../../../assets/images/tutors/34.jpg'
-import Tutorpic35 from '../../../assets/images/tutors/35.jpg'
-import Tutorpic36 from '../../../assets/images/tutors/36.jpg'
-import Tutorpic37 from '../../../assets/images/tutors/37.jpg'
-import Tutorpic38 from '../../../assets/images/tutors/38.jpg'
-import Tutorpic3 from '../../../assets/images/tutors/3.jpg'
-import PlaceholderPic from '../../../assets/images/tutors/---.jpg'
-import PreciousMomohPic from '../../../assets/images/tutors/precious-momoh.png'
-import MorenikejPic from '../../../assets/images/tutors/morenikeji.jpeg'
-import BilalPic from '../../../assets/images/tutors/bilal.jpg'
-import VictoriaOyebodePic from '../../../assets/images/tutors/victoria-oyebode.jpg'
-import UkojieAdanaikePic from '../../../assets/images/tutors/ukojie-adenaike.jpg'
-import ImmanuelAdesokanPic from '../../../assets/images/tutors/immanuel-adesokan.jpg'
-import TofunmiOyeniranPic from '../../../assets/images/tutors/tofunmi-oyeniran.jpeg'
-import AyobamiAladePic from '../../../assets/images/tutors/ayobami-alade.jpeg'
-import FavourOladapoPic from '../../../assets/images/tutors/favour-oladapo.jpeg'
-import TobaPic from '../../../assets/images/tutors/tovas-toba.jpg'
-import SharonDavidPic from '../../../assets/images/tutors/sharon-david.jpg'
-import BukunmiOlaopaPic from '../../../assets/images/tutors/oluwbukunmi-olaopa.jpeg'
-import MaryAdenijiPic from '../../../assets/images/tutors/mary-adeniji.jpeg'
-import OlamideChristianPic from '../../../assets/images/tutors/olamide-christian.jpeg'
+import team from '../../../data/team'
 
 const MeetTheTeam = () => {
 
-
-    const teamMembers = [
-        { id: 1, name: "Joshua Oroge", title: "CEO/Founder", img: Tutorpic36 },
-        { id: 2, name: "Rose Oroge", title: "Director", img: Tutorpic5 },
-        { id: 39, name: "Oyeniran Tofunmi Elizabeth", title: "Chief Financial Officer", img: TofunmiOyeniranPic },
-        { id: 14, name: "Priscilla Lasisi", title: "HR Manager", img: Tutorpic27 },
-        { id: 20, name: "Blossom Adeyemi", title: "Customer Care Lead", img: Tutorpic1 },
-        { id: 3, name: "Aaliyah Zemaiye", title: "Chief Marketing Officer", img: Tutorpic17 },
-        { id: 9, name: "Oluwafemi Akinruntan", title: "Chief Technical Officer", img: Tutorpic26 },
-        { id: 5, name: "Olamiji Onanuga", title: "HR Officer", img: Tutorpic28 },
-        { id: 6, name: "Busayo Amadi", title: "Supervisor Lead", img: Tutorpic6 },
-        { id: 44, name: "Oluwabukunmi Olaopa", title: "Programs and Partnerships Lead", img: BukunmiOlaopaPic },
-        { id: 7, name: "Gideon Akintade", title: "CSR Team Lead", img: Tutorpic23 },
-        { id: 46, name: "Olamide Christian", title: "CSR Deputy Lead", img: OlamideChristianPic },
-        { id: 29, name: "Afolayan Opeyemi", title: "Supervisor", img: Tutorpic18 },
-        { id: 18, name: "Abisola Adefila", title: "Supervisor", img: Tutorpic16 },
-        { id: 15, name: "Mercy Adams", title: "Supervisor", img: Tutorpic15 },
-        { id: 13, name: "Emmanuel Oziegbe", title: "Supervisor", img: Tutorpic4 },
-        { id: 10, name: "Iseoluwa Akinduko", title: "Counselor", img: Tutorpic35 },
-        // { id: 11, name: "Rasheed Adeoti", title: "Tutor", img: Tutorpic3 },
-        // { id: 12, name: "Dolapo Obasa", title: "Tutor", img: Tutorpic2 },
-        { id: 16, name: "James Opara", title: "Tutor", img: Tutorpic25 },
-        { id: 17, name: "Toyin Salami", title: "Coding Tutor", img: Tutorpic19 },
-        // { id: 19, name: "Ayodeji Akinsanya", title: "Tutor", img: Tutorpic11 },
-        { id: 22, name: "Praise Aderinola", title: "Tutor", img: Tutorpic34 },
-        { id: 23, name: "Kemisola David", title: "Tutor", img: Tutorpic37 },
-        { id: 24, name: "Olumide Adisa", title: "Tutor", img: Tutorpic38 },
-        { id: 26, name: "Faith Jimoh", title: "Tutor", img: Tutorpic33 },
-        { id: 27, name: "Adeleke Owoade", title: "Yoruba Tutor", img: Tutorpic9 },
-        { id: 28, name: "Dongmo Bilson", title: "French Tutor", img: Tutorpic8 },
-        { id: 30, name: "Daniel Babalola", title: "Tutor", img: Tutorpic21 },
-        { id: 32, name: "Noah Ige", title: "Tutor", img: Tutorpic31 },
-        { id: 33, name: "Precious Momoh", title: "Tutor", img: PreciousMomohPic },
-        { id: 34, name: "Adeogun Morenikeji Samson", title: "Tutor", img: MorenikejPic },
-        { id: 35, name: "Bilal", title: "Emotional Response Marketing Strategist", img: BilalPic },
-        { id: 36, name: "Oyebode Victoria", title: "English Tutor", img: VictoriaOyebodePic },
-        { id: 37, name: "Ukoje Onohije Adenaike", title: "Tutor", img: UkojieAdanaikePic },
-        { id: 38, name: "Adesokan Immanuel Oluwanifise", title: "Tutor", img: ImmanuelAdesokanPic },
-
-        { id: 40, name: "Alade Ganiyu Ayobami", title: "Tutor", img: AyobamiAladePic },
-        { id: 41, name: "Oladapo Favour", title: "Tutor", img: FavourOladapoPic },
-        { id: 42, name: "Toba Adigun", title: "Tutor", img: TobaPic },
-        { id: 43, name: "David Sharon", title: "Tutor", img: SharonDavidPic },
-
-        { id: 45, name: "Mary Adeniji", title: "Tutor", img: MaryAdenijiPic },
-    ];
 
     return (
         <div>
@@ -160,7 +69,7 @@ const MeetTheTeam = () => {
 
                     {/* Meet the team Boxes */}
                     <div className="box_cont grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-7 px-3 md:px-0 pb-16">
-                        {teamMembers.map((member, index) => (
+                        {team.map((member, index) => (
                             <TeamBox
                                 key={member.id}
                                 id={member.id}
@@ -168,6 +77,7 @@ const MeetTheTeam = () => {
                                 name={member.name}
                                 title={member.title}
                                 index={index}
+                                clickable={member.hasProfilePage}
                             />
                         ))}
                     </div>
