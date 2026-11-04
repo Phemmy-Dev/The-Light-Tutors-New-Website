@@ -6,6 +6,7 @@ import Navbar from '../../Sections/NavBar/Navbar'
 import Footer from '../../Sections/Footer/Footer'
 import BlogCard from '../../widgets/BlogCard/BlogCard'
 import { client, queries, urlFor } from '../../../lib/sanity'
+import usePageMeta from '../../../hooks/usePageMeta'
 
 const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyVJaJAeRlKMkLVBvTDDjCnL6POBQBAklJrI2gilR24V7xYU-6bMWIDuvpqbwZuZsfL/exec'
 
@@ -128,6 +129,14 @@ const BlogPost = () => {
   const [email, setEmail] = useState('')
   const [subscribing, setSubscribing] = useState(false)
   const [subscribeStatus, setSubscribeStatus] = useState(null)
+
+  const metaDescription = (post?.seoDescription || post?.excerpt || '').replace(/\s+/g, ' ').trim()
+  usePageMeta({
+    title: post?.seoTitle || post?.title,
+    description: metaDescription.length > 155 ? metaDescription.slice(0, 152).trimEnd() + '...' : metaDescription,
+    image: post?.mainImage ? urlFor(post.mainImage).width(1200).height(630).url() : undefined,
+    type: 'article',
+  })
   const articleRef = useRef(null)
 
   // Reading progress bar
@@ -453,6 +462,22 @@ const BlogPost = () => {
               <PortableText value={post.body} components={portableTextComponents} />
             </div>
           )}
+
+          {/* Book a free session: the WhatsApp message names the post, so the team can see which article brought the parent in */}
+          <div className="mt-14 rounded-2xl bg-gradient-to-br from-tltgreen/5 to-tltorange/10 border border-tltorange/20 p-6 md:p-8 text-center">
+            <h3 className="text-xl md:text-2xl font-bold text-tltgreen mb-3">Does this sound like your child?</h3>
+            <p className="text-gray-600 mb-6 max-w-xl mx-auto">
+              You don&apos;t have to figure it out alone. Book a free session and one of our tutors will meet your child, find where they&apos;re stuck, and show you a clear way forward.
+            </p>
+            <a
+              href={`https://api.whatsapp.com/send?phone=2348153418503&text=${encodeURIComponent(`Hi! I just read "${post.title}" on your blog and I'd like to book a free session for my child.`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-tltorange text-white font-semibold px-8 py-3 rounded-full hover:opacity-90 transition"
+            >
+              Book a free session
+            </a>
+          </div>
 
           {/* Tags/Categories */}
           {post.categories && post.categories.length > 0 && (
