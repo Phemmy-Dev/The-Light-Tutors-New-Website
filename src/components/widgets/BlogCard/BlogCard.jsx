@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { urlFor } from '../../../lib/sanity'
 
 const BlogCard = ({ post, variant = 'default' }) => {
-  const { title, slug, excerpt, mainImage, publishedAt, categories, author } = post
+  const { title, slug, excerpt, bodyText, mainImage, publishedAt, categories, author } = post
 
   const formattedDate = new Date(publishedAt).toLocaleDateString('en-GB', {
     day: 'numeric',
@@ -11,8 +11,9 @@ const BlogCard = ({ post, variant = 'default' }) => {
     year: 'numeric',
   })
 
-  // Estimate reading time (rough calculation)
-  const readingTime = excerpt ? Math.max(1, Math.ceil(excerpt.length / 500)) : 3
+  // Reading time from the full post text (about 200 words a minute)
+  const text = bodyText || excerpt || ''
+  const readingTime = Math.max(1, Math.ceil(text.split(/\s+/).filter(Boolean).length / 200))
 
   // Featured/Hero variant for first post
   if (variant === 'featured') {

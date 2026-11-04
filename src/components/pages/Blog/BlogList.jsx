@@ -5,6 +5,7 @@ import Navbar from '../../Sections/NavBar/Navbar'
 import Footer from '../../Sections/Footer/Footer'
 import BlogCard from '../../widgets/BlogCard/BlogCard'
 import { client, queries, urlFor } from '../../../lib/sanity'
+import usePageMeta from '../../../hooks/usePageMeta'
 
 const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyVJaJAeRlKMkLVBvTDDjCnL6POBQBAklJrI2gilR24V7xYU-6bMWIDuvpqbwZuZsfL/exec'
 
@@ -16,6 +17,11 @@ const BlogList = () => {
   const [subscribing, setSubscribing] = useState(false)
   const [subscribeStatus, setSubscribeStatus] = useState(null)
 
+  usePageMeta({
+    title: 'Blog: Advice for Parents on GCSEs, SATs and Confidence',
+    description: 'Practical, caring advice for parents: helping your child with GCSEs, KS2 SATs, homework, focus and exam stress, from the tutors at The Light Tutors.',
+  })
+
   useEffect(() => {
     const fetchPosts = async () => {
       try {
@@ -25,7 +31,7 @@ const BlogList = () => {
         if (featured) {
           // If there's a featured post, get all other posts
           setFeaturedPost(featured)
-          const otherPosts = await client.fetch(queries.nonFeaturedPosts)
+          const otherPosts = await client.fetch(queries.nonFeaturedPosts, { featuredId: featured._id })
           setPosts(otherPosts)
         } else {
           // No featured post - use all posts, first one becomes featured

@@ -20,6 +20,7 @@ export const queries = {
     title,
     slug,
     "excerpt": pt::text(body[0..2]),
+    "bodyText": pt::text(body),
     mainImage,
     publishedAt,
     author->{
@@ -37,6 +38,9 @@ export const queries = {
     _id,
     title,
     slug,
+    seoTitle,
+    seoDescription,
+    "excerpt": pt::text(body[0..1]),
     mainImage,
     body,
     publishedAt,
@@ -57,6 +61,7 @@ export const queries = {
     title,
     slug,
     "excerpt": pt::text(body[0..1]),
+    "bodyText": pt::text(body),
     mainImage,
     publishedAt,
     categories[]->{
@@ -71,6 +76,7 @@ export const queries = {
     title,
     slug,
     "excerpt": pt::text(body[0..1]),
+    "bodyText": pt::text(body),
     mainImage,
     publishedAt,
     categories[]->{
@@ -85,6 +91,7 @@ export const queries = {
     title,
     slug,
     "excerpt": pt::text(body[0..2]),
+    "bodyText": pt::text(body),
     mainImage,
     publishedAt,
     author->{
@@ -97,12 +104,13 @@ export const queries = {
     }
   }`,
 
-  // Get all posts except featured
-  nonFeaturedPosts: `*[_type == "post" && defined(publishedAt) && !("Featured" in categories[]->title)] | order(publishedAt desc) {
+  // Get all posts except the one shown as featured
+  nonFeaturedPosts: `*[_type == "post" && defined(publishedAt) && _id != $featuredId] | order(publishedAt desc) {
     _id,
     title,
     slug,
     "excerpt": pt::text(body[0..2]),
+    "bodyText": pt::text(body),
     mainImage,
     publishedAt,
     author->{
