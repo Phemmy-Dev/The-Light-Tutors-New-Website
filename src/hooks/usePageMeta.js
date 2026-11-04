@@ -1,6 +1,9 @@
 import { useEffect } from 'react'
 
 const SITE_NAME = 'The Light Tutors'
+// Always point Google at the main domain, even when the site is opened on a
+// Netlify or Vercel copy, so those copies don't count as duplicate pages.
+const SITE_URL = 'https://thelightutors.com'
 
 const setMeta = (attr, key, content) => {
   if (!content) return
@@ -29,7 +32,7 @@ export default function usePageMeta({ title, description, image, type = 'website
   useEffect(() => {
     if (!title) return
     const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`
-    const url = window.location.origin + window.location.pathname
+    const url = SITE_URL + window.location.pathname
     document.title = fullTitle
     setMeta('name', 'description', description)
     setMeta('property', 'og:title', fullTitle)
