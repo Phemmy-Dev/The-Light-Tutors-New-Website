@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { PiArrowRightBold } from 'react-icons/pi'
 import heroImg from '../../../assets/images/heroBg3.jpg'
 import { WHATSAPP } from '../../Layout/links'
+import BrandShapes from '../../Layout/BrandShapes'
 
 // Real outcomes from parent reviews; the card cycles through them.
 const results = [
@@ -47,6 +48,7 @@ const HomeHero = () => {
         </div>
 
         <figure className="hero-photo">
+          <BrandShapes />
           <img src={heroImg} alt="A young girl writing in her notebook during an online lesson" />
           <div className="result" aria-live="polite">
             <div className="result-top">

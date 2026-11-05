@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import BrandShapes from './BrandShapes'
 
 // The opening block of an inner page: kicker, big heading, intro, buttons, and an optional photo.
 const PageHead = ({ kicker, title, lede, image, imageAlt = '', actions }) => (
@@ -10,7 +11,7 @@ const PageHead = ({ kicker, title, lede, image, imageAlt = '', actions }) => (
         {lede && <p className="lede">{lede}</p>}
         {actions && <div className="actions">{actions}</div>}
       </div>
-      {image && <figure><img src={image} alt={imageAlt} /></figure>}
+      {image && <figure><BrandShapes /><img src={image} alt={imageAlt} /></figure>}
     </div>
   </div>
 )

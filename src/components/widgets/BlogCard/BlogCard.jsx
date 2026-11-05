@@ -13,6 +13,8 @@ const BlogCard = ({ post, variant = 'default' }) => {
   const readingTime = Math.max(1, Math.ceil(words / 200))
   const featured = variant === 'featured'
   const size = featured ? [1200, 750] : [640, 420]
+  // "Featured" only decides which post leads the blog, so it isn't shown as a topic
+  const topic = categories?.find(c => c.title !== 'Featured')?.title
 
   return (
     <Link to={`/blog/${slug.current}`} className={`post-card ${variant}`}>
@@ -23,15 +25,17 @@ const BlogCard = ({ post, variant = 'default' }) => {
       </span>
       <span className="post-body">
         <span className="post-meta">
-          {categories?.[0] && <span className="tag">{categories[0].title}</span>}
-          <span>{readingTime} min read</span>
+          {topic && <span className="post-topic">{topic}</span>}
+          <span>{date} · {readingTime} min read</span>
         </span>
         <span className="post-title">{title}</span>
         {excerpt && variant !== 'compact' && <span className="post-excerpt">{excerpt}</span>}
-        <span className="post-foot">
-          <span>{author?.name || 'The Light Tutors'} · {date}</span>
-          {featured && <span className="post-read">Read article <PiArrowRightBold /></span>}
-        </span>
+        {featured && (
+          <span className="post-foot">
+            <span>By {author?.name || 'The Light Tutors'}</span>
+            <span className="post-read">Read article <PiArrowRightBold /></span>
+          </span>
+        )}
       </span>
     </Link>
   )

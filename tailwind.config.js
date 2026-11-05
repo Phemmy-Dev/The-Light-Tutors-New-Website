@@ -16,8 +16,9 @@ export default {
         '2xl': '1536px', // 2X large devices (default Tailwind breakpoint)
       },
       colors: {
-        'tltorange': '#fc8402',
-        'tltgreen': '#0a3d48',
+        // Brand palette (TLT Brand Guidelines v1.0)
+        'tltorange': '#ff7300',
+        'tltblack': '#16120f',
         'tltwhite': '#ffffff',
       },
       fontFamily: {

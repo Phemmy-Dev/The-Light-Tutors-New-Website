@@ -57,7 +57,7 @@ const Becomeatutor = () => (
       </div>
     </section>
 
-    <section className="band-mist" id="requirements">
+    <section className="band-cool" id="requirements">
       <div className="wrap split">
         <div>
           <h2 className="h-section">What we look for</h2>

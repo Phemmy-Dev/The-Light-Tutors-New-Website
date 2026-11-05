@@ -83,7 +83,7 @@ const Home = () => {
       <HomeSubjects />
       <HowItWorks />
 
-      <section className="band-peach" id="tutors">
+      <section className="band-warm" id="tutors">
         <div className="wrap">
           <div className="sec-head">
             <h2>Say hello to the people your child will learn with</h2>

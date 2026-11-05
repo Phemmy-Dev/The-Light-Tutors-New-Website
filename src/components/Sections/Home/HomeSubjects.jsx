@@ -25,7 +25,7 @@ const HomeSubjects = () => {
   const s = subjects[i]
 
   return (
-    <section className="band-teal" id="subjects">
+    <section className="band-orange" id="subjects">
       <div className="wrap">
         <div className="sec-head">
           <h2>Where does your child need a little help?</h2>

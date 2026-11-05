@@ -189,7 +189,7 @@ const BlogPost = () => {
       </article>
 
       {relatedPosts.length > 0 && (
-        <section className="band-mist related">
+        <section className="band-cool related">
           <div className="wrap">
             <div className="sec-head">
               <h2>Keep reading</h2>

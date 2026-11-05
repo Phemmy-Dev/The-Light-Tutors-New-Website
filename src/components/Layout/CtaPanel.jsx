@@ -3,7 +3,7 @@ import { PiArrowRightBold, PiCheckBold } from 'react-icons/pi'
 import { WHATSAPP } from './links'
 import defaultImg from '../../assets/images/ctaImg.jpg'
 
-// The teal closing panel at the bottom of most pages. Defaults to the "free first lesson" offer.
+// The dark closing panel at the bottom of most pages. Defaults to the "free first lesson" offer.
 const CtaPanel = ({
   title = <>Their first lesson is <span>on us.</span></>,
   text = 'Meet a tutor, see how your child gets on, and decide after. There’s nothing to sign and nothing to pay for the first lesson.',

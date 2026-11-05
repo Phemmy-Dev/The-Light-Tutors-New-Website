@@ -76,7 +76,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="band-teal">
+      <section className="band-dark">
         <div className="wrap">
           <div className="sec-head">
             <h2>What guides us</h2>

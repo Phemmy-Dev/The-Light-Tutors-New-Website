@@ -63,7 +63,7 @@ const CsrPage = () => {
         </div>
       </section>
 
-      <section className="band-teal" id="projects">
+      <section className="band-dark" id="projects">
         <div className="wrap">
           <div className="sec-head">
             <h2>Our projects, year by year</h2>
