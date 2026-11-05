@@ -1,436 +1,96 @@
-import Navbar from "../../Sections/NavBar/Navbar";
-import Footer from "../../Sections/Footer/Footer";
-import BecomeATutorWidget from "../../widgets/BecomeATutor/BecomeATutorWidget";
-import teamImg2 from '../../../assets/images/teamimg.JPG';
-import { FaWallet, FaCalendarAlt } from "react-icons/fa";
-import { IoIosHome } from "react-icons/io";
-import { motion } from "framer-motion";
+import { PiWalletDuotone, PiCalendarCheckDuotone, PiHouseLineDuotone, PiCheckBold, PiArrowRightBold } from 'react-icons/pi'
+import PageLayout from '../../Layout/PageLayout'
+import PageHead from '../../Layout/PageHead'
+import CtaPanel from '../../Layout/CtaPanel'
+import teamImg from '../../../assets/images/teamimg.JPG'
 
-const Becomeatutor = () => {
-  const steps = [
-    {
-      title: "Fill Application",
-      description: "Complete the online application form on this page in its entirety.",
-    },
-    {
-      title: "Upload Documents",
-      description: "Upload all required documents, which include: Resume/CV, Cover letter, Contact information for professional references.",
-    },
-    {
-      title: "Review Application",
-      description: "Review your application to ensure all information is accurate and up-to-date.",
-    },
-    {
-      title: "Submit Application",
-      description: "Submit your application by clicking the 'Submit' button at the end of the registration form.",
-    },
-  ];
+const APPLY = 'https://forms.gle/3bzxXxwatTGGiHiH6'
 
-  return (
-    <div>
-      <Navbar />
-      <BecomeATutorWidget  title='Join The Light Tutors Team' 
-      subtext='We are excited to welcome passionate and dedicated tutors to our growing team. Explore the details below and apply today!'
-      subsubtext="" 
-      batImg={teamImg2} />
+const benefits = [
+  { icon: PiWalletDuotone, title: 'Competitive pay', text: 'Prompt, fair pay for your time and effort.' },
+  { icon: PiCalendarCheckDuotone, title: 'A schedule that suits you', text: 'Your own teaching calendar, planned around your day.', warm: true },
+  { icon: PiHouseLineDuotone, title: 'Work from anywhere', text: 'Teach remotely, with little or no need to be anywhere in person.' },
+]
 
-      <div>
-        {/* Benefits Section */}
-        <motion.div
-          className="benefits px-10 mt-10"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-        >
-          <motion.h1
-            className="text-3xl text-center font-bold md:text-4xl"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            Benefits of being a Tutor
-          </motion.h1>
-          <motion.div
-            className="benefits__box__cont flex flex-col justify-between gap-10 my-10 md:flex-row"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: { staggerChildren: 0.2, delayChildren: 0.2 },
-              },
-            }}
-          >
-            {[
-              {
-                icon: <FaWallet />,
-                title: "Competitive Pay",
-                description: "Prompt and adequate compensation for your time and effort.",
-              },
-              {
-                icon: <FaCalendarAlt />,
-                title: "Convenient Schedule",
-                description: "Your own personalised work calendar that can be easily customised and planned around your day.",
-              },
-              {
-                icon: <IoIosHome />,
-                title: "Remote",
-                description: "Work from anywhere in the world, with little to no requirements for physical presence.",
-              },
-            ].map((benefit, index) => (
-              <motion.div
-                key={index}
-                className="benefit__box flex flex-col justify-center items-center py-5 px-5 rounded-lg md:w-1/3 shadow-2xl"
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-              >
-                <div className="icon text-5xl text-tltgreen">{benefit.icon}</div>
-                <h2 className="font-semibold text-2xl my-2">{benefit.title}</h2>
-                <p className="text-center">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.div>
+const requirements = [
+  { label: 'Education', text: 'WASSCE and/or a B.Sc. in Education or a relevant subject, or an equivalent qualification.' },
+  { label: 'Experience', text: 'Prior experience teaching your subject, preferably online.' },
+  { label: 'Subject knowledge', text: 'A thorough understanding of the subject you’ll teach.' },
+  { label: 'Technical skills', text: 'Comfortable with virtual tools such as Zoom and Google Docs.' },
+  { label: 'People skills', text: 'Excellent communication, adaptability, patience and empathy.' },
+  { label: 'Language', text: 'Fluent in English.' },
+]
 
-        {/* Requirements Section */}
-           <motion.div
-          className="bg-gradient-to-r from-tltgreen to-teal-600 text-white p-8 rounded-lg shadow-lg mx-10 mt-10"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <motion.h1
-            className="text-3xl font-bold mb-6 text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          >
-            Requirements To Become A Tutor
-          </motion.h1>
-          <motion.ul
-            className="list-none pl-0 space-y-4"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: { staggerChildren: 0.2, delayChildren: 0.4 },
-              },
-            }}
-          >
-            {[
-              "Educational Background: WASSCE and/or B.Sc. in Education or relevantLanguage or equivalent qualification.",
-              "Experience: Prior experience in teaching Language subjects, preferably online.",
-              "Technical Skills: Proficiency in using virtual tools and platforms.",
-              "Soft Skills: Excellent communication, adaptability, patience, and empathy.",
-              "Proficiency in virtual platforms (e.g., Zoom, Google Docs).",
-              "Comprehensive knowledge of the subject area.",
-              "Fluency in English.",
-            ].map((requirement, index) => (
-              <motion.li
-                key={index}
-                className="flex items-start"
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-              >
-                <span className="text-teal-300 mr-3">✔</span>
-                <p>{requirement}</p>
-              </motion.li>
-            ))}
-          </motion.ul>
-        </motion.div>  
+const steps = [
+  { title: 'Fill in the application', text: 'Complete the online application form in full.' },
+  { title: 'Upload your documents', text: 'Your CV, a cover letter, and contact details for professional references.' },
+  { title: 'Check your details', text: 'Make sure everything is accurate and up to date.' },
+  { title: 'Submit', text: 'Press Submit at the end of the form. We’ll be in touch.' },
+]
 
-        {/* How To Apply Section */}
-        <motion.div
-          className="bg-gray-900 text-white py-16 px-4 mt-10"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-        >
-          <motion.h1
-            className="text-4xl font-bold mb-12 text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            How To Apply
-          </motion.h1>
-          <motion.div
-            className="mx-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:mx-0"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: { staggerChildren: 0.2, delayChildren: 0.4 },
-              },
-            }}
-          >
-            {steps.map((step, index) => (
-              <motion.div
-                key={index}
-                className="bg-transparent border border-white p-6 rounded-lg shadow-lg hover:bg-gray-800 transition duration-300"
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-              >
-                <h2 className="text-4xl font-semibold mb-4">{step.title}</h2>
-                <p className="text-gray-300">{step.description}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.div> 
+const Becomeatutor = () => (
+  <PageLayout title="Become a Tutor" description="Join The Light Tutors: teach one-to-one online, from anywhere, on a schedule that suits you. See the benefits, requirements and how to apply.">
+    <PageHead
+      kicker="Careers at The Light Tutors"
+      title="Teach from anywhere. Change a child’s year."
+      lede="We’re always glad to welcome passionate, patient tutors to our growing team. Here’s what we offer, what we look for, and how to apply."
+      image={teamImg}
+      imageAlt="The Light Tutors team"
+      actions={<>
+        <a className="btn btn-primary" href={APPLY} target="_blank" rel="noopener noreferrer">Apply now <PiArrowRightBold /></a>
+        <a className="btn btn-ghost" href="#requirements">See the requirements</a>
+      </>}
+    />
 
-        {/* Apply Now CTA */}
-        <motion.div
-          className="text-center py-16 px-6 mx-10 mt-10 bg-tltorange/5 rounded-2xl border border-tltorange/20"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Ready to Join Us?</h2>
-          <p className="text-gray-600 mb-8 max-w-lg mx-auto">
-            If you meet the requirements and are passionate about teaching, we'd love to hear from you. Click below to fill out the application form.
-          </p>
-          <a
-            href="https://forms.gle/3bzxXxwatTGGiHiH6"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-8 py-3.5 bg-tltorange text-white font-semibold rounded-full shadow-md hover:bg-orange-600 transition-colors duration-200 text-lg"
-          >
-            Apply Now
-          </a>
-        </motion.div>
-
-        {/*  Tutor Position Details */}
-          {/* <motion.div
-          className="bg-gradient-to-r from-tltgreen to-teal-600 text-white p-8 rounded-lg shadow-lg mx-10 mt-10"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <motion.h1
-            className="text-4xl font-bold mb-6 text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          >
-            We're Hiring!!
-          </motion.h1>
-          <motion.p
-            className="text-center mb-6 text-lg"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-          >
-            We are looking for skilled and passionate tutors to join our team, conducting live online tutoring sessions for students in the UK Years 3 to 11 and A’levels.
-          </motion.p>
-
-          <motion.h2
-            className="text-2xl font-bold mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-          >
-            Job Responsibilities
-          </motion.h2>
-          <motion.ul
-            className="list-none pl-5 space-y-2 mb-6"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: { staggerChildren: 0.2, delayChildren: 0.8 },
-              },
-            }}
-          >
-            {[
-              "Conduct engaging and interactive live online tutoring sessions.",
-              "Utilise online platforms (e.g., Zoom, Google Packages) effectively.",
-              "Provide structured lesson plans and comprehensive progress reports for students.",
-            ].map((responsibility, index) => (
-              <motion.li
-                key={index}
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-              >
-                <span className="text-teal-300 mr-3">✔</span>
-                {responsibility}
-              </motion.li>
-            ))}
-          </motion.ul>
-
-          <motion.h2
-            className="text-2xl font-bold mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 1.0 }}
-          >
-            Subjects
-          </motion.h2>
-          <motion.div
-            className="mb-6 flex flex-wrap gap-2 justify-center"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: { staggerChildren: 0.1, delayChildren: 1.0 },
-              },
-            }}
-          >
-            {[
-              "English", "Mathematics", "Physics", "Verbal & Non-verbal Reasoning",
-              "Chemistry", "Biology", "Basic Science", "Spanish", "Coding"
-            ].map((subject, index) => (
-              <motion.span
-                key={index}
-                className="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-shadow duration-200"
-                variants={{
-                  hidden: { opacity: 0, scale: 0.8 },
-                  visible: { opacity: 1, scale: 1 },
-                }}
-                whileHover={{ scale: 1.05 }}
-              >
-                {subject}
-              </motion.span>
-            ))}
-          </motion.div>
-          <motion.p
-            className="text-center mb-6 text-sm italic opacity-90"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 1.2 }}
-          >
-            (Computer Studies & Geography are a plus)
-          </motion.p>
-
-          <motion.h2
-            className="text-2xl font-bold mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 1.4 }}
-          >
-            Requirements
-          </motion.h2>
-          <motion.ul
-            className="list-none pl-5 space-y-2 mb-6"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: { staggerChildren: 0.2, delayChildren: 1.2 },
-              },
-            }}
-          >
-            {[
-              "Educational Background: Possesses WASSCE and/or a Bachelor’s Degree in Education or its equivalent.",
-              "Experience: Prior experience in teaching stated subjects, preferably online.",
-              "Technical Skills: Proficiency in using virtual tools and platforms.",
-              "Soft Skills: Excellent communication, adaptability, patience, and empathy.",
-              "Fluent in English.",
-            ].map((requirement, index) => (
-              <motion.li
-                key={index}
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-              >
-                <span className="text-teal-300 mr-3">✔</span>
-                {requirement}
-              </motion.li>
-            ))}
-          </motion.ul>
-
-          <motion.h2
-            className="text-2xl font-bold mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 1.4 }}
-          >
-            Working Conditions
-          </motion.h2>
-          <motion.ul
-            className="list-none pl-5 space-y-2 mb-6"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: { staggerChildren: 0.2, delayChildren: 1.6 },
-              },
-            }}
-          >
-            {[
-              "Remote Work: Must have a quiet, distraction-free workspace.",
-              "Flexible Hours: Schedule based on student and tutor availability.",
-              // "Technical Setup Required: Stable internet connection, computer webcam, good lighting.",
-              "A stable internet connection.",
-              "A functional computer with a webcam.",
-              "Suitable lighting.",
-              "Noise cancellation headset.",
-              "MiFi.",
-            ].map((condition, index) => (
-              <motion.li
-                key={index}
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-              >
-                <span className="text-teal-300 mr-3">✔</span>
-                {condition}
-              </motion.li>
-            ))}
-          </motion.ul>
-
-          <div
-            className="text-center mt-8"
-            // initial={{ opacity: 0, y: 20 }}
-            // whileInView={{ opacity: 1, y: 0 }}
-            // transition={{ duration: 0.8, ease: "easeOut", delay: 1.8 }}
-          >
-            <a
-              href="https://forms.gle/zeyCGZzTsxK5RwebA"
-              target="_blank"
-              className="px-6 py-3 bg-white text-black font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition duration-200"
-            >
-              Apply Now
-            </a>
-          </div>
-        </motion.div>  */}
+    <section className="flush-top">
+      <div className="wrap">
+        <div className="sec-head"><h2>Why tutors join us</h2></div>
+        <div className="feature-grid" style={{ '--cols': 3 }}>
+          {benefits.map(({ icon: Icon, title, text, warm }) => (
+            <div className={`feature${warm ? ' warm' : ''}`} key={title}>
+              <Icon aria-hidden="true" />
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </div>
+          ))}
+        </div>
       </div>
+    </section>
 
-      <Footer />
-    </div>
-  );
-};
+    <section className="band-mist" id="requirements">
+      <div className="wrap split">
+        <div>
+          <h2 className="h-section">What we look for</h2>
+          <p className="muted-lede">If this sounds like you, we’d love to hear from you.</p>
+        </div>
+        <ul className="req-list">
+          {requirements.map(r => (
+            <li key={r.label}><PiCheckBold aria-hidden="true" /><div><b>{r.label}</b><span>{r.text}</span></div></li>
+          ))}
+        </ul>
+      </div>
+    </section>
 
-export default Becomeatutor;
+    <section>
+      <div className="wrap">
+        <div className="sec-head"><h2>How to apply</h2><p>Have your CV and cover letter ready before you start.</p></div>
+        <ol className="numbered">
+          {steps.map((s, i) => (
+            <li key={s.title}><span className="num">{i + 1}</span><h3>{s.title}</h3><p>{s.text}</p></li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    <CtaPanel
+      title={<>Ready to <span>join us?</span></>}
+      text="If you meet the requirements and love teaching, fill in the application form and we’ll be in touch."
+      points={[]}
+      label="Apply now"
+      href={APPLY}
+      image={null}
+    />
+  </PageLayout>
+)
+
+export default Becomeatutor

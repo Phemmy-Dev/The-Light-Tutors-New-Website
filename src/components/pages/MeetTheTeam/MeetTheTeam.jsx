@@ -1,94 +1,76 @@
-import Navbar from "../../Sections/NavBar/Navbar"
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import PageLayout from '../../Layout/PageLayout'
+import PageHead from '../../Layout/PageHead'
+import CtaPanel from '../../Layout/CtaPanel'
 import EmployeeOfTheMonth from '../../../assets/images/employeeM.png'
-import TeamBox from "../../widgets/TeamBox/TeamBox"
-import Footer from "../../Sections/Footer/Footer"
-import teamImg from '../../../assets/images/teamimg.JPG'
-import { motion } from 'framer-motion'
-
 import team from '../../../data/team'
 
+const groups = {
+  Everyone: () => true,
+  Tutors: m => m.isTutor,
+  'Leadership & staff': m => !m.isTutor,
+}
+
+// "Nil" and blank subjects come from older entries
+const subjectsOf = m => (typeof m.subject === 'string' && !['', 'nil'].includes(m.subject.trim().toLowerCase()) ? m.subject.replace(/\s+/g, ' ').trim().replace(/[.,]$/, '') : null)
+
 const MeetTheTeam = () => {
+  // Filter hidden for now. To bring it back: use `const [group, setGroup] = useState('Everyone')` and uncomment the filter below.
+  const [group] = useState('Everyone')
+  const members = team.filter(groups[group])
 
+  return (
+    <PageLayout title="Meet Our Team" description="Meet the tutors and staff behind The Light Tutors: qualified, patient people who bring a wide range of experience to every lesson.">
+      <PageHead
+        kicker="Meet the team"
+        title="The friendly faces behind every lesson"
+        lede="We are a group of young, passionate people working towards one goal: helping every child learn with confidence. Tap a tutor to read about how they teach."
+      />
 
-    return (
-        <div>
-            <Navbar />
-            <div className="meet_the_team_cont h-screen ">
+      <div className="wrap">
+        <figure className="eotm">
+          <img src={EmployeeOfTheMonth} alt="The Light Tutors employee of the month" />
+        </figure>
+      </div>
 
-                {/* Meet The Team Header */}
-                <motion.div
-                    className="meet_team_header pt-56 py-20 flex flex-col justify-center items-center mb-16"
-                    style={{
-                        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(${teamImg})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundRepeat: 'no-repeat',
-                    }}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                >
-                    <motion.h1
-                        className="text-2xl md:text-4xl mb-4 px-3 md:px-0 w-full md:w-1/2 text-tltwhite text-center font-bold"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-                    >
-                        We bring a <span className="text-tltorange">wealth</span> of experience from a wide range <span className="text-tltorange">background</span>.
-                    </motion.h1>
-                    <motion.p
-                        className="text-xs md:text-base text-center w-11/12 px-8 md:w-2/5 text-tltwhite"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-                    >
-                        We are a group of young passionate individuals working together to achieve a common goal. Get to know the faces behind our success.
-                    </motion.p>
-                </motion.div>
+      <section className="team-section">
+        <div className="wrap">
+          <div className="sec-head">
+            <h2>Our team</h2>
+            {/* <div className="filter" role="tablist" aria-label="Filter the team">
+              {Object.keys(groups).map(g => (
+                <button key={g} role="tab" aria-selected={group === g} onClick={() => setGroup(g)}>
+                  {g} <span>{team.filter(groups[g]).length}</span>
+                </button>
+              ))}
+            </div> */}
+          </div>
 
-                {/* Employee Of The Month */}
-                <motion.div
-                    className="employee_of_the_month_img flex justify-center items-center mb-16 mx-4"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-                >
-                    <img src={EmployeeOfTheMonth} alt="Employee Of The Month" className="w-full rounded-xl" />
-                </motion.div>
-
-                {/* The Team */}
-                <div className=" px-0 md:px-12">
-                    <motion.h2
-                        className="font-semibold text-3xl text-center md:text-left text-tltorange mb-5"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
-                    >
-                        Our Team
-                    </motion.h2>
-
-                    {/* Meet the team Boxes */}
-                    <div className="box_cont grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-7 px-3 md:px-0 pb-16">
-                        {team.map((member, index) => (
-                            <TeamBox
-                                key={member.id}
-                                id={member.id}
-                                img={member.img}
-                                name={member.name}
-                                title={member.title}
-                                index={index}
-                                clickable={member.hasProfilePage}
-                            />
-                        ))}
-                    </div>
-                </div>
-
-
-                {/* Footer */}
-                <Footer />
-            </div>
+          <div key={group} className="person-grid swap" style={{ '--cols': 4 }}>
+            {members.map(m => {
+              const role = m.isTutor ? (subjectsOf(m) || m.title) : m.title
+              const body = <>
+                <span className="ph"><img src={m.img} alt={m.name} loading="lazy" /></span>
+                <span className="person-name">{m.name}</span>
+                <span className="person-role">{role}</span>
+              </>
+              return m.hasProfilePage
+                ? <Link className="person" to={`/meet-our-team/${m.id}`} key={m.id}>{body}</Link>
+                : <div className="person" key={m.id}>{body}</div>
+            })}
+          </div>
         </div>
-    )
+      </section>
+
+      <CtaPanel
+        title={<>Found a tutor you like? <span>Let’s talk.</span></>}
+        text="Tell us about your child and we’ll match them with the right tutor for their subject and level. The first lesson is free."
+        points={[]}
+        label="Chat with us on WhatsApp"
+      />
+    </PageLayout>
+  )
 }
 
 export default MeetTheTeam

@@ -1,22 +1,11 @@
-import Navbar from "../../Sections/NavBar/Navbar"
-import Footer from "../../Sections/Footer/Footer"
-import { motion } from 'framer-motion'
+import LegalPage from "../../Layout/LegalPage"
 
-const Terms = () => {
-  return (
-    <div>
-      <Navbar />
-
-      <section className="terms_cont pt-32 pb-20 px-6 md:px-24 lg:px-48 bg-tltwhite text-gray-800">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
-        >
-          <h1 className="text-4xl font-bold text-tltgreen mb-2">Terms and Conditions</h1>
-          <p className="text-sm text-gray-500 mb-10">Last Updated: February 19, 2026</p>
-
+const Terms = () => (
+  <LegalPage
+    title="Terms and Conditions"
+    description="The terms that govern The Light Tutors online tutoring services, lessons, payments and accounts."
+    updated="19 February 2026"
+  >
           <div className="space-y-8">
             {/* Section 01 */}
             <div>
@@ -198,12 +187,7 @@ const Terms = () => {
               </ul>
             </div>
           </div>
-        </motion.div>
-      </section>
-
-      <Footer />
-    </div>
-  )
-}
+  </LegalPage>
+)
 
 export default Terms
