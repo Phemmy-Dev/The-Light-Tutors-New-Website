@@ -43,7 +43,7 @@ const SiteNav = () => {
         </ul>
         <div className="nav-cta">
           <Link className="tutor-link" to="/become-a-tutor">Become a tutor</Link>
-          <a className="btn btn-primary" href={WHATSAPP} target="_blank" rel="noopener noreferrer">Book a free lesson</a>
+          <a className="btn btn-primary" href={WHATSAPP} target="_blank" rel="noopener noreferrer">Book a lesson</a>
           <button className="menu-btn" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="mobile-menu" aria-label={open ? 'Close menu' : 'Open menu'}>
             {open ? <PiXBold /> : <PiListBold />}
           </button>
@@ -64,8 +64,8 @@ const SiteNav = () => {
               ))}
             </ul>
             <div className="menu-card">
-              <p className="menu-card-title">Your child’s first lesson is free.</p>
-              <a className="btn btn-primary" href={WHATSAPP} target="_blank" rel="noopener noreferrer">Book a free lesson <PiArrowRightBold /></a>
+              <p className="menu-card-title">Let’s find the right tutor for your child.</p>
+              <a className="btn btn-primary" href={WHATSAPP} target="_blank" rel="noopener noreferrer">Book a lesson <PiArrowRightBold /></a>
               <p className="contact-line"><PiWhatsappLogoDuotone aria-hidden="true" />+234-8153418503</p>
               <p className="contact-line"><PiEnvelopeSimpleDuotone aria-hidden="true" />thelightutorsltd@gmail.com</p>
             </div>

@@ -49,7 +49,7 @@ const TeamProfile = () => {
     { label: 'Qualification', value: qualification, icon: PiCertificateDuotone },
   ].filter(f => f.value)
 
-  const whatsapp = `https://api.whatsapp.com/send?phone=2348153418503&text=${encodeURIComponent(`Hi! I saw ${member.name}'s profile and I'd like to book a free lesson for my child.`)}`
+  const whatsapp = `https://api.whatsapp.com/send?phone=2348153418503&text=${encodeURIComponent(`Hi! I saw ${member.name}'s profile and I'd like to book lessons for my child.`)}`
 
   return (
     <PageLayout title={`${member.name}, ${member.title}`} description={`Meet ${member.name}, ${member.title.toLowerCase()} at The Light Tutors${teaches ? `, teaching ${subjects.join(', ')}` : ''}.`}>
@@ -64,7 +64,7 @@ const TeamProfile = () => {
               {teaches && <div className="tags">{subjects.map(s => <span className="tag" key={s}>{s}</span>)}</div>}
               {teaches && (
                 <div className="actions">
-                  <a className="btn btn-primary" href={whatsapp} target="_blank" rel="noopener noreferrer"><PiWhatsappLogoBold /> Book a free lesson with {firstName}</a>
+                  <a className="btn btn-primary" href={whatsapp} target="_blank" rel="noopener noreferrer"><PiWhatsappLogoBold /> Book a lesson with {firstName}</a>
                 </div>
               )}
             </div>
@@ -119,7 +119,7 @@ const TeamProfile = () => {
             <div className="profile-cta">
               <div>
                 <h2>Think {firstName} is a good fit?</h2>
-                <p>Message us and we’ll arrange a free first lesson for your child.</p>
+                <p>Message us and we’ll arrange lessons with them for your child.</p>
               </div>
               <a className="btn btn-primary" href={whatsapp} target="_blank" rel="noopener noreferrer"><PiWhatsappLogoBold /> Chat on WhatsApp</a>
             </div>

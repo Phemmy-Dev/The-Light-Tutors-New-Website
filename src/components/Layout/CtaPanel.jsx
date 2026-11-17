@@ -3,12 +3,12 @@ import { PiArrowRightBold, PiCheckBold } from 'react-icons/pi'
 import { WHATSAPP } from './links'
 import defaultImg from '../../assets/images/ctaImg.jpg'
 
-// The dark closing panel at the bottom of most pages. Defaults to the "free first lesson" offer.
+// The dark closing panel at the bottom of most pages. Defaults to the tutor-matching offer.
 const CtaPanel = ({
-  title = <>Their first lesson is <span>on us.</span></>,
-  text = 'Meet a tutor, see how your child gets on, and decide after. There’s nothing to sign and nothing to pay for the first lesson.',
-  points = ['A full one-to-one lesson, not a sales call', 'Matched to your child’s subject and level', 'We reply on WhatsApp within the day'],
-  label = 'Book the free lesson',
+  title = <>Let’s find your child’s <span>tutor.</span></>,
+  text = 'Tell us about your child and we’ll match them with a tutor who fits their subject, their level and the way they learn.',
+  points = ['One child, one tutor, every lesson', 'Matched to your child’s subject and level', 'We reply on WhatsApp within the day'],
+  label = 'Book a lesson',
   href = WHATSAPP,
   image = defaultImg,
   imageAlt = 'A girl working through a lesson at her laptop',

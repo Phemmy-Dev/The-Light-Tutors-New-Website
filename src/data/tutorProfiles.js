@@ -156,17 +156,17 @@ const tutorProfiles = {
         ],
     },
 
-    // Olumide Adisa
+    // Olumide Adisa (Oct 2026 response)
     24: {
         qualification: "MBBS, in progress",
         field: "Medicine and Surgery",
         experience: "5 years",
-        subjects: ["Mathematics", "English", "Science", "Physics", "Biology", "Chemistry"],
-        ageGroups: "Ages 9–16 (Years 4–11)",
-        teachingStyle: "Structured, interactive and student-centred. I simplify complex concepts using clear explanations, relatable examples and step-by-step problem solving, and adapt lessons to each student's pace with questions, practice exercises and real-life applications.",
+        subjects: ["Mathematics", "English", "Science", "Biology", "Chemistry", "Physics"],
+        ageGroups: "Ages 9–16 (UK curriculum, KS2–KS4)",
+        teachingStyle: "Student-centred, interactive and structured, with clear explanations, practical examples and exam-focused practice.",
         bio: [
-            "I am a dedicated tutor and medical student with five years of teaching experience. I teach Mathematics, English and Sciences, helping students aged 9–16 strengthen their understanding and perform better academically.",
-            "My lessons are supportive and structured, designed to build both confidence and strong academic foundations. My goal is not only to help students improve their grades but also to develop critical thinking and independent learning habits.",
+            "I am an experienced tutor passionate about helping students improve their understanding, build confidence and achieve academic success.",
+            "I provide personalised, curriculum-aligned lessons tailored to each student's learning needs, with a focus on measurable progress and exam preparation.",
         ],
     },
 
@@ -195,6 +195,7 @@ const tutorProfiles = {
         bio: [
             "I am a Cameroonian pharmacist and educator with a strong passion for teaching languages and sciences. I grew up in a bilingual country where French is an official language, so I developed fluency in French from an early age.",
             "I have taught French in more than seven schools in Nigeria and also tutor privately, online and in person. Coming from a family of educators, teaching has always been a natural part of my journey, and I enjoy helping students build confidence and strong academic foundations.",
+            "I particularly enjoy supporting students preparing for GCSE exams, helping them improve their performance through structured learning and personalised guidance.",
         ],
     },
 
@@ -250,16 +251,17 @@ const tutorProfiles = {
         ],
     },
 
-    // Adesokan Immanuel Oluwanifise (age and exam scores from the response left off the public page)
+    // Adesokan Immanuel Oluwanifise (Oct 2026 response)
     38: {
+        qualification: "Computer Science undergraduate",
         field: "Computer Science",
-        experience: "3–4 years",
-        subjects: ["Mathematics", "Physics", "Coding", "Music"],
-        ageGroups: "Ages 4–15",
-        teachingStyle: "Demonstration-led, with clear and structured lessons that show students exactly how things work.",
+        experience: "2–3 years",
+        subjects: ["Mathematics", "Coding", "Music", "English"],
+        ageGroups: "Ages 5–14",
+        teachingStyle: "Student-oriented. I adapt each lesson to how the child learns best and build their confidence step by step.",
         bio: [
-            "I am a dedicated tutor specialising in Mathematics, Physics, Coding and Music. I deliver clear, structured lessons that help students understand complex concepts and build lasting confidence.",
-            "I am known for a calm, professional approach, and I focus on creating an engaging learning environment that supports academic growth and independent thinking.",
+            "I am an undergraduate Computer Science student with two to three years of teaching experience in Mathematics, Coding, Music and English.",
+            "I aim to make learning clear, engaging and enjoyable while helping every student grow in skill and confidence.",
         ],
     },
 
@@ -276,17 +278,17 @@ const tutorProfiles = {
         ],
     },
 
-    // David Sharon (form response had no name; matched by bio)
+    // David Sharon (Oct 2026 response)
     43: {
         qualification: "Doctor of Pharmacy (Pharm.D.), University of Ilorin",
-        field: "Pharmaceutical Sciences",
-        experience: "2+ years",
-        subjects: ["Mathematics", "Physics", "Biology", "Chemistry", "Verbal Reasoning", "Non-Verbal Reasoning"],
-        ageGroups: "Years 3–12",
-        teachingStyle: "Patient, interactive and student-centred. I focus on helping students truly understand concepts rather than just memorising steps, breaking topics down into simple explanations and encouraging students to ask questions and think problems through. Practice questions and small activities keep lessons engaging and build confidence.",
+        field: "Pharmacy",
+        experience: "1+ year of online one-to-one tutoring",
+        subjects: ["Mathematics", "Biology", "Physics", "Chemistry", "Non-Verbal Reasoning"],
+        ageGroups: "Years 4–11, including GCSE, 11+ and WAEC preparation",
+        teachingStyle: "Patient, interactive, structured and student-centred. I break complex concepts down into simple, manageable steps, using practical examples, visual resources, guided practice and interactive activities. I adapt to each student's needs, pace and goals, and encourage questions, independent thinking and problem-solving.",
         bio: [
-            "I am a dedicated and patient tutor who enjoys helping students build confidence in their learning. I am a Doctor of Pharmacy student at the University of Ilorin, with several years of experience supporting primary and secondary school students in Mathematics and Science.",
-            "I focus on creating a comfortable learning environment where students feel encouraged to ask questions and develop strong problem-solving skills.",
+            "I am a dedicated and enthusiastic tutor with a Doctor of Pharmacy background and a passion for helping students achieve their academic goals. I provide online, one-to-one tuition in Mathematics and Science for students at different academic levels.",
+            "My approach combines clear explanations, engaging activities, structured practice and personalised support. I strive to make learning enjoyable, build students' confidence and equip them to become independent learners.",
         ],
     },
 
@@ -304,17 +306,119 @@ const tutorProfiles = {
         ],
     },
 
-    // Olamide Christian
+    // Olamide Christian (Oct 2026 response; university name from March)
     46: {
         qualification: "B.Tech. Food Science and Nutrition (Federal University of Technology, Minna), 120-hour TEFL certificate",
         field: "Food Science and Nutrition, with TEFL training",
-        experience: "18+ years",
-        subjects: ["English Language", "Mathematics", "General Science", "Verbal Reasoning", "Non-Verbal Reasoning", "English as a Foreign Language"],
-        ageGroups: "Ages 6–15, plus teenagers learning English as a second language",
-        teachingStyle: "Student-centred, patient and interactive. I break difficult topics into simple, relatable ideas using examples, guided practice and engaging activities. Lessons are structured but flexible, so I can adapt to each learner's pace and learning style.",
+        experience: "16 years, including online tutoring",
+        subjects: ["English Language", "Mathematics", "Non-Verbal Reasoning"],
+        ageGroups: "Ages 5–16 (primary and secondary)",
+        teachingStyle: "Student-centred, engaging, patient and structured. I simplify complex concepts into easy-to-understand steps, using practical examples, interactive activities, guided practice and regular assessments, and adapt lessons to each learner's needs, ability and pace.",
         bio: [
-            "I am an experienced tutor with over eighteen years of teaching and mentoring experience, in schools, private tutoring and online. I specialise in helping young learners strengthen their skills in English, Mathematics and Science, including preparation for entrance exams and international English assessments.",
-            "I am passionate about creating a supportive learning environment where every child can grow, understand difficult topics and achieve their academic goals.",
+            "I am an experienced and passionate educator with 16 years of teaching experience and a strong commitment to helping learners achieve their academic goals. I create supportive, engaging learning environments where students feel comfortable asking questions, developing their skills and building confidence.",
+            "My strength lies in breaking challenging concepts down into simple, manageable steps. I focus on understanding, steady progress and helping every learner reach their full potential.",
+        ],
+    },
+
+    // ----- From the late October 2026 responses -----
+
+    // Oladapo Favour
+    41: {
+        qualification: "B.A. English",
+        field: "English Language and Literary Studies",
+        experience: "3 years",
+        subjects: ["English Language", "English Literature", "Verbal Reasoning"],
+        ageGroups: "Year 4 and above",
+        teachingStyle: "Interactive, structured and learner-focused. I adapt lessons to each student's pace and areas of difficulty, using practical examples, targeted exercises and regular assessments to reinforce understanding.",
+        bio: [
+            "I am passionate about making learning accessible, engaging and rewarding. I create a supportive environment where students feel comfortable asking questions, tackling challenges and building confidence in their abilities.",
+            "I find great fulfilment in helping learners recognise their potential and develop the skills they need for long-term academic success.",
+        ],
+    },
+
+    // ----- New tutors from the Nov 2026 personnel form, profiles from the Tutor Profile form -----
+
+    // Victoria Okolie (Oct 2026 response; NVR added from Nov personnel form)
+    47: {
+        qualification: "B.A. Social Studies Education, University of Ilorin",
+        field: "Social Studies Education",
+        experience: "3 years",
+        subjects: ["English Language", "English Literature", "Igbo Language", "Non-Verbal Reasoning"],
+        ageGroups: "Ages 5–14",
+        teachingStyle: "Patient, friendly and interactive. I make lessons simple, enjoyable and easy to understand, while encouraging students to ask questions and learn with confidence.",
+        bio: [
+            "I am a caring and intentional tutor who enjoys helping children learn, grow and believe in themselves. I create a warm and supportive learning environment where every child feels comfortable, valued and encouraged.",
+            "My goal is to make learning fun and meaningful while helping each student reach their potential.",
+        ],
+    },
+
+    // Emmanuel Amusan (Oct 2026 response)
+    48: {
+        qualification: "B.Sc. Physics, University of Ilorin; M.Sc. Physics in progress",
+        field: "Physics",
+        experience: "7+ years",
+        subjects: ["Mathematics", "Further Mathematics", "Physics"],
+        ageGroups: "Ages 5–18, including Cambridge and IGCSE/GCSE exam preparation",
+        teachingStyle: "Student-centred, interactive and practical. I simplify complex concepts through clear, step-by-step explanations, relatable examples, visual resources and guided practice, and use assessments, practice questions and feedback to find learning gaps, track progress and build confidence.",
+        bio: [
+            "I am a dedicated and passionate Mathematics, Further Mathematics and Physics tutor with over seven years of experience across classroom, home tutoring and online learning.",
+            "My goal is to create a supportive and engaging learning environment where students develop a strong understanding of their subjects, become independent learners and make meaningful progress, through personalised teaching, patience, consistency and encouragement.",
+        ],
+    },
+
+    // Elijah Akiode (Oct 2026 response; subjects and motivation from Nov personnel form)
+    49: {
+        qualification: "B.Sc. Anatomy",
+        field: "Human Anatomy",
+        experience: "2+ years",
+        subjects: ["Mathematics", "Further Mathematics", "Physics", "Chemistry", "Biology", "Non-Verbal Reasoning"],
+        ageGroups: "Year 6 and above",
+        teachingStyle: "Flexible and student-centred, with lessons tailored to each student's needs and pace. I break concepts down into clear, step-by-step explanations supported by visual aids, helping students understand difficult topics and develop problem-solving skills.",
+        bio: [
+            "I am a committed tutor who enjoys helping students develop strong academic foundations. Through clear explanations, patience and interactive lessons, I support students in improving their understanding, confidence and performance.",
+            "I find fulfilment in helping students overcome learning challenges and discover their potential. Seeing them progress from uncertainty to understanding, and become more independent learners, is what makes teaching rewarding for me.",
+        ],
+    },
+
+    // Olatomiwa Omotunde (March 2026 response; subjects from Nov personnel form)
+    50: {
+        qualification: "MBBS, in progress",
+        field: "Medicine and Surgery",
+        experience: "About 2 years",
+        subjects: ["Mathematics", "Physics", "Chemistry", "Biology", "Verbal Reasoning", "Non-Verbal Reasoning"],
+        ageGroups: "Ages 12–18 (lower secondary to A-Level)",
+        teachingStyle: "Interactive, structured and student-centred. I simplify complex concepts using relatable examples, illustrations and guided practice, and encourage questions, critical thinking and active participation.",
+        bio: [
+            "I am a dedicated medical student with a strong passion for teaching and student development. I specialise in helping students understand challenging topics in a clear and supportive learning environment.",
+            "My goal is to build students' confidence, strengthen their understanding of key concepts and support them in achieving their academic potential.",
+        ],
+    },
+
+    // Favour Akande (Oct 2026 response; not the same person as Oladapo Favour)
+    51: {
+        qualification: "B.A. Education and English Language, Obafemi Awolowo University",
+        field: "Education and English Language",
+        experience: "6 years",
+        subjects: ["English Language", "Literature in English", "Phonics and Reading", "Grammar and Comprehension", "Verbal Reasoning"],
+        ageGroups: "Primary (ages 5–12) and secondary",
+        teachingStyle: "Learner-centred, interactive and adaptable to each child's needs and pace. I use visual aids, storytelling, practical examples, educational games, guided practice and regular assessments to make lessons engaging and effective.",
+        bio: [
+            "I am a dedicated and passionate educator committed to helping children build strong academic foundations, develop confidence and cultivate a genuine love for learning.",
+            "With a background in Education and English Language and experience teaching learners at different levels, I make every lesson engaging, meaningful and adapted to the learner's needs. I believe every child can make progress with the right guidance.",
+        ],
+    },
+
+    // Ibtisam Ejiwunmi (Oct 2026 response; subjects from Nov personnel form)
+    52: {
+        qualification: "B.Sc. Anatomy, University of Ilorin (Second Class Upper); MBBS in progress, Federal University of Lafia",
+        field: "Anatomy and Medicine",
+        experience: "1+ year",
+        subjects: ["English", "Mathematics", "Biology", "Chemistry"],
+        ageGroups: "Ages 6–14 (primary and secondary)",
+        teachingStyle: "Interactive, student-centred and tailored to each learner. I simplify complex concepts using relatable examples, visual aids and engaging activities, encourage questions and critical thinking, and use regular assessments and feedback to track progress.",
+        bio: [
+            "I am a passionate and dedicated tutor with a background in Anatomy and a strong interest in helping children develop academic confidence. I create engaging, supportive and inclusive lessons where students feel comfortable asking questions, making mistakes and exploring new ideas.",
+            "I believe every child has the potential to excel with the right guidance and encouragement. My goal is to make learning enjoyable, strengthen understanding and help each student make meaningful progress.",
         ],
     },
 }

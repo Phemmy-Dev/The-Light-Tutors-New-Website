@@ -141,7 +141,7 @@ const BlogPost = () => {
   const words = (post.body || []).map(b => (b._type === 'block' ? (b.children || []).map(c => c.text || '').join(' ') : '')).join(' ').split(/\s+/).filter(Boolean).length
   const readingTime = Math.max(1, Math.ceil(words / 200))
   // The WhatsApp message names the post, so the team can see which article brought the parent in
-  const bookHref = `https://api.whatsapp.com/send?phone=2348153418503&text=${encodeURIComponent(`Hi! I just read "${post.title}" on your blog and I'd like to book a free session for my child.`)}`
+  const bookHref = `https://api.whatsapp.com/send?phone=2348153418503&text=${encodeURIComponent(`Hi! I just read "${post.title}" on your blog and I'd like to book a session for my child.`)}`
 
   return (
     <PageLayout>
@@ -178,8 +178,8 @@ const BlogPost = () => {
 
         <div className="article-cta">
           <h2>Does this sound like your child?</h2>
-          <p>You don’t have to figure it out alone. Book a free session and one of our tutors will meet your child, find where they’re stuck, and show you a clear way forward.</p>
-          <a className="btn btn-primary" href={bookHref} target="_blank" rel="noopener noreferrer">Book a free session <PiArrowRightBold /></a>
+          <p>You don’t have to figure it out alone. Book a session and one of our tutors will meet your child, find where they’re stuck, and show you a clear way forward.</p>
+          <a className="btn btn-primary" href={bookHref} target="_blank" rel="noopener noreferrer">Book a session <PiArrowRightBold /></a>
         </div>
 
         <div className="article-foot">

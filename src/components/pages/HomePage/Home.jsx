@@ -8,12 +8,12 @@ import HomeHero from '../../Sections/Home/HomeHero'
 import HomeSubjects from '../../Sections/Home/HomeSubjects'
 import HowItWorks from '../../Sections/Home/HowItWorks'
 import HomeStories from '../../Sections/Home/HomeStories'
-import daniel from '../../../assets/images/tutors/21.jpg'
-import noah from '../../../assets/images/tutors/31.jpg'
-import kemisola from '../../../assets/images/tutors/37.jpg'
-import james from '../../../assets/images/tutors/25.jpg'
-import abisola from '../../../assets/images/tutors/16.jpg'
-import dongmo from '../../../assets/images/tutors/8.jpg'
+import daniel from '../../../assets/images/tutors/daniel-babalola.jpg'
+import noah from '../../../assets/images/tutors/noah-ige.jpg'
+import kemisola from '../../../assets/images/tutors/kemisola-david.jpg'
+import james from '../../../assets/images/tutors/james-opara.jpg'
+import abisola from '../../../assets/images/tutors/abisola-adefila.jpg'
+import dongmo from '../../../assets/images/tutors/dongmo-bilson.jpg'
 
 const stats = [
   { num: '300', unit: '+', text: "students who've grown in confidence with us" },
@@ -30,7 +30,7 @@ const perks = [
 
 // id matches src/data/team.js, so each card opens that tutor's profile
 const tutors = [
-  { id: 30, img: daniel, name: 'Daniel Babalola', subjects: 'Maths, Physics, Economics' },
+  { id: 30, img: daniel, name: 'Daniel Babalola', subjects: 'Maths, Physics' },
   { id: 32, img: noah, name: 'Noah Ige', subjects: 'Maths, Science, Computing' },
   { id: 23, img: kemisola, name: 'Kemisola David', subjects: 'Maths, English, Science' },
   { id: 16, img: james, name: 'James Opara', subjects: 'Maths, English, Computing' },
@@ -47,7 +47,7 @@ const Home = () => {
   return (
     <PageLayout
       title="The Light Tutors | Expert Online Tutors for UK Students"
-      description="Struggling with GCSEs or KS2 SATs? The Light Tutors provides patient, one-on-one online tutoring that builds confidence and boosts grades for students across the UK. Book a free session!"
+      description="Struggling with GCSEs or KS2 SATs? The Light Tutors provides patient, one-on-one online tutoring that builds confidence and boosts grades for students across the UK. Book a lesson today."
     >
       <HomeHero />
 

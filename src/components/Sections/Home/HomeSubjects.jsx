@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import daniel from '../../../assets/images/tutors/21.jpg'
-import kemisola from '../../../assets/images/tutors/37.jpg'
-import praise from '../../../assets/images/tutors/34.jpg'
-import abisola from '../../../assets/images/tutors/16.jpg'
-import noah from '../../../assets/images/tutors/31.jpg'
-import dongmo from '../../../assets/images/tutors/8.jpg'
+import daniel from '../../../assets/images/tutors/daniel-babalola.jpg'
+import kemisola from '../../../assets/images/tutors/kemisola-david.jpg'
+import praise from '../../../assets/images/tutors/praise-aderinola.jpg'
+import abisola from '../../../assets/images/tutors/abisola-adefila.jpg'
+import noah from '../../../assets/images/tutors/noah-ige.jpg'
+import dongmo from '../../../assets/images/tutors/dongmo-bilson.jpg'
 import { WHATSAPP } from '../../Layout/links'
 
 // tutor.id matches the id in src/data/team.js, so the card links to their profile

@@ -49,7 +49,8 @@ const MeetTheTeam = () => {
 
           <div key={group} className="person-grid swap" style={{ '--cols': 4 }}>
             {members.map(m => {
-              const role = m.isTutor ? (subjectsOf(m) || m.title) : m.title
+              // Supervisors also tutor, but their card shows their role rather than their subjects
+              const role = m.isTutor && !/supervisor/i.test(m.title) ? (subjectsOf(m) || m.title) : m.title
               const body = <>
                 <span className="ph"><img src={m.img} alt={m.name} loading="lazy" /></span>
                 <span className="person-name">{m.name}</span>
@@ -65,7 +66,7 @@ const MeetTheTeam = () => {
 
       <CtaPanel
         title={<>Found a tutor you like? <span>Let’s talk.</span></>}
-        text="Tell us about your child and we’ll match them with the right tutor for their subject and level. The first lesson is free."
+        text="Tell us about your child and we’ll match them with the right tutor for their subject and level."
         points={[]}
         label="Chat with us on WhatsApp"
       />
