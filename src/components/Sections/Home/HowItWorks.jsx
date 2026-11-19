@@ -6,7 +6,7 @@ import abisola from '../../../assets/images/tutors/abisola-adefila.jpg'
 const steps = [
   { title: 'Say hello on WhatsApp', text: "Tell us your child's year, subject and what's been hard." },
   { title: 'We match a tutor', text: 'Picked for their level, subject and how they like to learn.' },
-  { title: 'Start lessons', text: 'One-to-one lessons online, at a time that suits your family.' },
+  { title: 'Try your first lesson free', text: "A full first lesson. You decide if it's the right fit." },
   { title: 'Watch them grow', text: 'Regular lessons with the same tutor who knows them.' },
 ]
 
@@ -22,12 +22,12 @@ const scenes = [
     <div className="top"><img src={abisola} alt="" /><div><h4>Abisola Adefila</h4><span className="k">Science, Biology and Chemistry</span></div></div>
     <ul>
       <li><PiCheckBold />Teaches Year 9 Science</li>
-      <li><PiCheckBold />Available on weekday evenings</li>
+      <li><PiCheckBold />Free on weekday evenings</li>
       <li><PiCheckBold />Patient, step-by-step style</li>
     </ul>
   </div>,
   <div key="lesson" className="card lesson-card">
-    <span className="lesson-tag">First lesson</span>
+    <span className="free-tag">Free first lesson</span>
     <div className="when"><div className="cal"><span>THU</span><b>14</b></div><div><h4>Year 9 Science</h4><span className="k">5:00pm · 60 minutes · online</span></div></div>
     <div className="matched"><img src={abisola} alt="" /><p><b>with Abisola</b>Joining link sent on WhatsApp</p></div>
     <span className="fake-btn">Join lesson</span>

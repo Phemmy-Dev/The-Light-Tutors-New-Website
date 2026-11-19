@@ -28,7 +28,7 @@ const Privacy = () => (
                 Information We Collect
               </h2>
               <p className="text-sm md:text-base leading-relaxed text-justify mb-4">
-                To provide our tutoring services, we must collect specific categories of personal data. We distinguish between data belonging to the Parent/Guardian and data concerning the minor Student.
+                To provide our tutoring services, we must collect specific categories of personal data. We distinguish between data belonging to the Parent/Guardian and data concerning the minor Student.text.split(" ")[0] + "e"
               </p>
               <ul className="list-disc pl-5 space-y-2 text-sm md:text-base text-justify">
                 <li><strong>Identity and Contact Data (Parent/Guardian):</strong> Full name, billing address, email address, telephone number, and account credentials.</li>

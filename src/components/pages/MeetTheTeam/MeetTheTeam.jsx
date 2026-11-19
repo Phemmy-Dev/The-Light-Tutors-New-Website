@@ -66,7 +66,7 @@ const MeetTheTeam = () => {
 
       <CtaPanel
         title={<>Found a tutor you like? <span>Let’s talk.</span></>}
-        text="Tell us about your child and we’ll match them with the right tutor for their subject and level."
+        text="Tell us about your child and we’ll match them with the right tutor for their subject and level. The first lesson is free."
         points={[]}
         label="Chat with us on WhatsApp"
       />

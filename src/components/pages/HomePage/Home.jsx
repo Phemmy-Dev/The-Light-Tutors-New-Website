@@ -47,7 +47,7 @@ const Home = () => {
   return (
     <PageLayout
       title="The Light Tutors | Expert Online Tutors for UK Students"
-      description="Struggling with GCSEs or KS2 SATs? The Light Tutors provides patient, one-on-one online tutoring that builds confidence and boosts grades for students across the UK. Book a lesson today."
+      description="Struggling with GCSEs or KS2 SATs? The Light Tutors provides patient, one-on-one online tutoring that builds confidence and boosts grades for students across the UK. Book a free first lesson!"
     >
       <HomeHero />
 

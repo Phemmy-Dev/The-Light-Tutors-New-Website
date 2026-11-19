@@ -38,7 +38,7 @@ const HomeHero = () => {
           </h1>
           <p className="hero-lede">Friendly, patient tutors who learn how your child thinks, then teach to it. One child, one tutor, every lesson. Most families notice the confidence first, and then the grades follow.</p>
           <div className="hero-actions">
-            <a className="btn btn-primary" href={WHATSAPP} target="_blank" rel="noopener noreferrer">Book a lesson <PiArrowRightBold /></a>
+            <a className="btn btn-primary" href={WHATSAPP} target="_blank" rel="noopener noreferrer">Book a free first lesson <PiArrowRightBold /></a>
             <a className="btn btn-ghost" href="#tutors">Meet the tutors</a>
           </div>
           <p className="hero-proof">

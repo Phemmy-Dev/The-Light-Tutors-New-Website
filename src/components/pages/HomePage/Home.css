@@ -87,7 +87,7 @@
 .site .cal { width: 64px; border-radius: 14px; overflow: hidden; text-align: center; border: 1.5px solid var(--line); }
 .site .cal span { display: block; background: var(--orange); color: var(--dark); font-size: 12px; font-weight: 700; padding: 3px 0; }
 .site .cal b { display: block; font: 700 26px/1.4 var(--display); }
-.site .lesson-tag { justify-self: start; font-size: 13px; font-weight: 700; color: var(--dark); background: var(--gold); padding: 6px 10px; border-radius: 8px; }
+.site .free-tag { justify-self: start; font-size: 13px; font-weight: 700; color: var(--dark); background: var(--gold); padding: 6px 10px; border-radius: 8px; }
 .site .lesson-card .matched { background: var(--cool); }
 .site .fake-btn { display: block; text-align: center; padding: 14px; border-radius: var(--rb); background: var(--dark); color: #fff; font-weight: 600; }
 .site .weeks { display: grid; grid-template-columns: repeat(8, 1fr); gap: 8px; margin-top: 18px; }
