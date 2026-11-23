@@ -29,7 +29,6 @@ import KemisolaDavidPic from '../assets/images/tutors/kemisola-david.jpg'
 import OlumideAdisaPic from '../assets/images/tutors/olumide-adisa.jpg'
 import PreciousMomohPic from '../assets/images/tutors/precious-momoh.png'
 import MorenikejiAdeogunPic from '../assets/images/tutors/morenikeji-adeogun.jpeg'
-import BilalPic from '../assets/images/tutors/bilal.jpg'
 import VictoriaOyebodePic from '../assets/images/tutors/victoria-oyebode.jpg'
 import UkojeAdenaikePic from '../assets/images/tutors/ukoje-adenaike.jpg'
 import ImmanuelAdesokanPic from '../assets/images/tutors/immanuel-adesokan.jpg'
@@ -590,25 +589,6 @@ const members = [
             "Politics",
             "Tech",
             "Neuroscience",
-        ]
-    },
-    {
-        id: 35,
-        name: "Bilal",
-        title: "Emotional Response Marketing Strategist",
-        isTutor: false,
-        img: BilalPic,
-        nationality: "Nigerian",
-        gender: "Male",
-        subject: "Nil",
-        course: "Pharmacy",
-        yearsattlt: "",
-        level: "600 Level",
-        passionate: "",
-        interest: [
-            "Reading books",
-            "Watching YouTube",
-            "Speaking",
         ]
     },
     {
