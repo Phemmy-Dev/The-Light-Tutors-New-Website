@@ -11,7 +11,7 @@ const CAMP = {
   formUrl: 'https://forms.gle/jdf1GNBgTgvrazJG7', // 1. Google registration form
   ages: '5–14', // 2.
   endTime: '1:00 PM WAT', // 5.
-  // The livestream link is shared in the WhatsApp community after registering, so it isn't on the page.
+  // Children join on Zoom and it's also streamed on YouTube. Both links are shared in the WhatsApp community after registering, so they aren't on the page.
   guides: null, // 6. optional: [{ name: 'Ada Obi', session: 'Kitchen Lab', img: importedPhoto }]. The section shows once set.
   pastCamps: null, // 7. optional: { headline: '…', photos: [importedPhoto, …] }. The section shows once set.
   deadline: 'Monday 21 December', // 8.
@@ -249,7 +249,7 @@ const CampPage = () => {
   const done = badges.length === 3
 
   return (
-    <PageLayout className="lq" title="LifeQuest! Winter Camp 2026" description="A free one-day virtual winter camp for children, live on YouTube on Tuesday 22 December 2026: kitchen science, feelings and first aid. Every child is welcome.">
+    <PageLayout className="lq" title="LifeQuest! Winter Camp 2026" description="A free one-day virtual winter camp for children, live on Zoom and YouTube on Tuesday 22 December 2026: kitchen science, feelings and first aid. Every child is welcome.">
       {/* HERO */}
       <section className="lq-hero" aria-labelledby="lq-title">
         <div className="lq-aurora" aria-hidden="true" />
@@ -259,7 +259,8 @@ const CampPage = () => {
           <div className="lq-hero-copy">
             <div className="lq-chips">
               <span className="lq-chip free">100% free</span>
-              <span className="lq-chip">Live on YouTube</span>
+              <span className="lq-chip">Live on Zoom</span>
+              <span className="lq-chip">Streamed on YouTube</span>
               <span className="lq-chip">Every child welcome</span>
               <span className="lq-chip">Ages {CAMP.ages || <Todo n={2}>?–?</Todo>}</span>
             </div>
@@ -291,10 +292,10 @@ const CampPage = () => {
           <div className="lq-cal" aria-hidden="true"><span>DEC</span><b>22</b></div>
           <div className="lq-ticket-info">
             <h3>Tuesday, 22 December 2026</h3>
-            <p>11:00 AM WAT · ends {CAMP.endTime || <Todo n={5}>time?</Todo>} · streamed live on YouTube</p>
+            <p>11:00 AM WAT · ends {CAMP.endTime || <Todo n={5}>time?</Todo>} · live on Zoom, streamed on YouTube</p>
             <p className="mine">That’s {mine.label} on {mine.day} where you are.</p>
           </div>
-          {live ? <p className="lq-live">We’re live now! Find the livestream link in the WhatsApp community.</p>
+          {live ? <p className="lq-live">We’re live now! Find the Zoom link in the WhatsApp community.</p>
             : ended ? <p className="lq-live">Thanks for joining LifeQuest 2026! See you at the next camp.</p>
               : (
                 <div className="lq-count" aria-label="Countdown to camp">
@@ -411,8 +412,8 @@ const CampPage = () => {
           </div>
           <ol className="lq-trail">
             <li><span className="n">1</span><h3>Register</h3><p>A two-minute form: your child’s name and age, your contact details, and your consent.</p></li>
-            <li><span className="n">2</span><h3>Join the WhatsApp community</h3><p>You’ll get the link after registering, for reminders and the livestream link.</p></li>
-            <li><span className="n">3</span><h3>Watch live on YouTube</h3><p>On 22 December, open the livestream link we share in the WhatsApp community and join in from home. No account needed.</p></li>
+            <li><span className="n">2</span><h3>Join the WhatsApp community</h3><p>You’ll get the link after registering, for reminders and the Zoom link.</p></li>
+            <li><span className="n">3</span><h3>Join live on Zoom</h3><p>On 22 December, open the Zoom link we share in the WhatsApp community and join in from home. You can also watch the livestream on YouTube.</p></li>
           </ol>
         </div>
       </section>
@@ -498,7 +499,7 @@ const CampPage = () => {
             <details open><summary>Is it really free?</summary><p>Yes! LifeQuest is completely free for every child who registers.</p></details>
             <details><summary>What ages is it for?</summary><p>LifeQuest is designed for children aged {CAMP.ages || <Todo n={2}>?–?</Todo>}.</p></details>
             <details><summary>Does my child need to be a TLT student?</summary><p>Not at all. Every child is welcome, whether they learn with us or are discovering TLT for the first time.</p></details>
-            <details><summary>Do we need a YouTube account?</summary><p>No. You just need the livestream link, which we share in the WhatsApp community before the day.</p></details>
+            <details><summary>Do we need Zoom?</summary><p>Yes, children join the camp on Zoom using the link we share in the WhatsApp community before the day. You can join with the free Zoom app or a web browser. If you’d rather just watch, the camp is also streamed live on YouTube.</p></details>
             <details><summary>What if we miss it live?</summary><p>{CAMP.replay === null ? <Todo n={8}>Will the recording stay on YouTube afterwards?</Todo> : CAMP.replay ? 'No problem. The recording stays on our YouTube channel after the camp, so you can watch it any time.' : 'The camp is live only, so do join us on the day.'}</p></details>
             <details><summary>When does registration close?</summary><p>{CAMP.deadline ? `Registration closes on ${CAMP.deadline}.` : <Todo n={8}>Registration deadline</Todo>}</p></details>
           </div>
@@ -508,7 +509,7 @@ const CampPage = () => {
       {/* FINAL */}
       <section className="lq-sec lq-final" aria-labelledby="lq-final-title">
         <div className="wrap">
-          <span className="lq-sticker">22 December · Live on YouTube</span>
+          <span className="lq-sticker">22 December · Live on Zoom</span>
           <h2 id="lq-final-title">Every child is welcome at <span>LifeQuest!</span></h2>
           <p>Grab your spot, join the community, and get ready for a morning of discovery. Frosty is waiting.</p>
           <Register>Join the quest</Register>
