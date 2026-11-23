@@ -11,6 +11,7 @@ const links = menu.filter(item => item.path !== '/' && item.path !== '/become-a-
 const hints = {
   '/about': 'Our story and what guides us',
   '/meet-our-team': 'The tutors your child will learn with',
+  '/camp': 'Free holiday camp for children',
   '/csr': 'Projects in our community',
   '/blog': 'Advice for parents',
   '/frequently-asked-questions': 'Questions parents ask us',
@@ -39,7 +40,7 @@ const SiteNav = () => {
       <div className="wrap nav-row">
         <Link to="/" className="nav-logo" aria-label="The Light Tutors home"><img src={Logo} alt="The Light Tutors" /></Link>
         <ul className="nav-links">
-          {links.map(item => <li key={item.path}><NavLink to={item.path}>{item.title}</NavLink></li>)}
+          {links.map(item => <li key={item.path}><NavLink to={item.path} className={item.path === '/camp' ? 'nav-camp' : undefined}>{item.path === '/camp' && <span aria-hidden="true">❄ </span>}{item.title}</NavLink></li>)}
         </ul>
         <div className="nav-cta">
           <Link className="tutor-link" to="/become-a-tutor">Become a tutor</Link>
@@ -56,8 +57,8 @@ const SiteNav = () => {
             <ul>
               {[...links, { title: 'Become a tutor', path: '/become-a-tutor' }].map((item, i) => (
                 <li key={item.path} style={{ '--i': i }}>
-                  <NavLink to={item.path} onClick={() => setOpen(false)}>
-                    <span><b>{item.title}</b><small>{hints[item.path]}</small></span>
+                  <NavLink to={item.path} onClick={() => setOpen(false)} className={item.path === '/camp' ? 'nav-camp' : undefined}>
+                    <span><b>{item.path === '/camp' && <span aria-hidden="true">❄ </span>}{item.title}</b><small>{hints[item.path]}</small></span>
                     <PiArrowRightBold aria-hidden="true" />
                   </NavLink>
                 </li>

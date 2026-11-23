@@ -15,6 +15,7 @@ import BlogPost from './components/pages/Blog/BlogPost.jsx'
 import Terms from './components/pages/Terms/Terms.jsx'
 import Privacy from './components/pages/Privacy/Privacy.jsx'
 import Refund from './components/pages/Refund/Refund.jsx'
+import CampPage from './components/pages/Camp/CampPage.jsx'
 import './index.css'
 
 
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: '/csr',
     element: <CsrPage />,
+  },
+  {
+    path: '/camp',
+    element: <CampPage />,
   },
   {
     path: '/blog',

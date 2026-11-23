@@ -15,6 +15,11 @@
         "cName": "nav-links"
     },
     {
+        "title": "Winter Camp",
+        "path": "/camp",
+        "cName": "nav-links"
+    },
+    {
         "title": "CSR",
         "path": "/csr",
         "cName": "nav-links"

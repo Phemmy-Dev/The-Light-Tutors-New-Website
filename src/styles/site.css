@@ -78,6 +78,10 @@
 .site .nav-links a { text-decoration: none; color: var(--muted); }
 .site .nav-links a:hover, .site .nav-links a[aria-current="page"] { color: var(--ink); }
 .site .nav-links a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--orange); text-decoration-thickness: 2px; text-underline-offset: 8px; }
+/* Seasonal camp link: blue with a snowflake so it stands out while registration is open */
+.site .nav-links a.nav-camp { color: var(--blue); font-weight: 600; }
+.site .nav-links a.nav-camp:hover, .site .nav-links a.nav-camp[aria-current="page"] { color: #0058b8; }
+.site .mobile-menu li a.nav-camp b, .site .mobile-menu li a.nav-camp[aria-current="page"] b { color: #6cb6ff; } /* lighter blue so it reads on the dark menu */
 .site .nav-cta { display: flex; align-items: center; gap: 22px; font-size: 15px; font-weight: 500; }
 .site .nav-cta .btn { padding: 12px 18px; font-size: 15px; }
 .site .tutor-link { text-decoration: none; color: var(--muted); }

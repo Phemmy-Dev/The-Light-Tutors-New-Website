@@ -7,7 +7,7 @@ const SITE = 'https://thelightutors.com'
 const QUERY = '*[_type == "post" && defined(publishedAt) && !(_id in path("drafts.**"))]{ "slug": slug.current, publishedAt, _updatedAt }'
 const API = `https://oy1d5jtt.apicdn.sanity.io/v2024-01-01/data/query/production?query=${encodeURIComponent(QUERY)}`
 
-const pages = ['/', '/about', '/meet-our-team', '/csr', '/blog', '/frequently-asked-questions', '/become-a-tutor', '/terms', '/privacy', '/refund']
+const pages = ['/', '/about', '/meet-our-team', '/camp', '/csr', '/blog', '/frequently-asked-questions', '/become-a-tutor', '/terms', '/privacy', '/refund']
 
 const entry = (path, lastmod) =>
   `  <url><loc>${SITE}${path}</loc>${lastmod ? `<lastmod>${lastmod.slice(0, 10)}</lastmod>` : ''}</url>`
